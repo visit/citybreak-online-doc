@@ -1,10 +1,13 @@
-# Example
+# Citybreak online documentaiton
 
-This is an example section.
+Welcome to Citybreak online documentation.
+Here you will find information related to Citybreak online widgets, template pages and tracking.
+
+If you can find the information you are looking, or if the informatio in incorrect. Please contact us at help@citybreak.com and we'll get back to you as soon as possible.
 
 ## Example
 
-```shell
+```html
 curl -X GET 
   --header 'ApiKey: APIKEY132456789EWOK'
   --header 'Accept: application/json' 
@@ -28,7 +31,7 @@ var r = fetch("https://example.citybreak.com/v1/example",
 ```json
 {
   "Examples": [
-	"Hello World",
+	"Hello World test",
 	"Ewoks are the best"
   ]
 }
