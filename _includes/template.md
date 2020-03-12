@@ -53,20 +53,21 @@ If a form tag is encountered in the header/footer include document that has a ch
 If a hidden input field with the name attribute set to ‘__VIEWSTATE’ is encountered, it will be replaced with a comment stating the field was removed. If you are using .NET WebForms a form tag will most likely wrap the entire page. That form element will be removed (since it wraps all elements of the page, and we want to make sure that we don’t pass too much unnecessary data back and forth from the client to the server).
 
 ### Citybreak Online content div
-The Citybreak online will download the file, parse it, modify it as necessary and split the content in two parts: one header and one footer. You should define a div tag with the id attribute set to ‘cb_init_bookingengine’  where you would like the Citybreak online content to be injected.
 ```html
 <div id="cb_init_bookingengine">
      <h1>Booking engine goes here.</h1>
 </div>
 ```
+The Citybreak online will download the file, parse it, modify it as necessary and split the content in two parts: one header and one footer. You should define a div tag with the id attribute set to ‘cb_init_bookingengine’  where you would like the Citybreak online content to be injected.
 
 Everything within this div element will be ignored and replaced by the Citybreak online content. In this case will the h1 tag be ignored and the specific requested Citybreak online page will be inserted there instead. If this tag is omitted the header/footer has no meaning in the context of Citybreak online and will be dealt with according to section Error reporting.
 
 ### Change language
-If the online guide implements more than one language, a change language control can be included into the header/footer document. Just include a span tag where you wish to insert the language change controls.
 ```html
 <span id="cb_replace_languages_select"></span> 
 ```
+If the online guide implements more than one language, a change language control can be included into the header/footer document. Just include a span tag where you wish to insert the language change controls.
+
 The id attribute must be the specific ‘cb_replace_languages_select’. Everything in the span will be ignored and replaced with a form element which has some hidden fields as well as select box with available languages and an input type submit control. This will enable the user to change language and still end up at the same page as currently is viewed.
 
 ### Title tag
@@ -87,10 +88,10 @@ If no meta description tag is defined on the page, Citybreak online will create 
 If meta refresh is defined on the include page, it will be removed. In rare cases Citybreak Citybreak online will define a refresh tag.
 
 ### Meta content charset
-Citybreak online will remove all elements that define meta http-equiv and replace it with the following: 
 ```html
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 ```
+Citybreak online will remove all elements that define meta http-equiv and replace it with the following: 
 
 ### Robots
 If meta tags to hint robots are encountered they are preserved, except for pages that Citybreak online defines as local. Those pages will be tagged as noindex, nofollow. If requested we can set the Citybreak online entirely as noindex
