@@ -4,9 +4,9 @@ Citybreak Online enables customization by offering the possibility to include a 
 
 _A responsive template page is strongly recommended._
 
-# Brief description
+## Brief description
 
-## Restrictions
+### Restrictions
 
 * **Valid HTML5 markup** 
 Citybreak online will parse the template page as HTML5 markup and it will therefore need to consist of valid HTML5 markup. The validity of the markup is determined by the tool we use for parsing, which is currently HtmlAgilityPack, but the markup can be validated with a tool such as the W3C validator using the HTML 5 doctype setting. The DOCTYPE is replaced or set by Citybreak online to <!DOCTYPE html>.
@@ -24,10 +24,10 @@ This will be the placeholder where the Citybreak online booking engine will be i
 
 _NOTE: Trobbule shooting will be debited accourgin our standard hour rate._
 
-## Optional functionality
+### Optional functionality
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ‘cb_replace_languages_select’ is encountered).
 
-## Features
+### Features
 Relative href/src rewriting.
 Title inject from Citybreak.
 Meta keyword inject
@@ -37,20 +37,20 @@ Injects CSS links and scripts from Citybreak online.
 Possibly remove form tags if interfering with Citybreak online.
 Possibly remove VIEWSTATE hidden input field.
 
-# Detailed description
+## Detailed description
 This section will go into the details of how to create your external header footer.
 
-## Error reporting
+### Error reporting
 If something goes wrong during the creation of the header/footer include from Citybreak, the error will be reported as a .NET stack trace in a comment at the bottom of the HTML generated. The standard header footer of Citybreak online will be used meanwhile.
 
-## Features
+### Features
 Form tags
 If a form tag is encountered in the header/footer include document that has a child element that defines special functionality for Citybreak online (such as the content div or language span, described below), the form will simply be removed and replaced by an HTML comment that states that the tag was removed. Form tags that do not interfere with Citybreak functionality will be preserved.
 
-## .NET Viewstate
+### .NET Viewstate
 If a hidden input field with the name attribute set to ‘__VIEWSTATE’ is encountered, it will be replaced with a comment stating the field was removed. If you are using .NET WebForms a form tag will most likely wrap the entire page. That form element will be removed (since it wraps all elements of the page, and we want to make sure that we don’t pass too much unnecessary data back and forth from the client to the server).
 
-## Citybreak Online content div
+### Citybreak Online content div
 The Citybreak online will download the file, parse it, modify it as necessary and split the content in two parts: one header and one footer. You should define a div tag with the id attribute set to ‘cb_init_bookingengine’  where you would like the Citybreak online content to be injected.
 ```html
 <div id="cb_init_bookingengine">
@@ -60,40 +60,40 @@ The Citybreak online will download the file, parse it, modify it as necessary an
 
 Everything within this div element will be ignored and replaced by the Citybreak online content. In this case will the h1 tag be ignored and the specific requested Citybreak online page will be inserted there instead. If this tag is omitted the header/footer has no meaning in the context of Citybreak online and will be dealt with according to section Error reporting.
 
-## Change language
+### Change language
 If the online guide implements more than one language, a change language control can be included into the header/footer document. Just include a span tag where you wish to insert the language change controls.
 ```html
 <span id="cb_replace_languages_select"></span> 
 ```
 The id attribute must be the specific ‘cb_replace_languages_select’. Everything in the span will be ignored and replaced with a form element which has some hidden fields as well as select box with available languages and an input type submit control. This will enable the user to change language and still end up at the same page as currently is viewed.
 
-## Title tag
+### Title tag
 The contents of the title tag will be replaced with a title appropriate for the Citybreak online page that is displayed. This title is generated from Citybreak online and can not be changed from the include file.
 
-## Relative href/src URL rewriting
+### Relative href/src URL rewriting
 All elements that have attributes named href or src will be tried to be rewritten in the context of the URL where the page was downloaded from. That is, Citybreak online will try to rewrite relative paths to absolute paths.
 
 If the include file was found at http://somesite.com/templ/cb.htm and a tag in that document is defined as /css/base.css the tag will be rewritten to the definition http://somesite.com/css/base.css. It applies to all elements with the attribute href or src, meaning it applies to link tags, script tags, img tags etc, etc.
 
-## Meta keyword inject
+### Meta keyword inject
 If a specific page in Citybreak online defines specific keywords to be used, it will create a new meta tag with them. If a meta keywords tag already exists in the header/footer document, Citybreak online will append the specific keywords to it.
 
-## Meta description inject
+### Meta description inject
 If no meta description tag is defined on the page, Citybreak online will create one and append it to the document. If one exists in the include document, Citybreak online will append its own description to the tag.
 
-## Meta refresh
+### Meta refresh
 If meta refresh is defined on the include page, it will be removed. In rare cases Citybreak Citybreak online will define a refresh tag.
 
-## Meta content charset
+### Meta content charset
 Citybreak online will remove all elements that define meta http-equiv and replace it with the following: 
 ```html
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 ```
 
-## Robots
+### Robots
 If meta tags to hint robots are encountered they are preserved, except for pages that Citybreak online defines as local. Those pages will be tagged as noindex, nofollow. If requested we can set the Citybreak online entirely as noindex
 
-## Head re-ordering
+### Head re-ordering
 Citybreak online will reorder the tags in the head. The elements will be rearranged according to
 this order:
 
@@ -106,16 +106,15 @@ this order:
 7. Script definitions from Citybreak online.
 8. Content Script definitions.
 
-## Injected CSS classes
+### Injected CSS classes
 The Citybreak online will inject class names on specific tags in the include file where applicable for styling purposes.
 
-## Conventions used
+### Conventions used
 CSS class names
 To make it harder for CSS class names to interfere, the Citybreak online team preambles all its internal CSS classes with either ‘Citybreak’ or ‘cb_’.
 
-## CSS web fonts
+### CSS web fonts
 When using custom fonts in the header/footer template, access must be granted for your Citybreak online sub-domain. This applies to both 3rd party services such as Typekit, as well as hosted fonts declared via @font-face CSS rules.
 
-## jQuery
+### jQuery
 Citybreak online uses the jQuery JavaScript library. The specific jQuery handle is called ‘citybreakjq’ and should never be interfered with.
-
