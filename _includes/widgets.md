@@ -21,10 +21,13 @@ To implement the widgets you need to add two things to your webpage:
 ```
 
 2. A div tag somewhere in the document body with an id parameter for each widget. This is where the widget will be inserted into the document. There is a separate id for each widget, e.g:
+
 ``<div id="citybreak_accommodation_searchform_widget"></div>``
+
 ```html
 <div id="citybreak_accommodation_searchform_widget"></div>
 ```
+
 ## Combine widget
 The combine widget is located at: /combinewidget/combine
 
