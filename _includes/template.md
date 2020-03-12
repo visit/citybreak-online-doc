@@ -4,7 +4,7 @@ Citybreak Online enables customization by offering the possibility to include a 
 
 _A responsive template page is strongly recommended._
 
-![Citybreak online template page solution](../images/cb_online_temp.png "Citybreak online template page solution")
+![Citybreak online template page solution](//visit.github.io/citybreak-online-doc/images/cb_online_temp.png "Citybreak online template page solution")
 
 ## Brief description
 
