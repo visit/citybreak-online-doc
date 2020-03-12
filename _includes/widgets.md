@@ -9,6 +9,7 @@ The widgets are JavaScript widgets that are easy to integrate with a few lines o
 To implement the widgets you need to add two things to your webpage:
 
 1. A script tag that points to our server. Should be loaded asynchronously by using the below script added just before </head>. Replace WIDGET_URL with a URL constructed according to instructions below.
+
 ```html
 <script type="text/javascript">
         (function() {
@@ -18,6 +19,7 @@ To implement the widgets you need to add two things to your webpage:
         })();
 </script>
 ```
+
 2. A div tag somewhere in the document body with an id parameter for each widget. This is where the widget will be inserted into the document. There is a separate id for each widget, e.g:
 ``<div id="citybreak_accommodation_searchform_widget"></div>``
 ```html
