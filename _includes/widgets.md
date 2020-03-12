@@ -64,7 +64,7 @@ The parameters have to be passed in the correct order, i.e. the value of the fir
 <div id="citybreak_ferry_searchform_widget"></div>
 ```
 
-## Accommodation search form
+## Accommodation search widget
 Script resource: ``/accommodationwidget/searchform``
 
 Div tag Id: ``citybreak_accommodation_searchform_widget``
@@ -138,7 +138,7 @@ String promotionCode
 
 Use this parameter if you want to set a promotion code in the promotion code field.
 
-## Rental car search form
+## Rental car widget
 Script resource: ``/carrentalwidget/searchform``
 
 Div tag Id: ``citybreak_carrental_searchform_widget``
@@ -156,7 +156,7 @@ Use this to position objects in the widget either to the left or to the right.
 
 2=objects will be aligned to the right.
 
-## Ferry search form
+## Ferry search widget
 Script resource: ``/ferrywidget/searchform``
 
 Div tag Id: ``citybreak_ferry_searchform_widget``
@@ -174,7 +174,7 @@ Use this to position objects in the widget either to the left or to the right.
 
 2=objects will be aligned to the right.
 
-## Flight search form
+## Flight search widget
 Script resource ``/flightwidget/searchform``
 
 Div tag Id: ``citybreak_flight_searchform_widget``
@@ -235,7 +235,7 @@ Div tag id: ``citybreak_basket_widget_summary``
 
 optional trigger id: ``citybreak_basket_widget_display``
 
-## Activity transport search form widget
+## Activity transport product widget
 Script resource ``activitytransportwidget/searchform``
 
 Div tag Id: ``citybreak_activity_transport_searchform_widget``
@@ -270,7 +270,7 @@ Whether to proceed to basket after booking. If not available, defaults to true.
 Booking event
 Same as Booking event for Activity booking widget except the event is in this case 'cb-activitytransport-booked'.
 
-## Activity booking widget
+## Activity product widget
 This widget does not take a product id as parameter, instead you initialize it with javascript. This enables you to show multiple booking widgets on the same page.
 
 Script resource ``activitywidget/booking``
