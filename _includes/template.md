@@ -4,10 +4,9 @@ Citybreak Online enables customization by offering the possibility to include a 
 
 _A responsive template page is strongly recommended._
 
+# Brief description
 
-## Brief description
-
-### Restrictions
+## Restrictions
 
 **Valid HTML5 markup** Citybreak online will parse the template page as HTML5 markup and it will therefore need to consist of valid HTML5 markup. The validity of the markup is determined by the tool we use for parsing, which is currently HtmlAgilityPack, but the markup can be validated with a tool such as the W3C validator using the HTML 5 doctype setting. The DOCTYPE is replaced or set by Citybreak online to <!DOCTYPE html>.
 
@@ -21,9 +20,10 @@ _A responsive template page is strongly recommended._
 
 _NOTE: Trobbule shooting will be debited accourgin our standard hour rate._
 
-Optional functionality
+## Optional functionality
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ‘cb_replace_languages_select’ is encountered).
-Features
+
+## Features
 Relative href/src rewriting.
 Title inject from Citybreak.
 Meta keyword inject
@@ -32,10 +32,11 @@ Preserves CSS links and script references in original document.
 Injects CSS links and scripts from Citybreak online.
 Possibly remove form tags if interfering with Citybreak online.
 Possibly remove VIEWSTATE hidden input field.
-Detailed description
+
+# Detailed description
 This section will go into the details of how to create your external header footer.
 
-###Error reporting
+## Error reporting
 If something goes wrong during the creation of the header/footer include from Citybreak, the error will be reported as a .NET stack trace in a comment at the bottom of the HTML generated. The standard header footer of Citybreak online will be used meanwhile.
 
 **Features**
