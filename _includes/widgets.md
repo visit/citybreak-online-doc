@@ -10,6 +10,16 @@ To implement the widgets you need to add two things to your webpage:
 
 1. A script tag that points to our server. Should be loaded asynchronously by using the below script added just before </head>. Replace WIDGET_URL with a URL constructed according to instructions below.
 
+```
+<script type="text/javascript">
+        (function() {
+              var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
+               widget.src = 'WIDGET_URL';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
+        })();
+</script>
+```
+
 ```html
 <script type="text/javascript">
         (function() {
