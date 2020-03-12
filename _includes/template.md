@@ -42,10 +42,11 @@ If a hidden input field with the name attribute set to ‘__VIEWSTATE’ is enco
 
 **Citybreak Online content div**
 The Citybreak Online 3 will download the file, parse it, modify it as necessary and split the content in two parts: one header and one footer. You should define a div tag with the id attribute set to ‘cb_init_bookingengine’  where you would like the Online 3 content to be injected.
-
+```html
 <div id="cb_init_bookingengine">
      <h1>Booking engine goes here.</h1>
 </div>
+```
 
 Everything within this div element will be ignored and replaced by the Online 3 content. In this case will the h1 tag be ignored and the specific requested Online 3 page will be inserted there instead. If this tag is omitted the header/footer has no meaning in the context of Online 3 and will be dealt with according to section Error reporting.
 
@@ -105,23 +106,4 @@ When using custom fonts in the header/footer template, access must be granted fo
 
 **jQuery**
 Citybreak Online 3 uses the jQuery JavaScript library. The specific jQuery handle is called ‘citybreakjq’ and should never be interfered with.
-
-
-```html
-curl -X GET 
-  --header 'ApiKey: APIKEY132456789EWOK'
-  --header 'Accept: application/json' 
-  --header 'Accept-Language: en-US'
-  'https://example.citybreak.com/v1/example'
-```
-
-### HTTP Request
-
-`POST https://example.citybreak.com/v1/example`
-
-### Query Parameters
-
-Parameter | Type |Description
---------- | ------ | -----------
-Accept-Language | Header | The language.
 
