@@ -1,4 +1,4 @@
-# Booking widgets
+# Widgets
 
 Citybreak online comes with a set of standard widgets these widgets are fully customizable with its own CSS that can be sent in as a parameter, thus making it possible to change the style in different locations.
 
@@ -47,8 +47,6 @@ Parameters - A list of parameters to each widget action specified by the "c" and
 
 The parameters have to be passed in the correct order, i.e. the value of the first "a" parameter will be passed to the first "c" parameter and so on. The parameters must exactly match, i.e. if you have three controllers ("c" parameters) you have to pass three actions ("a" parameters) and three parameter values ("p" parameters).
 
-### Example
-
 ```html
 <script type="text/javascript">
         (function() {
@@ -70,31 +68,31 @@ Script resource: ``/accommodationwidget/searchform``
 Div tag Id: ``citybreak_accommodation_searchform_widget``
 
 ### Valid parameters
-string css
+**string css**
 
 URL to where the CSS can found, if not submitted the default CSS will be used.
 
-int? defaultCategoryId
+**int? defaultCategoryId**
 
 To set a default category on the widget, the Id category can be found in the dropdownlist of the widget, the category tree is administered in CBIS
 
-string defaultRoomCfg
+**string defaultRoomCfg**
 
 This is a string that can be set the default number of room/adults/children, the string is build up by using our format.
 
-PARAMETERS FOR NUMBER OF ROOMS/CABINS AND GUESTS
+**PARAMETERS FOR NUMBER OF ROOMS/CABINS AND GUESTS**
 
 You define the number of adults and children (including the child’s age) that will stay in each room as parameters in the direct search, so called ”Room configuration”. It can for example be a search with two rooms where the first room shall have two adults and the other room shall have one adult and a child with age 5.
 
-“&pr”  is the base parameter for the room configuration that shall be searched.
+``“&pr”``  is the base parameter for the room configuration that shall be searched.
 
-“a“ is the separator between adults and children.
+``“a“`` is the separator between adults and children.
 
-“r“ is the separator if the search is made on more rooms than one.
+``“r“`` is the separator if the search is made on more rooms than one.
 
-“c“ is the separator if the search shall be made on more than one child.
+``“c“`` is the separator if the search shall be made on more than one child.
 
-Example:
+**Example:**
 
    * One room with one adults is entered ``”&pr=1”``
 
@@ -110,19 +108,19 @@ Example:
 
 A valid date to set the default arrival date in the widget, the format of the date must be the same as the format of the requested widget
 
-DateTime? defaultDepartureDate
+**DateTime? defaultDepartureDate**
 
 A valid date to set the default departure date in the widget, the format of the date must be the same as the format of the requested widget
 
-int? alignDirection
+**int? alignDirection**
 
 Use this to position objects in the widget either to the left or to the right.
 
-0=objects will be aligned to the left (default)
+``0=objects`` will be aligned to the left (default)
 
-2=objects will be aligned to the right.
+``2=objects`` will be aligned to the right.
 
-int? geoNodeId
+**int? geoNodeId**
 
 Use this to set a default geo node in the widget, this parameter will render the name of the geonode in textbox “Where do you want to go”.
 
@@ -130,11 +128,11 @@ int? productId (cbispids)
 
 Use this to set a default product in the widget, this parameter will render the name of the product in textbox “Where do you want to go”.
 
-bool? lockCategory
+**bool? lockCategory**
 
 Use this parameter to lock down the category dropdown, when this is set then the dropdown with the categories will be hidden, and the auto complete of the “where do you want to go” will only display objects that are of/has this category.
 
-String promotionCode
+**String promotionCode**
 
 Use this parameter if you want to set a promotion code in the promotion code field.
 
@@ -143,80 +141,80 @@ Script resource: ``/carrentalwidget/searchform``
 
 Div tag Id: ``citybreak_carrental_searchform_widget``
 
-Valid parameters
-string css
+### Valid parameters
+**string css**
 
 URL to where the CSS can found, if not submitted the default CSS will be used.
 
-int? alignDirection
+**int? alignDirection**
 
 Use this to position objects in the widget either to the left or to the right.
 
-0=objects will be aligned to the left (default)
+``0=objects`` will be aligned to the left (default)
 
-2=objects will be aligned to the right.
+``2=objects`` will be aligned to the right.
 
 ## Ferry search widget
 Script resource: ``/ferrywidget/searchform``
 
 Div tag Id: ``citybreak_ferry_searchform_widget``
 
-Valid parameters
-string css
+### Valid parameters
+**string css**
 
 URL to where the CSS can found, if not submitted the default CSS will be used.
 
-int? alignDirection
+**int? alignDirection**
 
 Use this to position objects in the widget either to the left or to the right.
 
-0=objects will be aligned to the left (default)
+``0=objects`` will be aligned to the left (default)
 
-2=objects will be aligned to the right.
+``2=objects`` will be aligned to the right.
 
 ## Flight search widget
 Script resource ``/flightwidget/searchform``
 
 Div tag Id: ``citybreak_flight_searchform_widget``
 
-Valid parameters
-string css
+### Valid parameters
+**string css**
 
 URL to where the CSS can found, if not submitted the default CSS will be used.
 
-int? alignDirection
+**int? alignDirection**
 
 Use this to position objects in the widget either to the left or to the right.
 
-0=objects will be aligned to the left (default)
+``0=objects`` will be aligned to the left (default)
 
-2=objects will be aligned to the right.
+``2=objects`` will be aligned to the right.
 
-string defaultArrivalDate
+**string defaultArrivalDate**
 
 Use this to configure a default arrival date.
 
-string defaultDepartureDate
+**string defaultDepartureDate**
 
 Use this to configure a default departure date.
 
-bool? preselectFlexibleDates
+**bool? preselectFlexibleDates**
 
 Use this to preselect flexible date search.
 
 True = flexible date search is preselected
 
-int? preselectedEndLocationId
+**int? preselectedEndLocationId**
 
 Use this to preselect a end location id (aggregator location id).
 
-bool? lockEndLocation
+**bool? lockEndLocation**
 
 Use this to locked/disabled changing the end location.
 
 True = changing end location is locked/disabled
 
-int? sgid
+**int? sgid**
 
 Use this to preselect start location using a CBIS geonode id.
 
@@ -240,35 +238,35 @@ Script resource ``activitytransportwidget/searchform``
 
 Div tag Id: ``citybreak_activity_transport_searchform_widget``
 
-Valid parameters
-int cbisProductId
+### Valid parameters
+**int cbisProductId**
 
 The id of the product to display the search form for.
 
-DateTime? preferedDate
+**DateTime? preferedDate**
 
 A valid date to set the default initially selected date in the widget, the format of the date must be the same as the format of the requested widget.
 
 If the prefered date is not available it will fallback to default behaviour.
 
-int? preferredDeparture
+**int? preferredDeparture**
 
 Id of the location that will be initially selected as departure location. If not available it will fallback to default behavior.
 
-int? preferredArrival
+**int? preferredArrival**
 
 Id of the location that will be initially selected as arrival location. If not available it will fallback to default behavior.
 
-bool? enablePromocode
+**bool? enablePromocode**
 
 Whether  field for entering promocode will be available/visible in the widget. If not available, defaults to false.
 
-bool? proceedToBasket
+**bool? proceedToBasket**
 
 Whether to proceed to basket after booking. If not available, defaults to true.
 
-Booking event
-Same as Booking event for Activity booking widget except the event is in this case 'cb-activitytransport-booked'.
+### Booking event
+Same as Booking event for Activity booking widget except the event is in this case ``'cb-activitytransport-booked'``.
 
 ## Activity product widget
 This widget does not take a product id as parameter, instead you initialize it with javascript. This enables you to show multiple booking widgets on the same page.
@@ -277,12 +275,12 @@ Script resource ``activitywidget/booking``
 
 Div tag Id: ``citybreak_activity_booking_widget``
 
-Valid parameters
-string css
+### Valid parameters
+**string css**
 
 URL to where the CSS can found, if not submitted the default CSS will be used.
 
-Initialization
+**Initialization**
 To initialize a widget, create a container for the product and run initContainer with the required cbisProductId option.
 
 ```html
@@ -307,16 +305,17 @@ To initialize a widget, create a container for the product and run initContainer
 </div>
 ```
 
-Valid options to initContainer are:
+**Valid options to initContainer are:**
 
-{
+``{
   cbisProductId: [required, int] a CBIS product id,
   proceedToBasket: [bool] whether to proceed to basket after booking, defaults to true,
   defaultDate: [date] a default selected date (Use JS new date format),
   startDate: [date] minimum selectable date,
   endDate: [date] maximum selectable date
-}
-Booking event
+}``
+
+### Booking event
 You may also customize the booking process with the proceedToBasket option and cb-activity-booked event.
 
 ```html
@@ -340,11 +339,12 @@ You may also customize the booking process with the proceedToBasket option and c
 </div>
 ```
 
-The cb-activity-booked event receives:
-
+**The cb-activity-booked event receives:**
+``
 detail: {
     cbisProductId: a CBIS product id of the booked product,
     basketProductIds: a list of resulting basket product ids,
     complementaryUrl: url to complementary page (will redirect to basket if no complementary options are available),
     success: [bool] whether the product was added successfully to basket
 }
+``
