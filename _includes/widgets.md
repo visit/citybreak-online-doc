@@ -9,7 +9,7 @@ The widgets are JavaScript widgets that are easy to integrate with a few lines o
 To implement the widgets you need to add two things to your webpage:
 
 1. A script tag that points to our server. Should be loaded asynchronously by using the below script added just before </head>. Replace WIDGET_URL with a URL constructed according to instructions below.
-
+```html
 <script type="text/javascript">
         (function() {
               var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
@@ -17,12 +17,13 @@ To implement the widgets you need to add two things to your webpage:
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
         })();
 </script>
+```
 2. A div tag somewhere in the document body with an id parameter for each widget. This is where the widget will be inserted into the document. There is a separate id for each widget, e.g:
-
+``<div id="citybreak_accommodation_searchform_widget"></div>``
+```html
 <div id="citybreak_accommodation_searchform_widget"></div>
-Combine widget
-To enable multiple Online3 widgets on the same page, it is required to use the "combine widget" in Online3. This is a widget that simply loads several widgets at once and inserts them in their corresponding div elements.
-
+```
+## Combine widget
 The combine widget is located at: /combinewidget/combine
 
 The combine widget requires three parameters:
@@ -41,7 +42,7 @@ Parameters - A list of parameters to each widget action specified by the "c" and
 
 The parameters have to be passed in the correct order, i.e. the value of the first "a" parameter will be passed to the first "c" parameter and so on. The parameters must exactly match, i.e. if you have three controllers ("c" parameters) you have to pass three actions ("a" parameters) and three parameter values ("p" parameters).
 
-Example
+### Example
 <script type="text/javascript">
         (function() {
               var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
@@ -53,12 +54,12 @@ Example
 <div id="citybreak_accommodation_searchform_widget"></div>
 <div id="citybreak_basket_minibasket_widget"></div>
 <div id="citybreak_ferry_searchform_widget"></div>
-Accommodation search form
+## Accommodation search form
 Script resource: /accommodationwidget/searchform
 
 Div tag Id: citybreak_accommodation_searchform_widget
 
-Valid parameters
+### Valid parameters
 string css
 
 URL to where the CSS can found, if not submitted the default CSS will be used.
@@ -127,7 +128,7 @@ String promotionCode
 
 Use this parameter if you want to set a promotion code in the promotion code field.
 
-Rental car search form
+## Rental car search form
 Script resource: /carrentalwidget/searchform
 
 Div tag Id: citybreak_carrental_searchform_widget
@@ -145,7 +146,7 @@ Use this to position objects in the widget either to the left or to the right.
 
 2=objects will be aligned to the right.
 
-Ferry search form
+## Ferry search form
 Script resource: /ferrywidget/searchform
 
 Div tag Id: citybreak_ferry_searchform_widget
@@ -163,7 +164,7 @@ Use this to position objects in the widget either to the left or to the right.
 
 2=objects will be aligned to the right.
 
-Flight search form
+## Flight search form
 Script resource /flightwidget/searchform
 
 Div tag Id: citybreak_flight_searchform_widget
@@ -213,12 +214,7 @@ tring defaultArrivalDate
 
 Use this to configure a default arrival date, example 2016-01-20 
 
-My booking basket
-Script resource: /basketwidget/minibasket
-
-Div tag Id: citybreak_basket_minibasket_widget
-
-Basket widget
+## Basket widget
 The basket widget can be used within or outside of the online3 template page.
 
 When the basket widget is to be used within the template the script tag must be omitted.
@@ -229,7 +225,7 @@ Div tag id: citybreak_basket_widget_summary
 
 optional trigger id: citybreak_basket_widget_display
 
-Activity transport search form widget
+## Activity transport search form widget
 Script resource activitytransportwidget/searchform
 
 Div tag Id: citybreak_activity_transport_searchform_widget
@@ -264,7 +260,7 @@ Whether to proceed to basket after booking. If not available, defaults to true.
 Booking event
 Same as Booking event for Activity booking widget except the event is in this case 'cb-activitytransport-booked'.
 
-Activity booking widget
+## Activity booking widget
 This widget does not take a product id as parameter, instead you initialize it with javascript. This enables you to show multiple booking widgets on the same page.
 
 Script resource activitywidget/booking
