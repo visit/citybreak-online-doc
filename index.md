@@ -10,7 +10,7 @@ toc_footers:
 
 includes:
   - intro
-  - https_ssl
+  - https_domain
   - template
 
 search: true
