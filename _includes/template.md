@@ -19,7 +19,12 @@ Loading an Citybreak online widget (via script) in the header/footer template pa
 * **No Google Analytics tracking scripts** 
 (calls to _trackPageview, _trackEvent etc) are allowed in the template page. This would cause double page views.
 
-* **Must Contain a div element with id attribute set to ‘cb_init_bookingengine’** 
+* **Must Contain a div element with id attribute set to ‘cb_init_bookingengine’**
+```html
+<div id="cb_init_bookingengine">
+     <h1>Booking engine goes here.</h1>
+</div>
+```
 This will be the placeholder where the Citybreak online booking engine will be injected.
 
 * **All meta tags except 'viewport' will be removed**
