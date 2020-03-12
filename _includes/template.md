@@ -24,7 +24,7 @@ This will be the placeholder where the Citybreak online booking engine will be i
 
 * **All meta tags except 'viewport' will be removed**
 
-_NOTE: Trobbule shooting will be debited accourgin our standard hour rate._
+_NOTE: Consultning or troubleshooting a tempate will be debited with standard hour rate._
 
 ### Optional functionality
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ‘cb_replace_languages_select’ is encountered).
