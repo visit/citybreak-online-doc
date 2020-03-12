@@ -8,19 +8,19 @@ _A responsive template page is strongly recommended._
 
 ## Restrictions
 
-**Valid HTML5 markup** 
+* **Valid HTML5 markup** 
 Citybreak online will parse the template page as HTML5 markup and it will therefore need to consist of valid HTML5 markup. The validity of the markup is determined by the tool we use for parsing, which is currently HtmlAgilityPack, but the markup can be validated with a tool such as the W3C validator using the HTML 5 doctype setting. The DOCTYPE is replaced or set by Citybreak online to <!DOCTYPE html>.
 
-**No Citybreak online widgets included in the header/footer template page** 
+* **No Citybreak online widgets included in the header/footer template page** 
 Loading an Citybreak online widget (via script) in the header/footer template page will cause serious conflicts and JavaScript errors. It is therefore not supported at this moment.
 
-**No Google Analytics tracking scripts** 
+* **No Google Analytics tracking scripts** 
 (calls to _trackPageview, _trackEvent etc) are allowed in the template page. This would cause double page views.
 
-**Must Contain a div element with id attribute set to ‘cb_init_bookingengine’** 
+* **Must Contain a div element with id attribute set to ‘cb_init_bookingengine’** 
 This will be the placeholder where the Citybreak online booking engine will be injected.
 
-**All meta tags except 'viewport' will be removed**
+* **All meta tags except 'viewport' will be removed**
 
 _NOTE: Trobbule shooting will be debited accourgin our standard hour rate._
 
