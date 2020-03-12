@@ -81,7 +81,7 @@ The contents of the title tag will be replaced with a title appropriate for the 
 ### Relative href/src URL rewriting
 All elements that have attributes named href or src will be tried to be rewritten in the context of the URL where the page was downloaded from. That is, Citybreak online will try to rewrite relative paths to absolute paths.
 
-If the include file was found at http://somesite.com/templ/cb.htm and a tag in that document is defined as /css/base.css the tag will be rewritten to the definition http://somesite.com/css/base.css. It applies to all elements with the attribute href or src, meaning it applies to link tags, script tags, img tags etc, etc.
+If the include file was found at ``https://somesite.com/templ/cb.htm`` and a tag in that document is defined as ``/css/base.css`` the tag will be rewritten to the definition ``https://somesite.com/css/base.css`` It applies to all elements with the attribute href or src, meaning it applies to link tags, script tags, img tags etc, etc.
 
 ### Meta keyword inject
 If a specific page in Citybreak online defines specific keywords to be used, it will create a new meta tag with them. If a meta keywords tag already exists in the header/footer document, Citybreak online will append the specific keywords to it.
@@ -119,7 +119,7 @@ The Citybreak online will inject class names on specific tags in the include fil
 
 ### Conventions used
 CSS class names
-To make it harder for CSS class names to interfere, the Citybreak online team preambles all its internal CSS classes with either ‘Citybreak’ or ‘cb_’.
+To make it harder for CSS class names to interfere, the Citybreak online team preambles all its internal CSS classes with either ``Citybreak`` or ``cb_``.
 
 ### CSS web fonts
 When using custom fonts in the header/footer template, access must be granted for your Citybreak online sub-domain. This applies to both 3rd party services such as Typekit, as well as hosted fonts declared via @font-face CSS rules.
