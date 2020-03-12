@@ -8,17 +8,7 @@ The widgets are JavaScript widgets that are easy to integrate with a few lines o
 
 To implement the widgets you need to add two things to your webpage:
 
-1. A script tag that points to our server. Should be loaded asynchronously by using the below script added just before </head>. Replace WIDGET_URL with a URL constructed according to instructions below.
-
-```
-<script type="text/javascript">
-        (function() {
-              var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
-               widget.src = 'WIDGET_URL';
-              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
-        })();
-</script>
-```
+1. A script tag that points to our server. Should be loaded asynchronously by using the below script added just before ``</head>``. Replace WIDGET_URL with a URL constructed according to instructions below.
 
 ```html
 <script type="text/javascript">
@@ -39,25 +29,27 @@ To implement the widgets you need to add two things to your webpage:
 ```
 
 ## Combine widget
-The combine widget is located at: /combinewidget/combine
+The combine widget is located at: ``/combinewidget/combine``
 
 The combine widget requires three parameters:
 
-c=
+**c=**
 
-Controller - A list of names of controllers for the desired widgets, e.g. "c=accommodationwidget&c=basketwidget&c=ferrywidget"
+Controller - A list of names of controllers for the desired widgets, e.g. ``"c=accommodationwidget&c=basketwidget&c=ferrywidget"``
 
-a=
+**a=**
 
-Action - A list of names of actions for the widget controllers specified in the "c" parameter, e.g. "a=searchform&a=minibasket&a=searchform". This would pass "searchform" as an action to "accommodationwidget", "minibasket" as an action to "basketwidget" and "searchform" as an action to "ferrywidget".
+Action - A list of names of actions for the widget controllers specified in the "c" parameter, e.g. ``"a=searchform&a=basket&a=searchform"``. This would pass "searchform" as an action to "accommodationwidget", "basket" as an action to "basketwidget" and "searchform" as an action to "ferrywidget".
 
-p=
+**p=**
 
-Parameters - A list of parameters to each widget action specified by the "c" and "a" parameters. To pass multiple parameters to a widget, use a semicolon-separated list of keys and values, e.g. "p=defaultCategoryId=1345;defaultRoomCfg=2&p=&p=alignDirection=2". This would send defaultCategoryId=1345 and defaultRoomCfg=2 to /accommodationwidget/searchform, an empty list of parameters to /basketwidget/minibasket and "alignDirection=2" to /ferrywidget/searchform in the previous examples.
+Parameters - A list of parameters to each widget action specified by the "c" and "a" parameters. To pass multiple parameters to a widget, use a semicolon-separated list of keys and values, e.g. ``"p=defaultCategoryId=1345;defaultRoomCfg=2&p=&p=alignDirection=2"``. This would send defaultCategoryId=1345 and defaultRoomCfg=2 to /accommodationwidget/searchform, an empty list of parameters to /basketwidget/minibasket and "alignDirection=2" to /ferrywidget/searchform in the previous examples.
 
 The parameters have to be passed in the correct order, i.e. the value of the first "a" parameter will be passed to the first "c" parameter and so on. The parameters must exactly match, i.e. if you have three controllers ("c" parameters) you have to pass three actions ("a" parameters) and three parameter values ("p" parameters).
 
 ### Example
+
+```html
 <script type="text/javascript">
         (function() {
               var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
@@ -65,14 +57,17 @@ The parameters have to be passed in the correct order, i.e. the value of the fir
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
         })();
 </script>
-
+```
+```html
 <div id="citybreak_accommodation_searchform_widget"></div>
 <div id="citybreak_basket_minibasket_widget"></div>
 <div id="citybreak_ferry_searchform_widget"></div>
-## Accommodation search form
-Script resource: /accommodationwidget/searchform
+```
 
-Div tag Id: citybreak_accommodation_searchform_widget
+## Accommodation search form
+Script resource: ``/accommodationwidget/searchform``
+
+Div tag Id: ``citybreak_accommodation_searchform_widget``
 
 ### Valid parameters
 string css
@@ -101,17 +96,17 @@ You define the number of adults and children (including the child’s age) that 
 
 Example:
 
-   • One room with one adults is entered ”&pr=1”
+   * One room with one adults is entered ``”&pr=1”``
 
-   • Three  rooms with one adult in each room is entered “&pr=1r1r1“
+   * Three  rooms with one adult in each room is entered ``“&pr=1r1r1“``
 
-   • One room with one adult and one child (10 yrs) is entered “&pr=1a10“
+   * One room with one adult and one child (10 yrs) is entered ``“&pr=1a10“``
 
-   • One room with one adult and two children (10, 12 yrs) is entered “&pr=1a10c12
+   * One room with one adult and two children (10, 12 yrs) is entered ``“&pr=1a10c12``
 
-   • Two rooms with one adult and two children (10, 12 yrs) in the first room and two adults in the second room is entered “&pr=1a10c12r2“
+   * Two rooms with one adult and two children (10, 12 yrs) in the first room and two adults in the second room is entered ``“&pr=1a10c12r2“``
 
-DateTime? defaultArrivalDate
+**DateTime? defaultArrivalDate**
 
 A valid date to set the default arrival date in the widget, the format of the date must be the same as the format of the requested widget
 
@@ -144,9 +139,9 @@ String promotionCode
 Use this parameter if you want to set a promotion code in the promotion code field.
 
 ## Rental car search form
-Script resource: /carrentalwidget/searchform
+Script resource: ``/carrentalwidget/searchform``
 
-Div tag Id: citybreak_carrental_searchform_widget
+Div tag Id: ``citybreak_carrental_searchform_widget``
 
 Valid parameters
 string css
@@ -162,9 +157,9 @@ Use this to position objects in the widget either to the left or to the right.
 2=objects will be aligned to the right.
 
 ## Ferry search form
-Script resource: /ferrywidget/searchform
+Script resource: ``/ferrywidget/searchform``
 
-Div tag Id: citybreak_ferry_searchform_widget
+Div tag Id: ``citybreak_ferry_searchform_widget``
 
 Valid parameters
 string css
@@ -180,9 +175,9 @@ Use this to position objects in the widget either to the left or to the right.
 2=objects will be aligned to the right.
 
 ## Flight search form
-Script resource /flightwidget/searchform
+Script resource ``/flightwidget/searchform``
 
-Div tag Id: citybreak_flight_searchform_widget
+Div tag Id: ``citybreak_flight_searchform_widget``
 
 Valid parameters
 string css
@@ -234,16 +229,16 @@ The basket widget can be used within or outside of the online3 template page.
 
 When the basket widget is to be used within the template the script tag must be omitted.
 
-Script resource: /basketwidget/widget
+Script resource: ``/basketwidget/widget``
 
-Div tag id: citybreak_basket_widget_summary
+Div tag id: ``citybreak_basket_widget_summary``
 
-optional trigger id: citybreak_basket_widget_display
+optional trigger id: ``citybreak_basket_widget_display``
 
 ## Activity transport search form widget
-Script resource activitytransportwidget/searchform
+Script resource ``activitytransportwidget/searchform``
 
-Div tag Id: citybreak_activity_transport_searchform_widget
+Div tag Id: ``citybreak_activity_transport_searchform_widget``
 
 Valid parameters
 int cbisProductId
@@ -278,9 +273,9 @@ Same as Booking event for Activity booking widget except the event is in this ca
 ## Activity booking widget
 This widget does not take a product id as parameter, instead you initialize it with javascript. This enables you to show multiple booking widgets on the same page.
 
-Script resource activitywidget/booking
+Script resource ``activitywidget/booking``
 
-Div tag Id: citybreak_activity_booking_widget
+Div tag Id: ``citybreak_activity_booking_widget``
 
 Valid parameters
 string css
@@ -290,6 +285,7 @@ URL to where the CSS can found, if not submitted the default CSS will be used.
 Initialization
 To initialize a widget, create a container for the product and run initContainer with the required cbisProductId option.
 
+```html
 <script type="text/javascript">
   (function() {
    document.addEventListener('cb-activity-widget-loaded', function() {
@@ -302,11 +298,15 @@ To initialize a widget, create a container for the product and run initContainer
     }, false);
   })();
 </script>
+```
 
+``` html
 <div id="citybreak_activity_booking_widget">
    <div id="activity_booking_widget-12345"></div>
    <div id="activity_booking_widget-67891"></div>
 </div>
+```
+
 Valid options to initContainer are:
 
 {
@@ -319,6 +319,7 @@ Valid options to initContainer are:
 Booking event
 You may also customize the booking process with the proceedToBasket option and cb-activity-booked event.
 
+```html
 <script type="text/javascript">
   (function() {
    document.addEventListener('cb-activity-booked', function(data) {
@@ -332,10 +333,13 @@ You may also customize the booking process with the proceedToBasket option and c
     }, false);
   })();
 </script>
-
+```
+```html
 <div id="citybreak_activity_booking_widget">
    <div id="activity_booking_widget-12345"></div>
 </div>
+```
+
 The cb-activity-booked event receives:
 
 detail: {
