@@ -11,7 +11,7 @@ _A responsive template page is strongly recommended._
 ### Restrictions
 
 * **Valid HTML5 markup** 
-Citybreak online will parse the template page as HTML5 markup and it will therefore need to consist of valid HTML5 markup. The validity of the markup is determined by the tool we use for parsing, which is currently HtmlAgilityPack, but the markup can be validated with a tool such as the W3C validator using the HTML 5 doctype setting. The DOCTYPE is replaced or set by Citybreak online to <!DOCTYPE html>.
+Citybreak online will parse the template page as HTML5 markup and it will therefore need to consist of valid HTML5 markup. The validity of the markup is determined by the tool we use for parsing, which is currently HtmlAgilityPack, but the markup can be validated with a tool such as the W3C validator using the HTML 5 doctype setting. The DOCTYPE is replaced or set by Citybreak online to ``<!DOCTYPE html>``
 
 * **No Citybreak online widgets included in the header/footer template page** 
 Loading an Citybreak online widget (via script) in the header/footer template page will cause serious conflicts and JavaScript errors. It is therefore not supported at this moment.
@@ -27,7 +27,7 @@ This will be the placeholder where the Citybreak online booking engine will be i
 _NOTE: Consultning or troubleshooting a tempate will be debited with standard hour rate._
 
 ### Optional functionality
-Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ‘cb_replace_languages_select’ is encountered).
+Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ``cb_replace_languages_select`` is encountered).
 
 ### Features
 Relative href/src rewriting.
