@@ -2,16 +2,9 @@
 
 ## Booking tracking id
 
-The reservation tracking feature is a simple way for a client to track whether or not certain reservations were referred to by a tracking key.
+The booking tracking feature is a simple way for a client to track whether or not certain reservations were referred to by a tracking key or not
 
 A tracking key is a text string which could be any value, it could be provided through a direct link or within a widget.
-
-Direct link sample
-online3.test.citybreak.com/501372096/en/en/accommodation?**tid=mytrackingkey**
-
-Widget link sample
-online3-next.citybreak.com/1795316478/sv/sv-se/eventwidget/searchform?tid=mytrackingkey
-[subdomain].[domain].[topdomain]/[culture]/eventwidget/searchform?**tid=mytrackingkey**
 
 Once a tracking key is set it will remain alive for 30 days unless the cookie is manually deleted, everytime a request is done with the same tracking key the period of 30 days will refresh and start over.
 
@@ -22,6 +15,22 @@ Referral statistics can be obtained by creating one of following reports in <htt
 * Analysis per country
 
 Within these reports there's a column which represents which tracking key was used on a booking level, if there was one present.
+
+Direct link sample
+[subdomain].[domain].[topdomain]/[culture]/[Citybreak guide]?**tid=mytrackingkey**
+
+```html
+//bokning.oringen.se/en/todo?tid=mytrackingkey
+```
+
+Widget link sample
+[subdomain].[domain].[topdomain]/[culture]/eventwidget/searchform?**tid=mytrackingkey**
+
+```html
+//bokning.oringen.se/en/activitywidget/searchform?tid=mytrackingkey
+
+```
+
 
 ## Custom Conversion Tracking
 
