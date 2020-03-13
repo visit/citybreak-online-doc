@@ -19,17 +19,17 @@ Within these reports there's a column which represents which tracking key was us
 Direct link sample
 [subdomain].[domain].[topdomain]/[culture]/[Citybreak guide]?**tid=mytrackingkey**
 
-```html
+``
 //bokning.oringen.se/en/todo?tid=mytrackingkey
-```
+``
 
 Widget link sample
 [subdomain].[domain].[topdomain]/[culture]/eventwidget/searchform?**tid=mytrackingkey**
 
-```html
+``
 //bokning.oringen.se/en/activitywidget/searchform?tid=mytrackingkey
 
-```
+``
 
 
 ## Custom Conversion Tracking
@@ -75,4 +75,154 @@ General description
 
 ### Universal Analytics
 
-### GTM
+How does it work?
+
+Note 1:
+Here we are discussing usage of Google accounts for Universal Analytics in Online3. These are not to be mistaken for Google accounts for Google Analytics whitch is deprecated by Google themselves.
+O3 guides are able to keep track of user behaviour in O3 web pages and send them to Universal Analytics account, by using Google Tag Manager container(s). O3 supports single and multiple GTMs on page.
+We keep track of the following GTM events:
+
+Page View
+Checkout Step
+Checkout Step Option
+Purchase
+Table1 describes pages where mentioned events are fired:
+
+Page View	Checkout Step 	Checkout Step Option 	Purchase
+ All pages (on load)	Group Basket; (on load)
+Payment Details; (on load)
+Confirmation; (on load)	Payment Details* (on successfull
+                                     form submit)	Confirmation (on load)
+* Payment details page may have 2 dimensions that are of interest: Payment Type (full payment, down payment ...) and Payment Option (VISA, Master, Paypal ...). We are firing GTM events for each of the present dimensions.
+
+Setting up the UA account
+Note 2:
+If you already have UA account set up, you only need to set up a view so skip to step 5.
+
+Sign in to your Google Marketing Platform and select product Analytics.
+Under the Admin console create account, by giving it a name and saving it.
+Create a property, by naming it. I suggest to enable user metrics in reporting.
+Make a note of the Tracking Id (UA-*******-**) of your property. You will need it later.
+Create a view (or use the default one called All Web Site Data), by:
+   a) specifing the domain URL
+   b) Enable Ecommerce
+   c) Enable Enhanced Ecommerce Reporting
+   d) Add labels for Checkout process, just in order for you to keep track of steps.
+      1) /basket
+      2) /customerinformation
+      3) /confirmation  
+viewsettings.PNG
+ 
+Setting up the GTM container
+
+Note 3:
+If you already have account set up, you can continue from step 2.
+If you also have a container set up, you can continue from step 4.
+
+Open Tag Manager and in Admin console create new account
+Set up a container name and select Web
+Switch to Workspace tab
+Add Variables (name these to your liking or use the suggested ones - you will use them later on so make note):
+checkoutstepvalue:
+   Variable type: Data Layer Variable
+   Data Layer Variable Name: ecommerce.checkout.actionField.step
+   Data Layer Version: Version 2
+checkoutoptionvalue:
+   Variable type: Data Layer Variable
+   Data Layer Variable Name: ecommerce.checkout_option.actionField.option
+   Data Layer Version: Version 2
+Add Triggers (name these to your liking or use the suggested ones):
+checkout:
+   Trigger type: Custom Event
+   Event name: checkout
+   Fires on: Event equals checkout
+checkoutoption:
+   Trigger type: Custom Event
+   Event name: checkoutOption
+   Fires on: Event equals checkoutOption
+Add Tags (name these to your liking or use the suggested ones):
+cbonlinecheckout:
+   Tag Type: Google Analytics - Universal Analytics
+   Track Type: Event
+   Category: checkout
+   Action: checkout_step_{{checkoutstepvalue}}
+   Label: {{checkoutoptionvalue}}
+   Value: {{checkoutoptionvalue}}
+   Google Analytics Settings -> Enable overriding settings in this tag: true
+   Tracking ID: your tracking ID from UA (UA-*******-**)
+   More Settings -> Ecommerce -> Enable Enhanced Ecommerce Features: True
+                                                           -> Use Data Layer: Checked
+   Firing Triggers -> Choose a trigger: checkout
+   Firing Triggers -> Choose a trigger: checkoutoption (2 triggers for one tag)
+cbonlinepageview:
+   Tag Type: Google Analytics - Universal Analytics
+   Track Type: Page View
+   Google Analytics Settings -> Enable overriding settings in this tag: true
+   Tracking ID: your tracking ID from UA (UA-*******-**)
+   Firing Triggers -> Choose a trigger: All Pages
+tag.PNG
+Reading the event data
+
+You can look at the Real-Time reports. Be aware that every dimension you select under Real-Time, will behave as a filter.
+You can look at the Behaviour -> Events -> Overview
+
+report.PNG
+You can look at the Conversions -> Ecommerce -> Checkout Behaviour
+
+conversions.PNG
+Every Day Usage (Salespoint administrator role)
+Log into V2
+Point of sales setting
+Online administration
+Find and select your guide
+Administrate tracking
+
+settings.PNG
+Add your GTM tracking id
+
+addgtm.PNG
+Note 4:
+As of yet, we don't have an option to bring Universal Analytics to our test environment.
+It is only available in Production environment, since otherwise it would give our customers false tracking data.
+
+Conclusion
+By adding GTM tracking id to your guide you have instructed O3 platform to render GTM stuff on your pages.
+For instance take a look at STF accommodation
+Add some stuff in their basket and when the basket page is loaded you can open the page's source and see that there is some javascript there that collects 'checkout' data for the first step.
+
+citybreak0dataLayer = [{
+'onlineGuide': '********',
+'organizationId': '*****',
+'culture': 'en-GB'
+}];
+
+if (shouldSendCheckoutTrackingGTMCookie === 'true') {
+ citybreak0dataLayer.push({
+ 'ecommerce': {
+  'checkout': {
+   'actionField': {
+    'step': 1
+    },
+   'currencyCode': 'SEK',
+   'products': [{
+    'name': "STF Abisko Mountain Station/Dormitory bed, dogs allowed, economy",
+    'id': '******',                    
+    'price': '###,00',
+    'category': "Accommodation/HostelBed",
+    'quantity': 2
+    }]
+   }
+  }
+ },
+ {
+ 'event': 'checkout',
+ 'eventCallback': function() {
+   console.log('Checkout event has fired');
+  }
+ });
+}
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                               '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                })(window,document,'script','citybreak0dataLayer','GTM-******');
