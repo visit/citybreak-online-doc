@@ -1,5 +1,7 @@
 # Tracking
 
+DOCS IN PROGRESS
+
 ## Booking tracking id
 
 The booking tracking feature is a simple way for a client to track whether or not certain reservations were referred to by a tracking key or not
@@ -31,14 +33,14 @@ Widget link sample
 
 ``
 
-
 ## Custom Conversion Tracking
 
 To make your script work for your organization you need to configure it. To do so you need to change the variables in your script with the variable names below.
 
-`{bookingcode} = Booking number, e.g. ABCD12
+``
+{bookingcode} = Booking number, e.g. ABCD12.
 
-{bookingvalue} = Total sum of customers booking
+{bookingvalue} = Total sum of customers booking.
 
 {customerfirstname} = Customers first name
 
@@ -62,8 +64,8 @@ Example of {bookingJSONObject} usage:
 
 var booking = {bookingJSONObject};
 Will generate:
-var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": 600.0, "TotalTax": 64.29, "Products": [{ "Id": 248466, "Name": "Testhotell/Enkelrum test", "Category": "Accommodation/Hotelroom", "Price": 600.0, "Quantity": 1, "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] };`
-
+var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": 600.0, "TotalTax": 64.29, "Products": [{ "Id": 248466, "Name": "Testhotell/Enkelrum test", "Category": "Accommodation/Hotelroom", "Price": 600.0, "Quantity": 1, "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] };
+``
 
 ```html
 <script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}"></script>
