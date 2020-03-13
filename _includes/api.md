@@ -1,14 +1,18 @@
-# API
+# Online API
+
+DOCS IN PROGRESS
 
 ## Linking API
 
 To be able to determine the link to a dynamic page irregardless of its language, there is an api endpoint available that either redirects or provides redirect information based on a query.
 
 Linking to products:
- https://{ONLINE3-HOST}/en/link/product/{CBIS-PRODUCT-ID}
+´´
+https://{ONLINE-HOST}/en/link/product/{CBIS-PRODUCT-ID}
+´´
 
 This will give a redirect to the correct url.
-
+ 
 If the querystring ?format=json or format=html is appended, the correct link will be returned in json or xml respectively.
 
 e.g
@@ -42,4 +46,4 @@ Id: 22233
 
 ## Bookable status API
 
-Citybreak Online bookable status API - with type - sample: https://www.kvitfjell.no/bestill/api/products/bookablestatus/1538217
+Online bookable status API - with type - sample: https://www.kvitfjell.no/bestill/api/products/bookablestatus/1538217
