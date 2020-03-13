@@ -80,8 +80,8 @@ General description
 How does it work?
 
 Note 1:
-Here we are discussing usage of Google accounts for Universal Analytics in Online3. These are not to be mistaken for Google accounts for Google Analytics whitch is deprecated by Google themselves.
-O3 guides are able to keep track of user behaviour in O3 web pages and send them to Universal Analytics account, by using Google Tag Manager container(s). O3 supports single and multiple GTMs on page.
+Here we are discussing usage of Google accounts for Universal Analytics in Citybreak online. These are not to be mistaken for Google accounts for Google Analytics whitch is deprecated by Google themselves.
+Citybreak online guides are able to keep track of user behaviour in Citybreak online web pages and send them to Universal Analytics account, by using Google Tag Manager container(s). Citybreak online supports single and multiple GTMs on page.
 We keep track of the following GTM events:
 
 Page View
@@ -188,7 +188,7 @@ As of yet, we don't have an option to bring Universal Analytics to our test envi
 It is only available in Production environment, since otherwise it would give our customers false tracking data.
 
 Conclusion
-By adding GTM tracking id to your guide you have instructed O3 platform to render GTM stuff on your pages.
+By adding GTM tracking id to your guide you have instructed Citybreak online platform to render GTM stuff on your pages.
 For instance take a look at STF accommodation
 Add some stuff in their basket and when the basket page is loaded you can open the page's source and see that there is some javascript there that collects 'checkout' data for the first step.
 
