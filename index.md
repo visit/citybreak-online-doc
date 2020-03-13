@@ -13,6 +13,8 @@ includes:
   - https_domain
   - template
   - widgets
+  - tracking
+  - api
 
 search: true
 ---
