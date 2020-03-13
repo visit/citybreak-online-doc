@@ -1,9 +1,8 @@
 # Tracking
 
-## Booking tracking
+## Booking tracking id
 
-he reservation tracking feature is a simple way for a client to track whether or not certain reservations were referred to by a tracking key.
-
+The reservation tracking feature is a simple way for a client to track whether or not certain reservations were referred to by a tracking key.
 
 A tracking key is a text string which could be any value, it could be provided through a direct link or within a widget.
 
@@ -18,7 +17,7 @@ Once a tracking key is set it will remain alive for 30 days unless the cookie is
 If an already existing tracking key is set it will never be overridden by another key, meaning that the first key must expire before a new one can be set.
 
 
-Referral statistics can be obtained by creating one of following reports in report.citybreak.com
+Referral statistics can be obtained by creating one of following reports in <https://reports.citybreak.com>
 - Product report
 - Analysis per country
 
@@ -44,9 +43,9 @@ Will generate:
 var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": 600.0, "TotalTax": 64.29, "Products": [{ "Id": 248466, "Name": "Testhotell/Enkelrum test", "Category": "Accommodation/Hotelroom", "Price": 600.0, "Quantity": 1, "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] }; 
 
 
-´´´html
+```html
 <script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}"></script>
-´´´
+```
 
 ## Google tracking
 
