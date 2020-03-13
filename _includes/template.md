@@ -30,14 +30,14 @@ _NOTE: Consultning or troubleshooting a tempate will be debited with standard ho
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ``cb_replace_languages_select`` is encountered).
 
 ### Features
-Relative href/src rewriting.
-Title inject from Citybreak.
-Meta keyword inject
-Meta description inject
-Preserves CSS links and script references in original document.
-Injects CSS links and scripts from Citybreak online.
-Possibly remove form tags if interfering with Citybreak online.
-Possibly remove VIEWSTATE hidden input field.
+* Relative href/src rewriting.
+* Title inject from Citybreak.
+* Meta keyword inject
+* Meta description inject
+* Preserves CSS links and script references in original document.
+* Injects CSS links and scripts from Citybreak online.
+* Possibly remove form tags if interfering with Citybreak online.
+* Possibly remove VIEWSTATE hidden input field.
 
 ## Detailed description
 This section will go into the details of how to create your external header footer.
@@ -88,10 +88,11 @@ If no meta description tag is defined on the page, Citybreak online will create 
 If meta refresh is defined on the include page, it will be removed. In rare cases Citybreak Citybreak online will define a refresh tag.
 
 ### Meta content charset
+Citybreak online will remove all elements that define meta http-equiv and replace it with the following: 
+
 ```html
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 ```
-Citybreak online will remove all elements that define meta http-equiv and replace it with the following: 
 
 ### Robots
 If meta tags to hint robots are encountered they are preserved, except for pages that Citybreak online defines as local. Those pages will be tagged as noindex, nofollow. If requested we can set the Citybreak online entirely as noindex
@@ -102,7 +103,7 @@ this order:
 
 1. Title element.
 2. Meta tags.
-3.Link definitions from header.
+3. Link definitions from header.
 4. Citybreak online link definitions.
 5. Explicit style definition from header.
 6. Script definitions from header.
@@ -120,7 +121,6 @@ To make it harder for CSS class names to interfere, the Citybreak online team pr
 When using custom fonts in the header/footer template, access must be granted for your Citybreak online sub-domain. This applies to both 3rd party services such as Typekit, as well as hosted fonts declared via @font-face CSS rules.
 
 ### BodyCssClasses
-
 Online3 inserts some CSS classes into the class attribute of the Body element based on what section of Online3 is active. This enables you to do special styling based on the currently active section, and these values are also accessible from javascript. It also inserts the currently active language. The body tag always has a class of cb_citybreak_body when Online3 is active.
 
 **Language**
@@ -143,4 +143,4 @@ Packages | cb_package
 
 
 ### jQuery
-Citybreak online uses the jQuery JavaScript library. The specific jQuery handle is called ‘citybreakjq’ and should never be interfered with.
+Citybreak online uses the jQuery JavaScript library. The specific jQuery handle is called ''‘citybreakjq’'' and should **never be interfered with**.
