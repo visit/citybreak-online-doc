@@ -39,25 +39,15 @@ To make your script work for your organization you need to configure it. To do s
 Parameter | Description
 --------- | ------ 
 {bookingcode} | Booking number, e.g. ABCD12.
-
 {bookingvalue} | Total sum of customers booking.
-
 {customerfirstname} | Customers first name
-
 {customersurname} | Customers surname
-
 {randomnumber} | Generates a random number
-
 {date} | Time stamp
-
 {isodate} | Time stamp (yyyy-MM-dd)
-
 {currency} | Currency
-
 {zipcode} | Zipcode
-
 {bookingJSONObject} | Booking information serialized as a JSON object, assign it to a javascript variable. If serialization fails 
-
 {bookingJSONObject} | will be replaced by undefined, so guard for it.
 
 Example of {bookingJSONObject} usage: 
