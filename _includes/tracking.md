@@ -153,17 +153,23 @@ If you also have a container set up, you can continue from step 4.
   * Track Type: Event
   * Category: checkout
   * Action: 
+  
   ``
   checkout_step_{{checkoutstepvalue}}
   ``
+  
   * Label: 
+  
   ``
   {{checkoutoptionvalue}}
   ``
+  
   * Value: 
+  
   ``
   {{checkoutoptionvalue}}
   ``
+  
   * Google Analytics Settings -> Enable overriding settings in this tag: true
   * Tracking ID: your tracking ID from UA (UA-*******-**)
   * More Settings -> Ecommerce -> Enable Enhanced Ecommerce Features: True
