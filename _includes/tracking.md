@@ -76,6 +76,10 @@ _**NOTE: adding Google tracker id via your template page is not allowed. We what
 We just need to add the google tracking id for you when implementing a new Citybreak online.
 Need help to add this contact us!
 
+FYI:
+* We dont have anny google trackers active via our development ot tests enviromets. But we can setup a test online in product if requested.
+* Missing something? Pleace contact us with specified sample of you needs or what your are missing and why you need if. Then we will consider developming support to our default feature set.
+
 ### Enhanced e-commerce
 
 Citybreak has some support for enhance ecommerce and event tracking.
@@ -117,7 +121,8 @@ If you already have UA account set up, you only need to set up a view so skip to
 
 [ADD IMG] viewsettings.PNG
 
-### Setting up the GTM container
+### Setting up Google tag manager 
+
 If you already have account set up, you can continue from step 2.
 If you also have a container set up, you can continue from step 4.
 
@@ -147,9 +152,18 @@ If you also have a container set up, you can continue from step 4.
   * Tag Type: Google Analytics - Universal Analytics
   * Track Type: Event
   * Category: checkout
-  * Action: checkout_step_{{checkoutstepvalue}}
-  * Label: {{checkoutoptionvalue}}
-  * Value: {{checkoutoptionvalue}}
+  * Action: 
+  ``
+  checkout_step_{{checkoutstepvalue}}
+  ``
+  * Label: 
+  ``
+  {{checkoutoptionvalue}}
+  ``
+  * Value: 
+  ``
+  {{checkoutoptionvalue}}
+  ``
   * Google Analytics Settings -> Enable overriding settings in this tag: true
   * Tracking ID: your tracking ID from UA (UA-*******-**)
   * More Settings -> Ecommerce -> Enable Enhanced Ecommerce Features: True
@@ -180,7 +194,7 @@ By adding GTM tracking id to your guide you have instructed Citybreak online pla
 
 Add some stuff in their basket and when the basket page is loaded you can open the page's source and see that there is some javascript there that collects 'checkout' data for the first step.
 
-> Purchase output sample
+> Purchase event output sample
 
 ```html
 citybreak0dataLayer = [{
@@ -220,7 +234,3 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
                                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                                 })(window,document,'script','citybreak0dataLayer','GTM-[tracker_id]');
 ```
-
-FYI:
-* We dont have anny google trackers active via our development ot tests enviromets. But we can setup a test online in product if requested.
-* Missing something? Pleace contact us with specified sample of you needs or what your are missing and why you need if. Then we will consider developming support to our default feature set.
