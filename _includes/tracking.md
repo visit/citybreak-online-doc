@@ -50,11 +50,11 @@ Parameter | Description
 {bookingJSONObject} | Booking information serialized as a JSON object, assign it to a javascript variable. If serialization fails 
 {bookingJSONObject} | will be replaced by undefined, so guard for it.
 
-Example of {bookingJSONObject} usage: 
-
-var booking = {bookingJSONObject};
-Will generate:
-var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": 600.0, "TotalTax": 64.29, "Products": [{ "Id": 248466, "Name": "Testhotell/Enkelrum test", "Category": "Accommodation/Hotelroom", "Price": 600.0, "Quantity": 1, "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] };
+> Example of {bookingJSONObject} usage: 
+> 
+> var booking = {bookingJSONObject};
+> Will generate:
+> var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": 600.0, "TotalTax": 64.29, "Products": [{ "Id": 248466, "Name": "Testhotell/Enkelrum test", "Category": "Accommodation/Hotelroom", "Price": 600.0, "Quantity": 1, "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] };
 
 
 ```html
