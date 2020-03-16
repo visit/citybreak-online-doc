@@ -71,7 +71,7 @@ Citybreak online has build in standard support for google tracking.
 * Universal Analytics analytics.js
 * Google tag manager gtm.js
 
-_**NOTE: adding Google tracker id via your template page is not allowed.**_
+_**NOTE: adding Google tracker id via your template page is not allowed. We what to avoid dubble tracking**_
 
 We just need to add the google tracking id for you when implementing a new Citybreak online.
 Need help to add this contact us!
@@ -87,6 +87,7 @@ We keep track of the following GTM events:
 2. Checkout Step
 3. Checkout Step Option
 4. Purchase
+
 **Table1** describes pages where mentioned events are fired:
 
 Page View | Checkout Step | Checkout Step Option |	Purchase
@@ -125,57 +126,54 @@ If you also have a container set up, you can continue from step 4.
 3. Switch to Workspace tab
 4. Add Variables (name these to your liking or use the suggested ones - you will use them later on so make note):
 **checkoutstepvalue:**
-   Variable type: Data Layer Variable
-   Data Layer Variable Name: ecommerce.checkout.actionField.step
-   Data Layer Version: Version 2
+  * Variable type: Data Layer Variable
+  * Data Layer Variable Name: ecommerce.checkout.actionField.step
+  * Data Layer Version: Version 2
 **checkoutoptionvalue:**
-   Variable type: Data Layer Variable
-   Data Layer Variable Name: ecommerce.checkout_option.actionField.option
-   Data Layer Version: Version 2
-Add Triggers (name these to your liking or use the suggested ones):
-checkout:
-   Trigger type: Custom Event
-   Event name: checkout
-   Fires on: Event equals checkout
-checkoutoption:
-   Trigger type: Custom Event
-   Event name: checkoutOption
-   Fires on: Event equals checkoutOption
-Add Tags (name these to your liking or use the suggested ones):
-cbonlinecheckout:
-   Tag Type: Google Analytics - Universal Analytics
-   Track Type: Event
-   Category: checkout
-   Action: checkout_step_{{checkoutstepvalue}}
-   Label: {{checkoutoptionvalue}}
-   Value: {{checkoutoptionvalue}}
-   Google Analytics Settings -> Enable overriding settings in this tag: true
-   Tracking ID: your tracking ID from UA (UA-*******-**)
-   More Settings -> Ecommerce -> Enable Enhanced Ecommerce Features: True
-                                                           -> Use Data Layer: Checked
-   Firing Triggers -> Choose a trigger: checkout
-   Firing Triggers -> Choose a trigger: checkoutoption (2 triggers for one tag)
-cbonlinepageview:
-   Tag Type: Google Analytics - Universal Analytics
-   Track Type: Page View
-   Google Analytics Settings -> Enable overriding settings in this tag: true
-   Tracking ID: your tracking ID from UA (UA-*******-**)
-   Firing Triggers -> Choose a trigger: All Pages
+  * Variable type: Data Layer Variable
+  * Data Layer Variable Name: ecommerce.checkout_option.actionField.option
+  * Data Layer Version: Version 2
+5. Add Triggers (name these to your liking or use the suggested ones):
+**checkout:**
+  * Trigger type: Custom Event
+  * Event name: checkout
+  * Fires on: Event equals checkout
+**checkoutoption:**
+  * Trigger type: Custom Event
+  * Event name: checkoutOption
+  * Fires on: Event equals checkoutOption
+6. Add Tags (name these to your liking or use the suggested ones):
+**cbonlinecheckout:**
+  * Tag Type: Google Analytics - Universal Analytics
+  * Track Type: Event
+  * Category: checkout
+  * Action: checkout_step_{{checkoutstepvalue}}
+  * Label: {{checkoutoptionvalue}}
+  * Value: {{checkoutoptionvalue}}
+  * Google Analytics Settings -> Enable overriding settings in this tag: true
+  * Tracking ID: your tracking ID from UA (UA-*******-**)
+  * More Settings -> Ecommerce -> Enable Enhanced Ecommerce Features: True
+  * Use Data Layer: Checked
+  * Firing Triggers -> Choose a trigger: checkout
+  * Firing Triggers -> Choose a trigger: checkoutoption (2 triggers for one tag)
+**cbonlinepageview:**
+  * Tag Type: Google Analytics - Universal Analytics
+  * Track Type: Page View
+  * Google Analytics Settings -> Enable overriding settings in this tag: true
+  * Tracking ID: your tracking ID from UA (UA-*******-**)
+  * Firing Triggers -> Choose a trigger: All Pages
 [ADD IMG] tag.PNG
-Reading the event data
 
-You can look at the Real-Time reports. Be aware that every dimension you select under Real-Time, will behave as a filter.
-You can look at the Behaviour -> Events -> Overview
+### Reading the event data
 
+Look at the Real-Time reports. Be aware that every dimension you select under Real-Time, will behave as a filter.
+Behaviour -> Events -> Overview
 [ADD IMG] report.PNG
 
-You can look at the Conversions -> Ecommerce -> Checkout Behaviour
+* The Conversions -> Ecommerce -> Checkout Behaviour
+[ADD IMG] report.PNG
 
 **Need to add a tracker id or edit a exsiting one. Contact our support in we will help you**
-
-### Note 4:
-As of yet, we don't have an option to bring Universal Analytics to our test environment.
-It is only available in Production environment, since otherwise it would give our customers false tracking data.
 
 ### Conclusion
 By adding GTM tracking id to your guide you have instructed Citybreak online platform to render GTM stuff on your pages.
@@ -223,4 +221,6 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
                                 })(window,document,'script','citybreak0dataLayer','GTM-[tracker_id]');
 ```
 
-Missing something? Pleace contact us with sample of you needs or what your are missing and we will consider adding this to our default feature set. 
+FYI:
+* We dont have anny google trackers active via our development ot tests enviromets. But we can setup a test online in product if requested.
+* Missing something? Pleace contact us with specified sample of you needs or what your are missing and why you need if. Then we will consider developming support to our default feature set.
