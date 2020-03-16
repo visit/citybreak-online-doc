@@ -187,6 +187,8 @@ By adding GTM tracking id to your guide you have instructed Citybreak online pla
 For instance take a look at STF accommodation
 Add some stuff in their basket and when the basket page is loaded you can open the page's source and see that there is some javascript there that collects 'checkout' data for the first step.
 
+> Purchase output sample
+
 ```html
 citybreak0dataLayer = [{
 'onlineGuide': '********',
