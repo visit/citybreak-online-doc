@@ -33,7 +33,7 @@ Widget link sample
 
 ## Custom conversion tracking
 
-To make your script work for your organization you need to configure it. To do so you need to change the variables in your script with the variable names below.
+To make your script work for your organization you need to configure it. To do so you need to change the variables in your script with the variable names below. This custum scripts are added to the booking confirmaiton page.
 
 
 Parameter | Description
@@ -66,19 +66,21 @@ Parameter | Description
 
 ## Google tracking
 
-Citybreak online has build in standard support fro google tracking.
+Citybreak online has build in standard support for google tracking.
 * Google analytics ga.js
 * Universal Analytics analytics.js
 * Google tag manager gtm.js
 
-We just need to add the google tracking id 
+_**NOTE: adding Google tracker id via your template page is not allowed.**_
 
-### Universal Analytics
+We just need to add the google tracking id for you when implementing a new Citybreak online.
+Need help to add this contact us!
 
-### How does it work?
-**Here we are discussing usage of Google accounts for Universal Analytics in Citybreak online. These are not to be mistaken for Google accounts for Google Analytics whitch is deprecated by Google themselves.**
+### Enhanced e-commerce
 
-Citybreak online guides are able to keep track of user behaviour in Citybreak online web pages and send them to Universal Analytics account, by using Google Tag Manager container(s). Citybreak online supports single and multiple GTMs on page.
+Citybreak has some support for enhance ecommerce and event tracking.
+
+Citybreak online are able to keep track of user behaviour in Citybreak online web pages and send them to Universal Analytics account, by using Google Tag Manager container(s). Citybreak online supports single and multiple GTMs on page.
 We keep track of the following GTM events:
 
 1. Page View
@@ -184,8 +186,8 @@ Add some stuff in their basket and when the basket page is loaded you can open t
 
 ```html
 citybreak0dataLayer = [{
-'onlineGuide': '********',
-'organizationId': '*****',
+'onlineGuide': '[citybreak_online_id]',
+'organizationId': '[citybreak_organization_id]',
 'culture': 'en-GB'
 }];
 
@@ -200,7 +202,7 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
    'products': [{
     'name': "Hotel_name/room_name",
     'id': '******',                    
-    'price': '###,00',
+    'price': '1234,00',
     'category': "Accommodation/Room",
     'quantity': 2
     }]
@@ -218,5 +220,7 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
                                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                                })(window,document,'script','citybreak0dataLayer','GTM-******');
+                                })(window,document,'script','citybreak0dataLayer','GTM-[tracker_id]');
 ```
+
+Missing something? Pleace contact us with sample of you needs or what your are missing and we will consider adding this to our default feature set. 
