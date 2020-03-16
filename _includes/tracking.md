@@ -31,7 +31,7 @@ Widget link sample
 [subdomain].[domain].[topdomain]/[culture]/[widgettype]/searchform?tid=mytrackingkey
 ``
 
-## Custom Conversion Tracking
+## Custom conversion tracking
 
 To make your script work for your organization you need to configure it. To do so you need to change the variables in your script with the variable names below.
 
@@ -54,7 +54,7 @@ Parameter | Description
 > 
 > var booking = {bookingJSONObject};
 > Will generate:
-> var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": 600.0, "TotalTax": 64.29, "Products": [{ "Id": 248466, "Name": "Testhotell/Enkelrum test", "Category": "Accommodation/Hotelroom", "Price": 600.0, "Quantity": 1, "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] };
+> var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": 600.0, "TotalTax": 64.29, "Products": [{ "Id": 248466, "Name": "Hotell_name/room_name", "Category": "Accommodation/Hotelroom", "Price": 600.0, "Quantity": 1, "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] };
 
 
 ```html
