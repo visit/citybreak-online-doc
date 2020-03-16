@@ -130,7 +130,7 @@ The currenly active language is inserted prepended by cb_lang_ , e.g cb_lang_sv 
 The currently active section is indicate with a cb_ prefix followed by the name of the section. The following values are used:
 
 Section | Class 
---------- | ------
+--------- | ---------
 Accommodation | cb_accommodation
 Basket | cb_checkout
 Basket & Payment pages | cb_basket
