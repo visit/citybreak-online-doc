@@ -129,16 +129,19 @@ If you also have a container set up, you can continue from step 4.
 1. Open Tag Manager and in Admin console create new account
 2. Set up a container name and select Web
 3. Switch to Workspace tab
-4. Add Variables (name these to your liking or use the suggested ones - you will use them later on so make note):
+4. **Add Variables (name these to your liking or use the suggested ones - you will use them later on so make note):**
+
 **checkoutstepvalue:**
   * Variable type: Data Layer Variable
   * Data Layer Variable Name: ecommerce.checkout.actionField.step
   * Data Layer Version: Version 2
+  
 **checkoutoptionvalue:**
   * Variable type: Data Layer Variable
   * Data Layer Variable Name: ecommerce.checkout_option.actionField.option
   * Data Layer Version: Version 2
-5. Add Triggers (name these to your liking or use the suggested ones):
+5. **Add Triggers (name these to your liking or use the suggested ones):**
+
 **checkout:**
   * Trigger type: Custom Event
   * Event name: checkout
@@ -147,7 +150,8 @@ If you also have a container set up, you can continue from step 4.
   * Trigger type: Custom Event
   * Event name: checkoutOption
   * Fires on: Event equals checkoutOption
-6. Add Tags (name these to your liking or use the suggested ones):
+6. **Add Tags (name these to your liking or use the suggested ones):**
+
 **cbonlinecheckout:**
   * Tag Type: Google Analytics - Universal Analytics
   * Track Type: Event
