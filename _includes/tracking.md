@@ -84,11 +84,13 @@ We keep track of the following GTM events:
 4. Purchase
 **Table1** describes pages where mentioned events are fired:
 
-Page View	Checkout Step 	Checkout Step Option 	Purchase
- All pages (on load)	Group Basket; (on load)
+Page View | Checkout Step | Checkout Step Option |	Purchase
+--------- | ------ | ----------- | -----------
+All pages (on load)	| Group Basket; (on load)
 Payment Details; (on load)
-Confirmation; (on load)	Payment Details* (on successfull
-                                     form submit)	Confirmation (on load)
+Confirmation; (on load)	| Payment Details* (on successfull
+                                     form submit)	| Confirmation (on load)
+                                     
 * Payment details page may have 2 dimensions that are of interest: Payment Type (full payment, down payment ...) and Payment Option (VISA, Master, Paypal ...). We are firing GTM events for each of the present dimensions.
 
 Setting up the UA account
