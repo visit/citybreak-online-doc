@@ -70,9 +70,7 @@ General description
 
 ### Universal Analytics
 
-How does it work?
-
-### Note 1:
+### How does it work?
 **Here we are discussing usage of Google accounts for Universal Analytics in Citybreak online. These are not to be mistaken for Google accounts for Google Analytics whitch is deprecated by Google themselves.**
 
 Citybreak online guides are able to keep track of user behaviour in Citybreak online web pages and send them to Universal Analytics account, by using Google Tag Manager container(s). Citybreak online supports single and multiple GTMs on page.
@@ -90,30 +88,28 @@ All pages (on load)	| Group Basket; (on load) | Payment Details* (on successfull
  | Payment Details; (on load) | |
  | Confirmation; (on load) | |
  
-* Payment details page may have 2 dimensions that are of interest: Payment Type (full payment, down payment ...) and Payment Option (VISA, Master, Paypal ...). We are firing GTM events for each of the present dimensions.
+**Payment details page may have 2 dimensions that are of interest: Payment Type (full payment, down payment ...) and Payment Option (VISA, Master, Paypal ...). We are firing GTM events for each of the present dimensions.**
 
-Setting up the UA account
+### Setting up the UA account
 
-### Note 2:
 If you already have UA account set up, you only need to set up a view so skip to step 5.
 
 Sign in to your Google Marketing Platform and select product Analytics.
 Under the Admin console create account, by giving it a name and saving it.
 Create a property, by naming it. I suggest to enable user metrics in reporting.
-Make a note of the Tracking Id (UA-*******-**) of your property. You will need it later.
-Create a view (or use the default one called All Web Site Data), by:
-   a) specifing the domain URL
-   b) Enable Ecommerce
-   c) Enable Enhanced Ecommerce Reporting
-   d) Add labels for Checkout process, just in order for you to keep track of steps.
-      1) /basket
-      2) /customerinformation
-      3) /confirmation  
-viewsettings.PNG
- 
-Setting up the GTM container
+Make a note of the Tracking Id (UA-*******-**) of your property. You will need it later. 
 
-### Note 3:
+Create a view (or use the default one called All Web Site Data), by:
+   1. specifing the domain URL
+   2. Enable Ecommerce
+   3. Enable Enhanced Ecommerce Reporting
+   4. Add labels for Checkout process, just in order for you to keep track of steps.
+      1. /basket
+      2. /customerinformation
+      3. /confirmation  
+viewsettings.PNG
+
+### Setting up the GTM container
 If you already have account set up, you can continue from step 2.
 If you also have a container set up, you can continue from step 4.
 
