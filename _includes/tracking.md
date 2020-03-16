@@ -1,10 +1,10 @@
 # Tracking
 
-DOCS IN PROGRESS
+Citybreak online support the basic google tracking and has a few custom build options that can be used.
 
 ## Booking tracking id
 
-The booking tracking feature is a simple way for a client to track whether or not certain reservations were referred to by a tracking key or not
+The booking tracking feature is a simple way for a client to track whether or not certain bookings were referred to by a tracking key or not.
 
 A tracking key is a text string which could be any value, it could be provided through a direct link or within a widget.
 
@@ -18,19 +18,14 @@ Referral statistics can be obtained by creating one of following reports in <htt
 
 Within these reports there's a column which represents which tracking key was used on a booking level, if there was one present.
 
-Direct link sample
+**Direct link sample**
+``
 [subdomain].[domain].[topdomain]/[culture]/[Citybreak guide]?**tid=mytrackingkey**
-
-``
-//bokning.oringen.se/en/todo?tid=mytrackingkey
 ``
 
-Widget link sample
-[subdomain].[domain].[topdomain]/[culture]/eventwidget/searchform?**tid=mytrackingkey**
-
+**Widget link sample**
 ``
-//bokning.oringen.se/en/activitywidget/searchform?tid=mytrackingkey
-
+[subdomain].[domain].[topdomain]/[culture]/[widgettype]/searchform?**tid=mytrackingkey**
 ``
 
 ## Custom Conversion Tracking
