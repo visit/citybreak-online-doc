@@ -99,13 +99,13 @@ If you already have UA account set up, you only need to set up a view so skip to
 3. Create a property, by naming it. I suggest to enable user metrics in reporting.
 4. Make a note of the Tracking Id (UA-*******-**) of your property. You will need it later. 
 5. Create a view (or use the default one called All Web Site Data), by:
- 1. specifing the domain URL
- 2. Enable Ecommerce
- 3. Enable Enhanced Ecommerce Reporting
- 4. Add labels for Checkout process, just in order for you to keep track of steps.
-  1. /basket
-  2. /customerinformation
-  3. /confirmation  
+   1. specifing the domain URL
+   2. Enable Ecommerce
+   3. Enable Enhanced Ecommerce Reporting
+   4. Add labels for Checkout process, just in order for you to keep track of steps.
+      1. /basket
+      2. /customerinformation
+      3. /confirmation  
 viewsettings.PNG
 
 ### Setting up the GTM container
