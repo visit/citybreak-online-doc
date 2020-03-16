@@ -73,15 +73,16 @@ General description
 How does it work?
 
 ### Note 1:
-Here we are discussing usage of Google accounts for Universal Analytics in Citybreak online. These are not to be mistaken for Google accounts for Google Analytics whitch is deprecated by Google themselves.
+**Here we are discussing usage of Google accounts for Universal Analytics in Citybreak online. These are not to be mistaken for Google accounts for Google Analytics whitch is deprecated by Google themselves.**
+
 Citybreak online guides are able to keep track of user behaviour in Citybreak online web pages and send them to Universal Analytics account, by using Google Tag Manager container(s). Citybreak online supports single and multiple GTMs on page.
 We keep track of the following GTM events:
 
-* Page View
-* Checkout Step
-* Checkout Step Option
-* Purchase
-* Table1 describes pages where mentioned events are fired:
+1. Page View
+2. Checkout Step
+3. Checkout Step Option
+4. Purchase
+**Table1** describes pages where mentioned events are fired:
 
 Page View	Checkout Step 	Checkout Step Option 	Purchase
  All pages (on load)	Group Basket; (on load)
