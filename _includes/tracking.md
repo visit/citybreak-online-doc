@@ -129,63 +129,50 @@ If you also have a container set up, you can continue from step 4.
 1. Open Tag Manager and in Admin console create new account
 2. Set up a container name and select Web
 3. Switch to Workspace tab
-4. **Add Variables (name these to your liking or use the suggested ones - you will use them later on so make note):**
+4. Add Variables (name these to your liking or use the suggested ones - you will use them later on so make note):
 
 **checkoutstepvalue:**
-  * Variable type: Data Layer Variable
-  * Data Layer Variable Name: ecommerce.checkout.actionField.step
-  * Data Layer Version: Version 2
+  * **Variable type:** Data Layer Variable
+  * **Data Layer Variable Name:** ecommerce.checkout.actionField.step
+  * **Data Layer Version:** Version 2
   
 **checkoutoptionvalue:**
-  * Variable type: Data Layer Variable
-  * Data Layer Variable Name: ecommerce.checkout_option.actionField.option
-  * Data Layer Version: Version 2
-5. **Add Triggers (name these to your liking or use the suggested ones):**
+  * **Variable type:** Data Layer Variable
+  * **Data Layer Variable Name:** ecommerce.checkout_option.actionField.option
+  * **Data Layer Version:** Version 2
+5. Add Triggers (name these to your liking or use the suggested ones):
 
 **checkout:**
-  * Trigger type: Custom Event
-  * Event name: checkout
-  * Fires on: Event equals checkout
+  * **Trigger type:** Custom Event
+  * **Event name:** checkout
+  * **Fires on:** Event equals checkout
+  
 **checkoutoption:**
-  * Trigger type: Custom Event
-  * Event name: checkoutOption
-  * Fires on: Event equals checkoutOption
-6. **Add Tags (name these to your liking or use the suggested ones):**
+  * **Trigger type:** Custom Event
+  * **Event name:** checkoutOption
+  * **Fires on:** Event equals checkoutOption
+6. Add Tags (name these to your liking or use the suggested ones):
 
 **cbonlinecheckout:**
-  * Tag Type: Google Analytics - Universal Analytics
-  * Track Type: Event
-  * Category: checkout
-  * Action: 
+  * **Tag Type:** Google Analytics - Universal Analytics
+  * **Track Type:** Event
+  * **Category:** checkout
+  * **Action:** checkout_step_{{checkoutstepvalue}}
+  * **Label:** {{checkoutoptionvalue}}
+  * **Value:** {{checkoutoptionvalue}}
+  * **Google Analytics Settings -> Enable overriding settings in this tag:** true
+  * **Tracking ID:** your tracking ID from UA (UA-*******-**)
+  * **More Settings -> Ecommerce -> Enable Enhanced Ecommerce Features:** True
+  * **Use Data Layer:** Checked
+  * **Firing Triggers -> Choose a trigger:** checkout
+  * **Firing Triggers -> Choose a trigger:** checkoutoption (2 triggers for one tag)
   
-  ``
-  checkout_step_{{checkoutstepvalue}}
-  ``
-  
-  * Label: 
-  
-  ``
-  {{checkoutoptionvalue}}
-  ``
-  
-  * Value: 
-  
-  ``
-  {{checkoutoptionvalue}}
-  ``
-  
-  * Google Analytics Settings -> Enable overriding settings in this tag: true
-  * Tracking ID: your tracking ID from UA (UA-*******-**)
-  * More Settings -> Ecommerce -> Enable Enhanced Ecommerce Features: True
-  * Use Data Layer: Checked
-  * Firing Triggers -> Choose a trigger: checkout
-  * Firing Triggers -> Choose a trigger: checkoutoption (2 triggers for one tag)
 **cbonlinepageview:**
-  * Tag Type: Google Analytics - Universal Analytics
-  * Track Type: Page View
-  * Google Analytics Settings -> Enable overriding settings in this tag: true
-  * Tracking ID: your tracking ID from UA (UA-*******-**)
-  * Firing Triggers -> Choose a trigger: All Pages
+  * **Tag Type:** Google Analytics - Universal Analytics
+  * **Track Type:** Page View
+  * **Google Analytics Settings -> Enable overriding settings in this tag:** true
+  * **Tracking ID:** your tracking ID from UA (UA-*******-**)
+  * **Firing Triggers -> Choose a trigger:** All Pages
 [ADD IMG] tag.PNG
 
 ### Reading the event data
@@ -199,10 +186,7 @@ Behaviour -> Events -> Overview
 
 **Need to add a tracker id or edit a exsiting one. Contact our support in we will help you**
 
-### Conclusion
-By adding GTM tracking id to your guide you have instructed Citybreak online platform to render GTM stuff on your pages.
-
-Add some stuff in their basket and when the basket page is loaded you can open the page's source and see that there is some javascript there that collects 'checkout' data for the first step.
+### Purchase output sample
 
 > Purchase event output sample
 
