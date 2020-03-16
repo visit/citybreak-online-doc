@@ -194,6 +194,7 @@ Behaviour -> Events -> Overview
 > Purchase event output sample
 
 ```html
+<script>
 citybreak0dataLayer = [{
 'onlineGuide': '[citybreak_online_id]',
 'organizationId': '[citybreak_organization_id]',
@@ -230,4 +231,5 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
                                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                                 })(window,document,'script','citybreak0dataLayer','GTM-[tracker_id]');
+ </script>
 ```
