@@ -37,7 +37,7 @@ To make your script work for your organization you need to configure it. To do s
 
 
 Parameter | Description
---------- | ------ 
+--------- | --------- 
 {bookingcode} | Booking number, e.g. ABCD12.
 {bookingvalue} | Total sum of customers booking.
 {customerfirstname} | Customers first name
@@ -83,10 +83,10 @@ We keep track of the following GTM events:
 **Table1** describes pages where mentioned events are fired:
 
 Page View | Checkout Step | Checkout Step Option |	Purchase
---------- | ------ | ----------- | -----------
+--------- | --------- | --------- | ---------
 All pages (on load)	| Group Basket; (on load) | Payment Details* (on successfull form submit)	| Confirmation (on load)
- | Payment Details; (on load) | |
- | Confirmation; (on load) | |
+ | Payment Details; (on load) | | 
+ | Confirmation; (on load) | | 
  
 **Payment details page may have 2 dimensions that are of interest: Payment Type (full payment, down payment ...) and Payment Option (VISA, Master, Paypal ...). We are firing GTM events for each of the present dimensions.**
 
@@ -106,7 +106,8 @@ If you already have UA account set up, you only need to set up a view so skip to
      * /basket
      * /customerinformation
      * /confirmation  
-viewsettings.PNG
+
+[ADD IMG] viewsettings.PNG
 
 ### Setting up the GTM container
 If you already have account set up, you can continue from step 2.
@@ -153,33 +154,34 @@ cbonlinepageview:
    Google Analytics Settings -> Enable overriding settings in this tag: true
    Tracking ID: your tracking ID from UA (UA-*******-**)
    Firing Triggers -> Choose a trigger: All Pages
-tag.PNG
+[ADD IMG] tag.PNG
 Reading the event data
 
 You can look at the Real-Time reports. Be aware that every dimension you select under Real-Time, will behave as a filter.
 You can look at the Behaviour -> Events -> Overview
 
-report.PNG
+[ADD IMG] report.PNG
 You can look at the Conversions -> Ecommerce -> Checkout Behaviour
 
-conversions.PNG
+[ADD IMG] conversions.PNG
 Every Day Usage (Salespoint administrator role)
-Log into V2
+Log into <https://admin.citybreak.com>
 Point of sales setting
 Online administration
 Find and select your guide
 Administrate tracking
 
-settings.PNG
+[ADD IMG]  settings.PNG
+
 Add your GTM tracking id
 
-addgtm.PNG
+[ADD IMG] gtm.PNG
 
 ### Note 4:
 As of yet, we don't have an option to bring Universal Analytics to our test environment.
 It is only available in Production environment, since otherwise it would give our customers false tracking data.
 
-Conclusion
+### Conclusion
 By adding GTM tracking id to your guide you have instructed Citybreak online platform to render GTM stuff on your pages.
 For instance take a look at STF accommodation
 Add some stuff in their basket and when the basket page is loaded you can open the page's source and see that there is some javascript there that collects 'checkout' data for the first step.
