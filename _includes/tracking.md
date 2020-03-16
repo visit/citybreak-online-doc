@@ -119,12 +119,14 @@ If you already have UA account set up, you only need to set up a view so skip to
      * /customerinformation
      * /confirmation  
 
-[ADD IMG] viewsettings.PNG
+![Sample](//visit.github.io/citybreak-online-doc/images/ga1.png "Sample")
 
 ### Setting up Google tag manager 
 
 If you already have account set up, you can continue from step 2.
 If you also have a container set up, you can continue from step 4.
+
+![Sample](//visit.github.io/citybreak-online-doc/images/ga2.png "Sample")
 
 1. Open Tag Manager and in Admin console create new account
 2. Set up a container name and select Web
@@ -173,16 +175,21 @@ If you also have a container set up, you can continue from step 4.
   * **Google Analytics Settings -> Enable overriding settings in this tag:** true
   * **Tracking ID:** your tracking ID from UA (UA-*******-**)
   * **Firing Triggers -> Choose a trigger:** All Pages
-[ADD IMG] tag.PNG
+
+![Sample](//visit.github.io/citybreak-online-doc/images/ga3.png "Sample")
+![Sample](//visit.github.io/citybreak-online-doc/images/ga4.png "Sample")
+
 
 ### Reading the event data
 
 Look at the Real-Time reports. Be aware that every dimension you select under Real-Time, will behave as a filter.
 Behaviour -> Events -> Overview
-[ADD IMG] report.PNG
+
+![Sample](//visit.github.io/citybreak-online-doc/images/ga5.png "Sample")
 
 * The Conversions -> Ecommerce -> Checkout Behaviour
-[ADD IMG] report.PNG
+
+![Sample](//visit.github.io/citybreak-online-doc/images/ga6.png "Sample")
 
 **Need to add a tracker id or edit a exsiting one. Contact our support in we will help you**
 
