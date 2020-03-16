@@ -18,49 +18,54 @@ Referral statistics can be obtained by creating one of following reports in <htt
 
 Within these reports there's a column which represents which tracking key was used on a booking level, if there was one present.
 
-**Direct link sample**
+Paramerter:
+**?tid=[your value]**
+
+Direct link sample
 ``
-[subdomain].[domain].[topdomain]/[culture]/[Citybreak guide]?**tid=mytrackingkey**
+[subdomain].[domain].[topdomain]/[culture]/[Citybreak guide]?tid=mytrackingkey
 ``
 
-**Widget link sample**
+Widget link sample
 ``
-[subdomain].[domain].[topdomain]/[culture]/[widgettype]/searchform?**tid=mytrackingkey**
+[subdomain].[domain].[topdomain]/[culture]/[widgettype]/searchform?tid=mytrackingkey
 ``
 
 ## Custom Conversion Tracking
 
 To make your script work for your organization you need to configure it. To do so you need to change the variables in your script with the variable names below.
 
-``
-{bookingcode} = Booking number, e.g. ABCD12.
 
-{bookingvalue} = Total sum of customers booking.
+Parameter | Description
+--------- | ------ 
+{bookingcode} | Booking number, e.g. ABCD12.
 
-{customerfirstname} = Customers first name
+{bookingvalue} | Total sum of customers booking.
 
-{customersurname} = Customers surname
+{customerfirstname} | Customers first name
 
-{randomnumber} = Generates a random number
+{customersurname} | Customers surname
 
-{date} = Time stamp
+{randomnumber} | Generates a random number
 
-{isodate} = Time stamp (yyyy-MM-dd)
+{date} | Time stamp
 
-{currency} = Currency
+{isodate} | Time stamp (yyyy-MM-dd)
 
-{zipcode} = Zipcode
+{currency} | Currency
 
-{bookingJSONObject} = Booking information serialized as a JSON object, assign it to a javascript variable. If serialization fails 
+{zipcode} | Zipcode
 
-{bookingJSONObject} will be replaced by undefined, so guard for it.
+{bookingJSONObject} | Booking information serialized as a JSON object, assign it to a javascript variable. If serialization fails 
+
+{bookingJSONObject} | will be replaced by undefined, so guard for it.
 
 Example of {bookingJSONObject} usage: 
 
 var booking = {bookingJSONObject};
 Will generate:
 var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": 600.0, "TotalTax": 64.29, "Products": [{ "Id": 248466, "Name": "Testhotell/Enkelrum test", "Category": "Accommodation/Hotelroom", "Price": 600.0, "Quantity": 1, "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] };
-``
+
 
 ```html
 <script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}"></script>
