@@ -187,7 +187,7 @@ By adding GTM tracking id to your guide you have instructed Citybreak online pla
 For instance take a look at STF accommodation
 Add some stuff in their basket and when the basket page is loaded you can open the page's source and see that there is some javascript there that collects 'checkout' data for the first step.
 
-
+```html
 citybreak0dataLayer = [{
 'onlineGuide': '********',
 'organizationId': '*****',
@@ -203,10 +203,10 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
     },
    'currencyCode': 'SEK',
    'products': [{
-    'name': "STF Abisko Mountain Station/Dormitory bed, dogs allowed, economy",
+    'name': "Hotel_name/room_name",
     'id': '******',                    
     'price': '###,00',
-    'category': "Accommodation/HostelBed",
+    'category': "Accommodation/Room",
     'quantity': 2
     }]
    }
@@ -224,3 +224,4 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
                                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                                 })(window,document,'script','citybreak0dataLayer','GTM-******');
+```
