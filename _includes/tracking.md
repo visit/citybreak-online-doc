@@ -66,7 +66,12 @@ Parameter | Description
 
 ## Google tracking
 
-General description
+Citybreak online has build in standard support fro google tracking.
+* Google analytics ga.js
+* Universal Analytics analytics.js
+* Google tag manager gtm.js
+
+We just need to add the google tracking id 
 
 ### Universal Analytics
 
@@ -113,15 +118,15 @@ If you already have UA account set up, you only need to set up a view so skip to
 If you already have account set up, you can continue from step 2.
 If you also have a container set up, you can continue from step 4.
 
-Open Tag Manager and in Admin console create new account
-Set up a container name and select Web
-Switch to Workspace tab
-Add Variables (name these to your liking or use the suggested ones - you will use them later on so make note):
-checkoutstepvalue:
+1. Open Tag Manager and in Admin console create new account
+2. Set up a container name and select Web
+3. Switch to Workspace tab
+4. Add Variables (name these to your liking or use the suggested ones - you will use them later on so make note):
+**checkoutstepvalue:**
    Variable type: Data Layer Variable
    Data Layer Variable Name: ecommerce.checkout.actionField.step
    Data Layer Version: Version 2
-checkoutoptionvalue:
+**checkoutoptionvalue:**
    Variable type: Data Layer Variable
    Data Layer Variable Name: ecommerce.checkout_option.actionField.option
    Data Layer Version: Version 2
@@ -161,21 +166,10 @@ You can look at the Real-Time reports. Be aware that every dimension you select 
 You can look at the Behaviour -> Events -> Overview
 
 [ADD IMG] report.PNG
+
 You can look at the Conversions -> Ecommerce -> Checkout Behaviour
 
-[ADD IMG] conversions.PNG
-Every Day Usage (Salespoint administrator role)
-Log into <https://admin.citybreak.com>
-Point of sales setting
-Online administration
-Find and select your guide
-Administrate tracking
-
-[ADD IMG]  settings.PNG
-
-Add your GTM tracking id
-
-[ADD IMG] gtm.PNG
+**Need to add a tracker id or edit a exsiting one. Contact our support in we will help you**
 
 ### Note 4:
 As of yet, we don't have an option to bring Universal Analytics to our test environment.
@@ -183,7 +177,7 @@ It is only available in Production environment, since otherwise it would give ou
 
 ### Conclusion
 By adding GTM tracking id to your guide you have instructed Citybreak online platform to render GTM stuff on your pages.
-For instance take a look at STF accommodation
+
 Add some stuff in their basket and when the basket page is loaded you can open the page's source and see that there is some javascript there that collects 'checkout' data for the first step.
 
 > Purchase output sample
