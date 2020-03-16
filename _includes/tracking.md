@@ -86,8 +86,8 @@ We keep track of the following GTM events:
 
 Page View | Checkout Step | Checkout Step Option |	Purchase
 --------- | ------ | ----------- | -----------
-All pages (on load)	| Group Basket; (on load), Payment Details; (on load), Confirmation; (on load)	| Payment Details* (on successfull
-                                     form submit)	| Confirmation (on load)
+- All pages (on load)	|  -Group Basket; (on load) - Payment Details; (on load) -Confirmation; (on load)	| - Payment Details* (on successfull
+                                     form submit)	| - Confirmation (on load)
                                      
 * Payment details page may have 2 dimensions that are of interest: Payment Type (full payment, down payment ...) and Payment Option (VISA, Master, Paypal ...). We are firing GTM events for each of the present dimensions.
 
