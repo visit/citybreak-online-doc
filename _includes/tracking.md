@@ -50,6 +50,7 @@ Parameter | Description
 {bookingJSONObject} | Booking information serialized as a JSON object, assign it to a javascript variable. If serialization fails 
 {bookingJSONObject} | will be replaced by undefined, so guard for it.
 
+
 > Example of {bookingJSONObject} usage: 
 > 
 > var booking = {bookingJSONObject};
@@ -58,7 +59,9 @@ Parameter | Description
 
 
 ```html
+
 <script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}"></script>
+
 ```
 
 ## Google tracking
@@ -69,16 +72,16 @@ General description
 
 How does it work?
 
-Note 1:
+### Note 1:
 Here we are discussing usage of Google accounts for Universal Analytics in Citybreak online. These are not to be mistaken for Google accounts for Google Analytics whitch is deprecated by Google themselves.
 Citybreak online guides are able to keep track of user behaviour in Citybreak online web pages and send them to Universal Analytics account, by using Google Tag Manager container(s). Citybreak online supports single and multiple GTMs on page.
 We keep track of the following GTM events:
 
-Page View
-Checkout Step
-Checkout Step Option
-Purchase
-Table1 describes pages where mentioned events are fired:
+* Page View
+* Checkout Step
+* Checkout Step Option
+* Purchase
+* Table1 describes pages where mentioned events are fired:
 
 Page View	Checkout Step 	Checkout Step Option 	Purchase
  All pages (on load)	Group Basket; (on load)
@@ -88,7 +91,8 @@ Confirmation; (on load)	Payment Details* (on successfull
 * Payment details page may have 2 dimensions that are of interest: Payment Type (full payment, down payment ...) and Payment Option (VISA, Master, Paypal ...). We are firing GTM events for each of the present dimensions.
 
 Setting up the UA account
-Note 2:
+
+### Note 2:
 If you already have UA account set up, you only need to set up a view so skip to step 5.
 
 Sign in to your Google Marketing Platform and select product Analytics.
@@ -107,7 +111,7 @@ viewsettings.PNG
  
 Setting up the GTM container
 
-Note 3:
+### Note 3:
 If you already have account set up, you can continue from step 2.
 If you also have a container set up, you can continue from step 4.
 
@@ -173,7 +177,8 @@ settings.PNG
 Add your GTM tracking id
 
 addgtm.PNG
-Note 4:
+
+### Note 4:
 As of yet, we don't have an option to bring Universal Analytics to our test environment.
 It is only available in Production environment, since otherwise it would give our customers false tracking data.
 
@@ -181,6 +186,7 @@ Conclusion
 By adding GTM tracking id to your guide you have instructed Citybreak online platform to render GTM stuff on your pages.
 For instance take a look at STF accommodation
 Add some stuff in their basket and when the basket page is loaded you can open the page's source and see that there is some javascript there that collects 'checkout' data for the first step.
+
 
 citybreak0dataLayer = [{
 'onlineGuide': '********',
