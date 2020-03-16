@@ -175,18 +175,17 @@ If you also have a container set up, you can continue from step 4.
   * **Firing Triggers -> Choose a trigger:** All Pages
 
 ![Sample](//visit.github.io/citybreak-online-doc/images/ga3.png "Sample")
-
+![Sample](//visit.github.io/citybreak-online-doc/images/ga7.PNG "Sample")
 ### Reading the event data
 
 Look at the Real-Time reports. Be aware that every dimension you select under Real-Time, will behave as a filter.
 Behaviour -> Events -> Overview
 
-![Sample](//visit.github.io/citybreak-online-doc/images/ga5.PNG "Sample")
-![Sample](//visit.github.io/citybreak-online-doc/images/ga7.PNG "Sample")
+![Sample](//visit.github.io/citybreak-online-doc/images/ga8.PNG "Sample")
 
 * The Conversions -> Ecommerce -> Checkout Behaviour
 
-![Sample](//visit.github.io/citybreak-online-doc/images/ga8.PNG "Sample")
+![Sample](//visit.github.io/citybreak-online-doc/images/ga6.PNG "Sample")
 
 **Need to add a tracker id or edit a exsiting one. Contact our support in we will help you**
 
