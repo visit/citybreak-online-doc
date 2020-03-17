@@ -33,7 +33,7 @@ Sample:
 https://{ONLINE-HOST}/en/api/products/bookablestatus/{CBIS-PRODUCT-ID}
 ``
 
-Sample output
+> Sample output
 
 ```html
 
