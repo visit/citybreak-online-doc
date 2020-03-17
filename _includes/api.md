@@ -16,8 +16,22 @@ https://{ONLINE-HOST}/en/link/product/{CBIS-PRODUCT-ID}
 ?format=xml
 
 **Link to a supplier package**
- https://{ONLINE3-HOST}/en/link/packagelight/{SUPPLIER-PACKAGE-ID}
+´´
+https://{ONLINE3-HOST}/en/link/packagelight/{SUPPLIER-PACKAGE-ID}
+´´
 
 ## Bookable status API
 
-Online bookable status API - with type - sample: https://www.kvitfjell.no/bestill/api/products/bookablestatus/1538217
+Online bookable status API - with type - sample: 
+
+´´
+https://{ONLINE-HOST}/en/api/products/bookablestatus/{CBIS-PRODUCT-ID}
+´´
+Sample output
+
+´´´html
+<BookableStatusResponse xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Citybreak.Online3.Web.ApiModels.Products">
+<BookingType>Todo</BookingType>
+<Status>Online3</Status>
+</BookableStatusResponse>
+´´´
