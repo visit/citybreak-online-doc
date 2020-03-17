@@ -23,12 +23,13 @@ Paramerter:
 
 Direct link sample
 ``
-[subdomain].[domain].[topdomain]/[culture]/[Citybreak guide]?tid=mytrackingkey
+https://[ONLINE-HOST]/[culture]/[Citybreak guide]?tid=mytrackingkey
 ``
+
 
 Widget link sample
 ``
-[subdomain].[domain].[topdomain]/[culture]/[widgettype]/searchform?tid=mytrackingkey
+https://[ONLINE-HOST]/[culture]/[widgettype]/searchform?tid=mytrackingkey
 ``
 
 ## Custom conversion tracking
