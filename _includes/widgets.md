@@ -63,6 +63,8 @@ This would send defaultCategoryId=1345 and defaultRoomCfg=2 to /accommodationwid
 
 The parameters have to be passed in the correct order, i.e. the value of the first "a" parameter will be passed to the first "c" parameter and so on. The parameters must exactly match, i.e. if you have three controllers ("c" parameters) you have to pass three actions ("a" parameters) and three parameter values ("p" parameters).
 
+> Combine widgets sample
+
 ```html
 <script type="text/javascript">
         (function() {
@@ -72,6 +74,8 @@ The parameters have to be passed in the correct order, i.e. the value of the fir
         })();
 </script>
 ```
+
+> Combine widget dive place holder sample
 
 ```html
 <div id="citybreak_accommodation_searchform_widget"></div>
