@@ -3,10 +3,12 @@
 ## Domain - DNS setup
 
 Add a DNS record with type CNAME and point to 
+
 ´´
 hosted01.citybreak.com
 ´´
-. When this is done Citybreak will connect the subdomain to your Citybreak online.
+
+When this is done Citybreak will connect the subdomain to your Citybreak online.
 
 [test your subdomain](http://kund.delat.se/online3/hosted)
 
