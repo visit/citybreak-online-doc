@@ -2,7 +2,7 @@
 
 ## Domain - DNS setup
 
-Add a DNS record with type CNAME and point to 
+Add a DNS record with type CNAME and point to
 
 ´´
 hosted01.citybreak.com
