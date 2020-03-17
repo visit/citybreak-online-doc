@@ -121,7 +121,7 @@ To make it harder for CSS class names to interfere, the Citybreak online team pr
 When using custom fonts in the header/footer template, access must be granted for your Citybreak online sub-domain. This applies to both 3rd party services such as Typekit, as well as hosted fonts declared via @font-face CSS rules.
 
 ### BodyCssClasses
-Online3 inserts some CSS classes into the class attribute of the Body element based on what section of Online3 is active. This enables you to do special styling based on the currently active section, and these values are also accessible from javascript. It also inserts the currently active language. The body tag always has a class of cb_citybreak_body when Online3 is active.
+Citybreak online inserts some CSS classes into the class attribute of the Body element based on what section of Citybreak online is active. This enables you to do special styling based on the currently active section, and these values are also accessible from javascript. It also inserts the currently active language. The body tag always has a class of cb_citybreak_body when Citybreak online is active.
 
 **Language**
 The currenly active language is inserted prepended by cb_lang_ , e.g cb_lang_sv or cb_lang_en
