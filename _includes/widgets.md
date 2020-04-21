@@ -4,6 +4,9 @@ Citybreak online comes with a set of standard widgets these widgets are fully cu
 
 The widgets are JavaScript widgets that are easy to integrate with a few lines of code.
 
+Make sure you only run ONE widget script at the time. 
+If you need to have more then one widget on the same page/view you can load and unload the scripts to handle this.
+
 ## Implementation
 
 To implement the widgets you need to add two things to your webpage:
