@@ -399,3 +399,45 @@ detail: {
     success: [bool] whether the product was added successfully to basket
 }
 ``
+## Dynamic package widgets
+
+Script and div resource differ per package type here is some samples
+
+### Accommodation Todo widget
+Script resource differ per package type
+``accommodationtodopackagewidget/searchform``
+
+Div tag Id:
+ ``citybreak_activity_transport_searchform_widget``
+
+#### Valid parameters
+**int cbisProductId**
+
+The id of the product/package to display the search form for.
+
+
+### Accommodation Ferry widget
+Script resource differ per package type
+``accommodationferrypackagewidget/searchform``
+
+Div tag Id:
+ ``citybreak_accommodation_ferry_package_searchform_widget``
+
+#### Valid parameters
+**int cbisProductId**
+
+The id of the product/package to display the search form for.
+
+```html
+<script type="text/javascript">
+    (function () {
+        var widget = document.createElement('script');
+        widget.type = 'text/javascript';
+        widget.async = true;
+        widget.src = '//[ONLINE-HOST]/[CULTURE]/accommodationferrypackagewidget/searchform?cbisProductId=[CBIS_ID]';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(widget, s);
+    })();
+</script>
+        <div id="citybreak_accommodation_ferry_package_searchform_widget"></div>
+```
