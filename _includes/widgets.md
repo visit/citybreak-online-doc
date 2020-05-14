@@ -280,6 +280,22 @@ Script resource ``activitytransportwidget/searchform``
 
 Div tag Id: ``citybreak_activity_transport_searchform_widget``
 
+```html
+<script type="text/javascript">
+		(function() { 
+			
+			var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
+            widget.src = 'https://[WIDGET_URL]' + '?cbisProductId=123456';
+			
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
+				
+		})(); 
+	</script>
+
+	<div id="citybreak_activity_transport_searchform_widget">
+	</div>
+```
+
 ### Valid parameters
 **int cbisProductId**
 
