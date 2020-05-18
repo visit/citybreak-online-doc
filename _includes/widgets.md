@@ -275,6 +275,28 @@ Div tag id: ``citybreak_basket_widget_summary``
 
 optional trigger id: ``citybreak_basket_widget_display``
 
+## Accommodation property / product widget
+Script resource ``AccommodationPropertyWidget/searchform``
+
+Div tag Id: ``citybreak_accommodation_property_widget``
+
+```html
+ <script type="text/javascript">
+  (function() {
+	try{
+	var widget = document.createElement('script');
+	widget.type = 'text/javascript';
+	widget.async = true;
+	widget.src = 'https://[WIDGET_URL]' + '?productid=123456';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(widget, s);
+	} catch {return;} })();							
+</script>
+
+<div id="citybreak_accommodation_property_widget"></div>
+```
+
+
 ## Activity transport product widget
 Script resource ``activitytransportwidget/searchform``
 
@@ -282,18 +304,14 @@ Div tag Id: ``citybreak_activity_transport_searchform_widget``
 
 ```html
 <script type="text/javascript">
-		(function() { 
-			
-			var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
-            widget.src = 'https://[WIDGET_URL]' + '?cbisProductId=123456';
-			
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
-				
-		})(); 
-	</script>
+	(function() { 		
+	var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
+        widget.src = 'https://[WIDGET_URL]' + '?cbisProductId=123456';		
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);			
+	})(); 
+</script>
 
-	<div id="citybreak_activity_transport_searchform_widget">
-	</div>
+<div id="citybreak_activity_transport_searchform_widget"></div>
 ```
 
 ### Valid parameters
