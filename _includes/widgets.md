@@ -442,7 +442,7 @@ Script resource differ per package type
 ``accommodationtodopackagewidget/searchform``
 
 Div tag Id:
- ``citybreak_activity_transport_searchform_widget``
+ ``citybreak_accommodation_todo_package_searchform_widget``
 
 #### Valid parameters
 **int cbisProductId**
