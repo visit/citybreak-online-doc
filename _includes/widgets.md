@@ -437,7 +437,7 @@ detail: {
 
 Script and div resource differ per package type here is some samples
 
-### Accommodation Todo widget
+### Accommodation Todo package widget
 Script resource differ per package type
 ``accommodationtodopackagewidget/searchform``
 
@@ -449,8 +449,19 @@ Div tag Id:
 
 The id of the product/package to display the search form for.
 
+### Todo Todo package widget
+Script resource differ per package type
+``todotodopackagewidget/searchform``
 
-### Accommodation Ferry widget
+Div tag Id:
+ ``citybreak_todo_todo_package_searchform_widget``
+
+#### Valid parameters
+**int cbisProductId**
+
+The id of the product/package to display the search form for.
+
+### Accommodation Ferry package widget
 Script resource differ per package type
 ``accommodationferrypackagewidget/searchform``
 
