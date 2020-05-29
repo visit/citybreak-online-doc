@@ -299,7 +299,7 @@ Div tag Id: ``citybreak_accommodation_property_widget``
 ![Accommodation property widget 3 collun design sample ](//visit.github.io/citybreak-online-doc/images/acc_prop_widget.png "Accommodaiton property widget")
 Its avaliable in 1,2 or 3 collum Style
 
-#### Valid parameters
+### Valid parameters
 **int ProductId**
 
 The CBIS id of the property/product to display the search form for.
