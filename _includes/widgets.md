@@ -295,7 +295,10 @@ Div tag Id: ``citybreak_accommodation_property_widget``
 
 <div id="citybreak_accommodation_property_widget"></div>
 ```
+#### Valid parameters
+**int ProductId**
 
+The CBIS id of the property/product to display the search form for.
 
 ## Activity transport product widget
 Script resource ``activitytransportwidget/searchform``
