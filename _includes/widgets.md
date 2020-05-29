@@ -295,6 +295,9 @@ Div tag Id: ``citybreak_accommodation_property_widget``
 
 <div id="citybreak_accommodation_property_widget"></div>
 ```
+
+![Accommodation propery widget sample ](//visit.github.io/citybreak-online-doc/images/acc_prop_widget.png "Accommodaiton property widget")
+
 #### Valid parameters
 **int ProductId**
 
