@@ -296,7 +296,8 @@ Div tag Id: ``citybreak_accommodation_property_widget``
 <div id="citybreak_accommodation_property_widget"></div>
 ```
 
-![Accommodation property widget sample ](//visit.github.io/citybreak-online-doc/images/acc_prop_widget.png "Accommodaiton property widget")
+![Accommodation property widget 3 collun design sample ](//visit.github.io/citybreak-online-doc/images/acc_prop_widget.png "Accommodaiton property widget")
+Its avaliable in 1,2 or 3 collum Style
 
 #### Valid parameters
 **int ProductId**
