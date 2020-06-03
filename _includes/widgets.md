@@ -346,10 +346,10 @@ Whether  field for entering promocode will be available/visible in the widget. I
 
 **bool? proceedToBasket**
 
-Whether to proceed to basket after booking. If not available, defaults to true.
+Whether to proceed to basket after . If not available, defaults to true.
 
-### Booking event
-Same as Booking event for Activity booking widget except the event is in this case ``'cb-activitytransport-booked'``.
+### Booking event listner
+You may also customize the booking process (same Activity product widget below) as the  with the proceedToBasket option and ``'cb-activitytransport-booked'``.
 
 ## Activity product widget
 This widget does not take a product id as parameter, instead you initialize it with javascript. This enables you to show multiple booking widgets on the same page.
@@ -407,7 +407,7 @@ To initialize a widget, create a container for the product and run initContainer
 ``
 
 ### Booking event
-You may also customize the booking process with the proceedToBasket option and cb-activity-booked event.
+You may also customize the booking process with the proceedToBasket option and ``'cb-activity-booked'`` event.
 
 ```html
 <script type="text/javascript">
