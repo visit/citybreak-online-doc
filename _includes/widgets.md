@@ -396,7 +396,13 @@ To initialize a widget, create a container for the product and run initContainer
 
 **Valid options to initContainer are:**
 
-``
+cbisProductId: [required, int] a CBIS product id,
+proceedToBasket: [bool] whether to proceed to basket after booking, defaults to true,
+defaultDate: [date] a default selected date (Use JS new date format),
+startDate: [date] minimum selectable date,
+endDate: [date] maximum selectable date
+
+```html
 {
   cbisProductId: [required, int] a CBIS product id,
   proceedToBasket: [bool] whether to proceed to basket after booking, defaults to true,
@@ -404,7 +410,7 @@ To initialize a widget, create a container for the product and run initContainer
   startDate: [date] minimum selectable date,
   endDate: [date] maximum selectable date
 }
-``
+```
 
 ### Booking event
 You may also customize the booking process with the proceedToBasket option and ``'cb-activity-booked'`` event.
@@ -432,14 +438,20 @@ You may also customize the booking process with the proceedToBasket option and `
 ```
 
 **The cb-activity-booked event receives:**
-``
+
+cbisProductId: a CBIS product id of the booked product,
+basketProductIds: a list of resulting basket product ids,
+complementaryUrl: url to complementary page (will redirect to basket if no complementary options are available),
+success: [bool] whether the product was added successfully to basket
+    
+```html
 detail: {
     cbisProductId: a CBIS product id of the booked product,
     basketProductIds: a list of resulting basket product ids,
     complementaryUrl: url to complementary page (will redirect to basket if no complementary options are available),
     success: [bool] whether the product was added successfully to basket
 }
-``
+```
 ## Dynamic package widgets
 
 Script and div resource differ per package type here is some samples
