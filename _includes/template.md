@@ -31,7 +31,7 @@ _NOTE: Consultning or troubleshooting a tempate will be debited with standard ho
 #### Language select feature
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ``cb_replace_languages_select`` is encountered).
 
-note: not supported in one domain implementations
+_Note: not supported in one domain implementations_
 
 #### Reference currency
 Reference currency select feature (if multiple refence currency’s are configured for the specific guide and a span with id attribute ``cb_replace_referencecurrency_select`` is encountered).
@@ -40,6 +40,7 @@ This can also be implemented by adding a parameter to the CB online URLs.
 
 Parameter
 - refcur
+
 Values sample:
 - EUR
 - SEK
@@ -49,7 +50,7 @@ etc.
 
 ``https://[CBONLINE_URL]?refcur=EUR``
 
-Note: not supported in one domain implementations
+_Note: not supported in one domain implementations_
 
 ### Features
 * Relative href/src rewriting.
