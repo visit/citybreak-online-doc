@@ -27,7 +27,29 @@ This will be the placeholder where the Citybreak online booking engine will be i
 _NOTE: Consultning or troubleshooting a tempate will be debited with standard hour rate._
 
 ### Optional functionality
+
+#### Language select feature
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ``cb_replace_languages_select`` is encountered).
+
+note: not supported in one domain implementations
+
+#### Reference currency
+Reference currency select feature (if multiple refence currency’s are configured for the specific guide and a span with id attribute ``cb_replace_referencecurrency_select`` is encountered).
+
+This can also be implemented by adding a parameter to the CB online URLs.
+
+Parameter
+- refcur
+Values sample:
+- EUR
+- SEK
+- NOK
+- USD
+etc.
+
+``https://[CBONLINE_URL]?refcur=EUR``
+
+Note: not supported in one domain implementations
 
 ### Features
 * Relative href/src rewriting.
