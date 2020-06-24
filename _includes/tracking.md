@@ -236,7 +236,7 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
 ```
 ### Booking confimation page urls
 
-http(s)://[CB online url]/[Lang/Culture]/confirmation....
+``http(s)://[CB online url]/[Lang/Culture]/confirmation...``
 
 Language | url
 --------- | ---------
