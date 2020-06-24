@@ -234,3 +234,23 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
                                 })(window,document,'script','citybreak0dataLayer','GTM-[tracker_id]');
  </script>
 ```
+### Booking confimation page urls
+
+http(s)://[CB online url]/[Lang/Culture]/confirmation....
+
+Language | url
+--------- | ---------
+sv | /Bekraftelse
+da | /Bekraftelse
+de | /Bestaetigung
+es | /confirmacion
+fi | /vahvistus
+fr | /confirmation
+it | /conferma
+nl | /bevestiging
+no | /bekreftelse
+pt | /confirmacao
+en | /confirmation
+Not in list | /confirmation
+
+_Note: After /confirmation we add unique parameters to define the bookings_
