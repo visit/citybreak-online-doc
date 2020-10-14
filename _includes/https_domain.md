@@ -10,8 +10,7 @@ hosted01.citybreak.com
 
 When this is done Citybreak will connect the subdomain to your Citybreak online.
 
-[test your subdomain](http://kund.delat.se/online3/hosted)
-Or user external testing tool example: [dnschecker](https://dnschecker.org/all-dns-records-of-domain.php)
+External testing tool example: [dnschecker](https://dnschecker.org/all-dns-records-of-domain.php)
 
 
 ## Https - SSL information
