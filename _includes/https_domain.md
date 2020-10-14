@@ -2,11 +2,7 @@
 
 ## Domain - DNS setup
 
-Add a DNS record with type CNAME and point to
-
-´´
-hosted01.citybreak.com
-´´
+Add a DNS record with type **CNAME and point to hosted01.citybreak.com**
 
 When this is done Citybreak will connect the subdomain to your Citybreak online.
 
