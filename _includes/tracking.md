@@ -48,8 +48,7 @@ Parameter | Description
 {isodate} | Time stamp (yyyy-MM-dd)
 {currency} | Currency
 {zipcode} | Zipcode
-{bookingJSONObject} | Booking information serialized as a JSON object, assign it to a javascript variable. If serialization fails 
-{bookingJSONObject} | will be replaced by undefined, so guard for it. Empty arrays are not serialized. All numbers are formatted as strings to the customer language culture.
+{bookingJSONObject} | Booking information serialized as a JSON object, assign it to a javascript variable. If serialization fails {bookingJSONObject} will be replaced by undefined, so guard for it. Empty arrays are not serialized. All numbers are formatted as strings to the customer language culture.
 
 
 > Example of {bookingJSONObject} usage: 
