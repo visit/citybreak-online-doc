@@ -432,9 +432,9 @@ You may also customize the booking process with the proceedToBasket option and `
 ```
 
 ```html
-<div id="citybreak_activity_booking_widget">
+<div id="citybreak_activity_booking_widget"></div>
    <div id="activity_booking_widget-12345"></div>
-</div>
+
 ```
 
 **The cb-activity-booked event receives:**
@@ -474,6 +474,19 @@ Script resource differ per package type
 
 Div tag Id:
  ``citybreak_todo_todo_package_searchform_widget``
+ 
+ ### Accommodation Accommodation package widget
+Script resource differ per package type
+``accommodationaccommodationpackagewidget/searchform``
+
+Div tag Id:
+ ``citybreak_accommodation_accommodation_package_searchform_widget``
+
+#### Valid parameters
+**int cbisProductId**
+
+The id of the product/package to display the search form for.
+
 
 #### Valid parameters
 **int cbisProductId**
