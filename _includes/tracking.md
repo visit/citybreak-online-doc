@@ -49,14 +49,14 @@ Parameter | Description
 {currency} | Currency
 {zipcode} | Zipcode
 {bookingJSONObject} | Booking information serialized as a JSON object, assign it to a javascript variable. If serialization fails 
-{bookingJSONObject} | will be replaced by undefined, so guard for it.
+{bookingJSONObject} | will be replaced by undefined, so guard for it. Empty arrays are not serialized. All numbers are formatted as strings to the customer language culture.
 
 
 > Example of {bookingJSONObject} usage: 
 > 
 > var booking = {bookingJSONObject};
 > Will generate:
-> var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": "600.0", "TotalTax": "64.29", "Products": [{ "Id": 248466, "Name": "Hotell_name/room_name", "Category": "Accommodation/Hotelroom", "Price": "600.0", "Quantity": "1", "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] };
+> var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": "600.0", "TotalTax": "64.29", "Products": [{ "Id": "248466", "Name": "Hotell_name/room_name", "Category": "Accommodation/Hotelroom", "Price": "600.0", "Quantity": "1", "DocumentUrls": ["https://doc.citybreak.com/url-to-ticket"] }] };
 
 
 ```html
