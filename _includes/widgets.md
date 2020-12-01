@@ -302,7 +302,7 @@ Its avaliable in 1,2 or 3 collum Style
 ### Valid parameters
 **int ProductId**
 
-The CBIS id of the property/product to display the search form for.
+The CBIS id of the property/product to display the search form for. (you can only use one product per widget)
 
 ## Activity transport product widget
 Script resource ``activitytransportwidget/searchform``
