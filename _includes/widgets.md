@@ -475,7 +475,7 @@ Script resource differ per package type
 Div tag Id:
  ``citybreak_todo_todo_package_searchform_widget``
  
- ### Accommodation Accommodation package widget
+### Accommodation Accommodation package widget
 Script resource differ per package type
 ``accommodationaccommodationpackagewidget/searchform``
 
