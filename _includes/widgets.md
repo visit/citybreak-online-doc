@@ -7,6 +7,8 @@ The widgets are JavaScript widgets that are easy to integrate with a few lines o
 Make sure you only run ONE widget script at the time. 
 If you need to have more then one widget on the same page/view you can load and unload the scripts to handle this.
 
+FYI-  don´t load a widget scripts on your tempalte page. This will affect the booking controlles and create possible conflicts.
+
 ## Implementation
 
 To implement the widgets you need to add two things to your webpage:
