@@ -277,7 +277,8 @@ Div tag id: ``citybreak_basket_widget_summary``
 
 optional trigger id: ``citybreak_basket_widget_display``
 
-```<script type="text/javascript">
+```html
+<script type="text/javascript">
         (function () {
 	        var widget = document.createElement('script');
 	        widget.type = 'text/javascript';
