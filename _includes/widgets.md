@@ -277,6 +277,22 @@ Div tag id: ``citybreak_basket_widget_summary``
 
 optional trigger id: ``citybreak_basket_widget_display``
 
+```<script type="text/javascript">
+        (function () {
+	        var widget = document.createElement('script');
+	        widget.type = 'text/javascript';
+	        widget.async = true;
+	        widget.src = '//[WIDGET_URL]/basketwidget/widget';
+	        var s = document.getElementsByTagName('script')[0];
+	        s.parentNode.insertBefore(widget, s);
+        })();
+</script>
+
+<span id="citybreak_basket_widget_display"></span>
+<div id="citybreak_basket_widget_summary"></div>
+
+```
+
 ## Accommodation property / product widget
 Script resource ``AccommodationPropertyWidget/searchform``
 
