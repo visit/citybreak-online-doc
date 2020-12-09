@@ -12,6 +12,7 @@ includes:
   - intro
   - https_domain
   - template
+  - cookies
   - widgets
   - tracking
   - api
