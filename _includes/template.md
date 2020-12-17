@@ -28,6 +28,15 @@ _NOTE: Consultning or troubleshooting a tempate will be debited with standard ho
 
 ### Optional functionality
 
+#### Cookie consent
+```html
+<script data-cb-template-trackerscript>
+     
+</div>
+```
+Integrate your cookie consent solutions that leverage script-tag rewriting by simply including one script tag with the data attribute ``data-cb-template-trackerscript``.
+The online will use the attributes of the script tag as a template when producing script tags containing trackers.
+
 #### Language select feature
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ``cb_replace_languages_select`` is encountered).
 
