@@ -12,10 +12,6 @@ Determine the link to a dynamic page irregardless of its language, there is an a
 https://[ONLINE-HOST]/en/link/product/[CBIS-PRODUCT-ID]
 ``
 
-**Valid extra parameters**
-* ?format=json
-* ?format=xml
-
 **Link to a supplier package**
 
 ``
@@ -30,7 +26,7 @@ This can then be user to build a citybreak online widget in the CMS or similar t
 Sample: 
 
 ``
-https://[ONLINE-HOST]/en/api/products/bookablestatus/[CBIS-PRODUCT-ID]
+https://[ONLINE-HOST]/en/api/products/bookablestatus?cbisProductId=[CBIS-PRODUCT-ID]
 ``
 
 > Sample output
