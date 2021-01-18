@@ -31,3 +31,6 @@ Description of Citybreak Online cookies
 - TRADEDOUBLER-{guideIdentifier}-s, Tracking
 - TRADEDOUBLER-{guideIdentifier}-p, Tracking
 
+#####  More information regarding cookie content implementation via template
+
+[See information under template page or click here](https://visit.github.io/citybreak-online-doc/#cookie-consent)
