@@ -407,10 +407,9 @@ To initialize a widget, create a container for the product and run initContainer
 ```
 
 ```html
-<div id="citybreak_activity_booking_widget">
-   <div id="activity_booking_widget-12345"></div>
-   <div id="activity_booking_widget-67891"></div>
-</div>
+<div id="citybreak_activity_booking_widget"></div>
+<div id="activity_booking_widget-12345"></div>
+<div id="activity_booking_widget-67891"></div>
 ```
 
 **Valid options to initContainer are:**
