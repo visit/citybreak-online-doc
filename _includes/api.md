@@ -9,13 +9,13 @@ Determine the link to a dynamic page irregardless of its language, there is an a
 **Linking to products:**
 
 ``
-https://[ONLINE-HOST]/en/link/product/[CBIS-PRODUCT-ID]
+https://[ONLINE-HOST]/[CULTURE]/link/product/[CBIS-PRODUCT-ID]
 ``
 
 **Link to a supplier package**
 
 ``
-https://[ONLINE3-HOST]/en/link/packagelight/[SUPPLIER-PACKAGE-ID]
+https://[ONLINE-HOST]/[CULTURE]/link/packagelight/[SUPPLIER-PACKAGE-ID]
 ``
 
 ## Bookable status API
@@ -24,5 +24,5 @@ Online bookable status API  can be usefull to find out if a product is bookable 
 This can then be user to build a citybreak online widget in the CMS or similar to have a more dynamic implementation.
 
 ``
-https://[ONLINE-HOST]/en/api/products/bookablestatus?cbisProductId=[CBIS-PRODUCT-ID]
+https://[ONLINE-HOST]/[CULTURE]/api/products/bookablestatus?cbisProductId=[CBIS-PRODUCT-ID]
 ``
