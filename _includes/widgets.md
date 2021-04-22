@@ -19,7 +19,7 @@ To implement the widgets you need to add two things to your webpage:
 <script type="text/javascript">
         (function() {
               var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
-               widget.src = 'https://[WIDGET_URL]';
+               widget.src = 'https://[ONLINE-HOST]/[CULTURE]...';
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
         })();
 </script>
@@ -74,7 +74,7 @@ The parameters have to be passed in the correct order, i.e. the value of the fir
 <script type="text/javascript">
         (function() {
               var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
-               widget.src = 'https://[ONLINE-HOST]/combinewidget/combine?c=accommodationwidget&c=basketwidget&c=ferrywidget&a=searchform&a=minibasket&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=&p=alignDirection=2';
+               widget.src = 'https://[ONLINE-HOST]/[CULTURE]/combinewidget/combine?c=accommodationwidget&c=basketwidget&c=ferrywidget&a=searchform&a=minibasket&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=&p=alignDirection=2';
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
         })();
 </script>
@@ -283,7 +283,7 @@ optional trigger id: ``citybreak_basket_widget_display``
 	        var widget = document.createElement('script');
 	        widget.type = 'text/javascript';
 	        widget.async = true;
-	        widget.src = '//[WIDGET_URL]/basketwidget/widget';
+	        widget.src = '//[ONLINE-HOST]/[CULTURE]/basketwidget/widget';
 	        var s = document.getElementsByTagName('script')[0];
 	        s.parentNode.insertBefore(widget, s);
         })();
@@ -306,7 +306,7 @@ Div tag Id: ``citybreak_accommodation_property_widget``
 	var widget = document.createElement('script');
 	widget.type = 'text/javascript';
 	widget.async = true;
-	widget.src = 'https://[WIDGET_URL]' + '?productid=123456';
+	widget.src = 'https://[ONLINE-HOST]/[CULTURE]' + '?productid=123456';
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(widget, s);
 	} catch {return;} })();							
@@ -332,7 +332,7 @@ Div tag Id: ``citybreak_activity_transport_searchform_widget``
 <script type="text/javascript">
 	(function() { 		
 	var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
-        widget.src = 'https://[WIDGET_URL]' + '?cbisProductId=123456';		
+        widget.src = 'https://[ONLINE-HOST]/[CULTURE]' + '?cbisProductId=123456';		
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);			
 	})(); 
 </script>
