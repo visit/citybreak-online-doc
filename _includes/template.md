@@ -176,11 +176,18 @@ Packages | cb_package
 ### jQuery
 Citybreak online uses the jQuery JavaScript library. The specific jQuery handle is called ''‘citybreakjq’'' and should **never be interfered with**.
 
-### Extras
+### Extra url parameters
 
-If you want to compare your CB online url with and with our the template page loaded you can user this URL parameter
+If you want to compare your CB online url with and with out the template page loaded you can user this URL parameter:  
 ``NoHeaderFooter=true``
 
 ```html
 //[ONLINE-HOST]/[CULTURE]/[CB ONLINE URL...]?NoHeaderFooter=true
+```
+
+If you want to load all System translation strings on a url you can user this parameter:  
+``showTranslationKeys=true``
+
+```html
+//[ONLINE-HOST]/[CULTURE]/[CB ONLINE URL...]?showTranslationKeys=true
 ```
