@@ -33,7 +33,7 @@ _NOTE: Consultning or troubleshooting a tempate will be debited with standard ho
 <script data-cb-template-trackerscript>    
 </script>
 ```
-Integrate your cookie consent solutions that leverage script-tag rewriting by simply including one script tag with the data attribute ``data-cb-template-trackerscript``.
+Integrate your cookie consent solutions that leverage script-tag rewriting by simply including one script tag with the data attribute ``data-cb-template-trackerscript``. Your cookie consent solution needs to support script-tag rewriting.
 The online will use the attributes of the script tag as a template when producing script tags containing trackers.
 
 #### Language select feature
