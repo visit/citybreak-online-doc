@@ -45,19 +45,15 @@ Most cookie consent solutions work by categorizing scripts by HTML attributes.
 <script type="text/javascript">
 code
 </script>
-```
 
 > In our example we have a cookie consent solution which has categorized tracking scripts using a CSS class 'optanon-category-C0002'.
 > We modify our template accordingly
 
-```html
 <script data-cb-template-trackerscript class="optanon-category-C0002">    
 </script>
-```
 
 > This will cause tracking scripts execution to be handed over to the control of your cookie consent solution, using script-tag rewriting:
 
-```html
 <script type="text/plain" class="optanon-category-C0002">
 code
 </script>
