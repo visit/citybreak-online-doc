@@ -33,8 +33,34 @@ _NOTE: Consultning or troubleshooting a tempate will be debited with standard ho
 <script data-cb-template-trackerscript>    
 </script>
 ```
-Integrate your cookie consent solutions that leverage script-tag rewriting by simply including one script tag with the data attribute ``data-cb-template-trackerscript``. Your cookie consent solution needs to support script-tag rewriting.
-The online will use the attributes of the script tag as a template when producing script tags containing trackers.
+Integrate your cookie consent solutions that leverage script-tag rewriting by simply including one script tag with the data attribute ``data-cb-template-trackerscript``. The online will use the attributes of the script tag as a template when producing script tags containing trackers.
+
+Your cookie consent solution needs to support script-tag rewriting which is one of the most efficient methods of preventing cookies controlled by script tags being set without consent. This method requires the least amount of change to your site.
+
+Usually tracking script tags look like this:
+
+```html
+<script type="text/javascript">
+code
+</script>
+```
+
+After adding the following to your template
+
+```html
+<script data-cb-template-trackerscript class="optanon-category-C0002">    
+</script>
+```
+
+This will cause tracking scripts to be produced to be consumed by your cookie consent solution script-tag rewriting:
+
+```html
+<script type="text/plain" class="optanon-category-C0002">
+code
+</script>
+```
+
+When the above code loads, JavaScript inside the tags will not run, and no cookies will be set. Then, when the Cookie Compliance code loads, if cookies for the associated group have consent, it will dynamically change the tag to: script type=text/JavaScript – the code inside the tags will then be recognized and run as normal.
 
 #### Language select feature
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ``cb_replace_languages_select`` is encountered).
