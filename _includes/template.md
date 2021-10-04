@@ -61,6 +61,17 @@ Most cookie consent solutions work by categorizing scripts by HTML attributes.
 
 When the above code loads, JavaScript inside the tags will not run, and no cookies will be set. Then, when the Cookie Compliance code loads, if cookies for the associated group have consent, it will dynamically change the tag to: script type=text/JavaScript – the code inside the tags will then be recognized and run as normal.
 
+
+
+
+
+
+
+
+
+
+
+
 ### Language select feature
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ``cb_replace_languages_select`` is encountered).
 
