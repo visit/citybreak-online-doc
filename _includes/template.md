@@ -26,9 +26,9 @@ This will be the placeholder where the Citybreak online booking engine will be i
 
 _NOTE: Consultning or troubleshooting a tempate will be debited with standard hour rate._
 
-### Optional functionality
+## Optional functionality
 
-#### Cookie consent
+### Cookie consent
 ```html
 <script data-cb-template-trackerscript>    
 </script>
@@ -65,12 +65,12 @@ code
 
 When the above code loads, JavaScript inside the tags will not run, and no cookies will be set. Then, when the Cookie Compliance code loads, if cookies for the associated group have consent, it will dynamically change the tag to: script type=text/JavaScript – the code inside the tags will then be recognized and run as normal.
 
-#### Language select feature
+### Language select feature
 Language select feature (if multiple languages are configured for the specific guide and a span with id attribute ``cb_replace_languages_select`` is encountered).
 
 _Note: not supported in one domain implementations_
 
-#### Reference currency
+### Reference currency
 Reference currency select feature (if multiple refence currency’s are configured for the specific guide and a span with id attribute ``cb_replace_referencecurrency_select`` is encountered).
 
 This can also be implemented by adding a parameter to the CB online URLs.
