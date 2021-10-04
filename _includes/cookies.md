@@ -17,6 +17,8 @@ Description of Citybreak Online cookies
 - chngbook\_online3\_{guideIdentifier}, MyPage change booking
 - pgid\_online3\_{guideIdentifier}, MyPage person login
 - Promotion\_online3\_{guideIdentifier}, Promotion code storage
+- cbbe, - Specify backend server used by the client
+- citybreak_online - Stores client search parameters
 
 #### Optional cookies
 - TrackingId\_{guideIdentifier}, Tracking
