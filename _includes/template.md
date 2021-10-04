@@ -37,6 +37,8 @@ Integrate your cookie consent solutions that leverage script-tag rewriting by si
 
 Your cookie consent solution needs to support script-tag rewriting which is one of the most efficient methods of preventing cookies controlled by script tags being set without consent. This method requires the least amount of change to your site.
 
+Most cookie consent solutions work by categorizing scripts by HTML attributes.
+
 > Usually tracking script tags look like this:
 
 ```html
@@ -45,14 +47,15 @@ code
 </script>
 ```
 
-> After adding the following to your template
+> In our example we have a cookie consent solution which has categorized tracking scripts using a CSS class 'optanon-category-C0002'.
+> We modify our template accordingly
 
 ```html
 <script data-cb-template-trackerscript class="optanon-category-C0002">    
 </script>
 ```
 
-> This will cause tracking scripts to be produced to be consumed by your cookie consent solution script-tag rewriting:
+> This will cause tracking scripts execution to be handed over to the control of your cookie consent solution, using script-tag rewriting:
 
 ```html
 <script type="text/plain" class="optanon-category-C0002">
