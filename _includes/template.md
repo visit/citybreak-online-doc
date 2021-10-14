@@ -53,7 +53,7 @@ code
 </script>
 ```
 
-Scripts rendered by the Online that perform tracking are categorized into one category, decorate the <script data-cb-template-trackerscript> tag with the attributes used by your cookie consent solution to categorize scripts that perform tracking. 
+Scripts rendered by the Online that perform tracking are categorized into one category, decorate the ``<script data-cb-template-trackerscript>`` tag with the attributes used by your cookie consent solution to categorize scripts that perform tracking. 
      
 The online will use the attributes of the script tag as a template when producing script tags containing trackers.
 
