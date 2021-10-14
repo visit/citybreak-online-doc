@@ -24,7 +24,7 @@ This will be the placeholder where the Citybreak online booking engine will be i
 
 * **All meta tags except 'viewport' will be removed**
 
-_NOTE: Consultning or troubleshooting a tempate will be debited with standard hour rate._
+**Note:** *Consultning or troubleshooting a tempate will be debited with standard hour rate.*
 
 ## Optional functionality
 
@@ -64,7 +64,7 @@ Most cookie consent solutions work by categorizing scripts by HTML attributes.
 When the above code loads, JavaScript inside the tags will not run, and no cookies will be set. Then, when the Cookie Compliance code loads, if cookies for the associated group have consent, it will dynamically change the tag to: script type=text/JavaScript – the code inside the tags will then be recognized and run as normal.
 
 
-
+**Note:** *Its not allowed to add more then one ``<script data-cb-template-trackerscript>`` in the tempalte page*
 
 
 
