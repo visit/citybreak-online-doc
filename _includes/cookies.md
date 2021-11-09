@@ -32,6 +32,7 @@ Description of Citybreak Online cookies
 - CBTRACKGAPayment, Tracking
 - TRADEDOUBLER-{guideIdentifier}-s, Tracking
 - TRADEDOUBLER-{guideIdentifier}-p, Tracking
+- gat_citybreak0, Tracking _(Advertising features plugin for configured via Google analytics)_
 
 #####  More information regarding cookie consent implementation via your template page
 
