@@ -167,17 +167,6 @@ Use this parameter to lock down the category dropdown, when this is set then the
 
 Use this parameter if you want to set a promotion code in the promotion code field.
 
-## Rental car widget
-Script resource: 
-``
-/carrentalwidget/searchform
-``
-
-Div tag Id: 
-``
-citybreak_carrental_searchform_widget
-``
-
 ### Valid parameters
 **string css**
 
