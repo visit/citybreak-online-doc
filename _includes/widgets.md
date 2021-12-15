@@ -80,7 +80,7 @@ The parameters have to be passed in the correct order, i.e. the value of the fir
 </script>
 ```
 
-> Combine widget dive place holder sample
+> Combine widget div place holder sample
 
 ```html
 <div id="citybreak_accommodation_searchform_widget"></div>
