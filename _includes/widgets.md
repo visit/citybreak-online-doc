@@ -47,24 +47,24 @@ The combine widget requires three parameters:
 
 Controller - A list of names of controllers for the desired widgets, e.g. 
 ``
-"c=accommodationwidget&c=basketwidget&c=ferrywidget"
+"c=accommodationwidget&c=ferrywidget"
 ``
 
 **a=**
 
 Action - A list of names of actions for the widget controllers specified in the "c" parameter, e.g. 
 ``
-"a=searchform&a=basket&a=searchform"
+"a=searchform&a=searchform"
 ``
-This would pass "searchform" as an action to "accommodationwidget", "basket" as an action to "basketwidget" and "searchform" as an action to "ferrywidget".
+This would pass "searchform" as an action to "accommodationwidget" and "searchform" as an action to "ferrywidget".
 
 **p=**
 
 Parameters - A list of parameters to each widget action specified by the "c" and "a" parameters. To pass multiple parameters to a widget, use a semicolon-separated list of keys and values, e.g. 
 ``
-"p=defaultCategoryId=1345;defaultRoomCfg=2&p=&p=alignDirection=2"
+"p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2"
 ``
-This would send defaultCategoryId=1345 and defaultRoomCfg=2 to /accommodationwidget/searchform, an empty list of parameters to /basketwidget/basket and "alignDirection=2" to /ferrywidget/searchform in the previous examples.
+This would send defaultCategoryId=1345 and defaultRoomCfg=2 to /accommodationwidget/searchform and "alignDirection=2" to /ferrywidget/searchform in the previous examples.
 
 The parameters have to be passed in the correct order, i.e. the value of the first "a" parameter will be passed to the first "c" parameter and so on. The parameters must exactly match, i.e. if you have three controllers ("c" parameters) you have to pass three actions ("a" parameters) and three parameter values ("p" parameters).
 
@@ -74,7 +74,7 @@ The parameters have to be passed in the correct order, i.e. the value of the fir
 <script type="text/javascript">
         (function() {
               var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
-               widget.src = 'https://[ONLINE-HOST]/[CULTURE]/combinewidget/combine?c=accommodationwidget&c=basketwidget&c=ferrywidget&a=searchform&a=minibasket&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=&p=alignDirection=2';
+               widget.src = 'https://[ONLINE-HOST]/[CULTURE]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2';
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
         })();
 </script>
@@ -84,7 +84,6 @@ The parameters have to be passed in the correct order, i.e. the value of the fir
 
 ```html
 <div id="citybreak_accommodation_searchform_widget"></div>
-<div id="citybreak_basket_minibasket_widget"></div>
 <div id="citybreak_ferry_searchform_widget"></div>
 ```
 
