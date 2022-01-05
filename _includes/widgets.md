@@ -480,19 +480,18 @@ Script resource differ per package type
 
 Div tag Id:
  ``citybreak_todo_todo_package_searchform_widget``
- 
-### Accommodation Accommodation package widget
-Script resource differ per package type
-``accommodationaccommodationpackagewidget/searchform``
-
-Div tag Id:
- ``citybreak_accommodation_accommodation_package_searchform_widget``
 
 #### Valid parameters
 **int cbisProductId**
 
 The id of the product/package to display the search form for.
 
+### Accommodation Accommodation package widget
+Script resource differ per package type
+``accommodationaccommodationpackagewidget/searchform``
+
+Div tag Id:
+ ``citybreak_accommodation_accommodation_package_searchform_widget``
 
 #### Valid parameters
 **int cbisProductId**
