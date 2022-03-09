@@ -333,11 +333,11 @@ Div tag Id: ``citybreak_activity_transport_searchform_widget``
 
 The id of the product to display the search form for.
 
-**DateTime? preferedDate**
+**DateTime? preferredDate**
 
 A valid date to set the default initially selected date in the widget, the format of the date must be the same as the format of the requested widget.
 
-If the prefered date is not available it will fallback to default behaviour.
+If the preferred date is not available it will fallback to default behaviour.
 
 **int? preferredDeparture**
 
