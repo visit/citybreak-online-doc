@@ -40,7 +40,7 @@ code
 > In our example we have a cookie consent solution which has categorized tracking scripts using a CSS class 'optanon-category-C0002'.
 > We modify our template accordingly
 
-<script data-cb-template-trackerscript type="text/plain" class="optanon-category-C0002">    
+<script data-cb-template-trackerscript="" type="text/plain" class="optanon-category-C0002">    
 </script>
 
 > This will cause tracking scripts to be rendered as below and execution to be handed over to the control of your cookie consent solution, using script-tag rewriting:
