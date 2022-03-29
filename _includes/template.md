@@ -43,7 +43,7 @@ code
 <script data-cb-template-trackerscript type="text/plain" class="optanon-category-C0002">    
 </script>
 
-> This will cause tracking scripts execution to be handed over to the control of your cookie consent solution, using script-tag rewriting:
+> This will cause tracking scripts to be rendered as below and execution to be handed over to the control of your cookie consent solution, using script-tag rewriting:
 
 <script type="text/plain" class="optanon-category-C0002">
 code
