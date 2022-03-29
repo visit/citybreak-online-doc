@@ -33,9 +33,6 @@ This will be the placeholder where the Citybreak online booking engine will be i
 ```html
 > Usually tracking script tags look like this:
 
-<script data-cb-template-trackerscript>    
-</script>
-
 <script type="text/javascript">
 code
 </script>
@@ -43,7 +40,7 @@ code
 > In our example we have a cookie consent solution which has categorized tracking scripts using a CSS class 'optanon-category-C0002'.
 > We modify our template accordingly
 
-<script data-cb-template-trackerscript class="optanon-category-C0002">    
+<script data-cb-template-trackerscript type="text/plain" class="optanon-category-C0002">    
 </script>
 
 > This will cause tracking scripts execution to be handed over to the control of your cookie consent solution, using script-tag rewriting:
@@ -61,7 +58,7 @@ Your cookie consent solution needs to support script-tag rewriting which is one 
 
 Most cookie consent solutions work by categorizing scripts by HTML attributes.
 
-When the above code loads, JavaScript inside the tags will not run, and no cookies will be set. Then, when the Cookie Compliance code loads, if cookies for the associated group have consent, it will dynamically change the tag to: script type=text/JavaScript – the code inside the tags will then be recognized and run as normal.
+When the above code loads, JavaScript inside the tags will not run, and no cookies will be set. Then, when the Cookie Compliance code loads, if cookies for the associated group have consent, it will dynamically change the tag to: script type=text/javascript – the code inside the tags will then be recognized and run as normal.
 
 
 **Note:** *Its not allowed to add more then one ``<script data-cb-template-trackerscript>`` in the tempalte page*
