@@ -277,7 +277,7 @@ optional trigger id: ``citybreak_basket_widget_display``
         })();
 </script>
 
-<span id="citybreak_basket_widget_display"></span>
+<a id="citybreak_basket_widget_display" href="#" tabindex="0"></a>
 <div id="citybreak_basket_widget_summary"></div>
 
 ```
