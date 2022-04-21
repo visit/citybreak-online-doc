@@ -32,8 +32,8 @@ Description of Citybreak Online cookies
 - CBTRACKGAPayment, Tracking
 - TRADEDOUBLER-{guideIdentifier}-s, Tracking
 - TRADEDOUBLER-{guideIdentifier}-p, Tracking
-- gat_citybreak0, Tracking _(Advertising plugin for configured via Google analytics)_
-- __utmt_citybreak0, Tracking _(Sent from google "Used to throttle request rate.")_
+- gat_citybreak0, Tracking _(Set by Google "Advertising plugin for configured via Google analytics")_
+- __utmt_citybreak0, Tracking _(Set by Google "Used to throttle request rate.")_
 
 
 #####  More information regarding cookie consent implementation via your template page
