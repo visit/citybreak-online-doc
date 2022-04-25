@@ -20,7 +20,7 @@ Loading an Citybreak online widget (via script) in the header/footer template pa
 (calls to _trackPageview, _trackEvent etc) are allowed in the template page. This would cause double page views.
 
 * **Must Contain a div element with id attribute set to ``cb_init_bookingengine``**
-This will be the placeholder where the Citybreak online booking engine will be injected.
+This will be the placeholder where the Citybreak online booking engine will be injected. Make sure this div element can use full page width.
 
 * **All meta tags except 'viewport' will be removed**
 
