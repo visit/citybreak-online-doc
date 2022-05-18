@@ -5,7 +5,6 @@ Citybreak online comes with a set of standard widgets these widgets are fully cu
 The widgets are JavaScript widgets that are easy to integrate with a few lines of code.
 
 Make sure you only run ONE widget script at the time. 
-If you need to have more then one widget on the same page/view you can load and unload the scripts to handle this.
 
 FYI-  don´t load a widget scripts on your tempalte page. This will affect the booking controlles and create possible conflicts.
 
