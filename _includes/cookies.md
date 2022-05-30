@@ -18,6 +18,7 @@ Description of Citybreak Online cookies
 - pgid\_online3\_{guideIdentifier}, MyPage person login
 - Promotion\_online3\_{guideIdentifier}, Promotion code storage
 - cbbe, Specify backend server used by the client
+- srbe, Specify signalr backend server used by the client
 - citybreak_online, Stores client search parameters
 
 #### Optional cookies
