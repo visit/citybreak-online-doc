@@ -189,7 +189,7 @@ Behaviour -> Events -> Overview
 
 **Need to add a tracker id or edit a exsiting one. Contact our support in we will help you**
 
-### Purchase output sample
+## Goolge Purchase output sample
 
 > Purchase event output sample
 
