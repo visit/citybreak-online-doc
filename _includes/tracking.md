@@ -212,7 +212,7 @@ if (shouldSendCheckoutTrackingGTMCookie === 'true') {
    'products': [{
     'name': "Hotel_name/room_name",
     'id': '******',                    
-    'price': '1234,00',
+    'price': '1234.00',
     'category': "Accommodation/Room",
     'quantity': 2
     }]
