@@ -256,11 +256,11 @@ Use this to configure a default arrival date, example 2016-01-20
 ## Basket widget
 The basket widget can be used within or outside of the Citybreak online template page.
 
-When the basket widget is to be used within the template the script tag must be omitted.
+When the basket widget is used within the template the script tag must be omitted.
 
 Script resource: ``/basketwidget/widget``
 
-Div tag id: ``citybreak_basket_widget_summary``
+Div tag required id: ``<div id="citybreak_basket_widget_summary"></div>``
 
 optional trigger id: ``citybreak_basket_widget_display``
 
