@@ -13,28 +13,29 @@ Description of Citybreak Online cookies
 #### Mandatory cookies
 - online3\_{guideIdentifier}\_{UICulture}\_{Culture}, User session
 - online3\_ss\_{guideIdentifier}\_[UICulture}\_{Culture}, User session
-- bookcred\_online3\_{guideIdentifier}, MyPage booking login
+- bookcred\_online3\_{guideIdentifier}, MyPage, stores booking credentials used to access a made booking
 - chngbook\_online3\_{guideIdentifier}, MyPage change booking
-- pgid\_online3\_{guideIdentifier}, MyPage person login
-- Promotion\_online3\_{guideIdentifier}, Promotion code storage
+- pgid\_online3\_{guideIdentifier}, MyPage, stores personId of the currently logged in person
+- Promotion\_online3\_{guideIdentifier}, Stores promotion code used
 - cbbe, Specify backend server used by the client
 - srbe, Specify signalr backend server used by the client
 - citybreak_online, Stores client search parameters
+- pymtid + "_" + "online3" + "_" + onlineIdentifier, Stores payment service provider parameters
 
 #### Optional cookies
-- TrackingId\_{guideIdentifier}, Tracking
-- CBTRACKGTMBasket, Tracking
-- CBTRACKGABasket, Tracking
-- CBTRACKGTMCustomerInformation, Tracking
-- CBTRACKGACustomerInformation, Tracking
-- CBTRACKGTMPayment, Tracking
-- CBTRACKGTM{bookingCode}, Tracking
-- CBTRACKGA{bookingCode}, Tracking
-- CBTRACKGAPayment, Tracking
+- TrackingId\_{guideIdentifier}, a Tracking string stored in cookie, is set by passing the querystring "tid"
+- CBTRACKGTMBasket, Tracking Google cookie only if implemented
+- CBTRACKGABasket, Tracking Google cookie only if implemented
+- CBTRACKGTMCustomerInformation, Tracking Google cookie only if implemented
+- CBTRACKGACustomerInformation, Tracking Google cookie only if implemented
+- CBTRACKGTMPayment, Tracking Google cookie only if implemented
+- CBTRACKGTM{bookingCode}, Tracking Google cookie only if implemented
+- CBTRACKGA{bookingCode}, Tracking Google cookie only if implemented
+- CBTRACKGAPayment, Tracking Google cookie only if implemented
 - TRADEDOUBLER-{guideIdentifier}-s, Tracking
 - TRADEDOUBLER-{guideIdentifier}-p, Tracking
-- gat_citybreak0, Tracking _(Set by Google "Advertising plugin for configured via Google analytics")_
-- __utmt_citybreak0, Tracking _(Set by Google "Used to throttle request rate.")_
+- gat_citybreak0, TrackingGoogle cookie only if implemented _(Set by Google "Advertising plugin for configured via Google analytics")_ 
+- __utmt_citybreak0, Tracking _ Google cookie only if implemented (Set by Google "Used to throttle request rate.")_
 
 
 #####  More information regarding cookie consent implementation via your template page
