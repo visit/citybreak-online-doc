@@ -6,7 +6,13 @@ Add a DNS record with type **CNAME and point to hosted01.citybreak.com**
 
 When this is done Citybreak will connect the subdomain to your Citybreak online.
 
-External testing tool example: [dnschecker](https://dnschecker.org/all-dns-records-of-domain.php)
+External testing tool example: 
+
+[nslookup.io](https://www.nslookup.io/)
+
+or
+
+[dnschecker.org](https://dnschecker.org/all-dns-records-of-domain.php)
 
 
 ## Https - SSL information
