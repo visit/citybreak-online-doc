@@ -8,7 +8,7 @@ When this is done Citybreak will connect the subdomain to your Citybreak online.
 
 External testing tool example: 
 
-[nslookup.io](https://www.nslookup.io/)
+[nslookup.io](https://www.nslookup.io/) - Check result on the authoritative tab.
 
 or
 
