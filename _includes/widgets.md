@@ -348,11 +348,11 @@ Id of the location that will be initially selected as arrival location. If not a
 
 **bool? enablePromocode**
 
-Whether  field for entering promocode will be available/visible in the widget. If not available, defaults to false.
+Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.
 
 **bool? proceedToBasket**
 
-Whether to proceed to basket after . If not available, defaults to true.
+Whether to proceed to basket after product is added. If parameter is not added widget defaults to true.
 
 ### Booking event listner
 You may also customize the booking process (same Activity product widget below) as the  with the proceedToBasket option and ``'cb-activitytransport-booked'``.
