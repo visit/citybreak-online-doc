@@ -336,7 +336,7 @@ The id of the product to display the search form for.
 
 A valid date to set the default initially selected date in the widget, the format of the date must be the same as the format of the requested widget.
 
-If the preferred date is not available it will fallback to default behaviour.
+If the preferred date is not available it will fall back to default behavior.
 
 **int? preferredDeparture**
 
