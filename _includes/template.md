@@ -23,6 +23,8 @@ Loading an Citybreak online widget (via script) in the header/footer template pa
 This will be the placeholder where the Citybreak online booking engine will be injected. Make sure this div element can use full page width.
 
 * **All meta tags except 'viewport' will be removed**
+(You need to add the meta tag 'viewport' to your template to enable a mobile friendly responsive CB online. 
+example: ``<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />``)
 
 **Note:** *Consultning or troubleshooting a tempate will be debited with standard hour rate.*
 
