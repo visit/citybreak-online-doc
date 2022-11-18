@@ -10,7 +10,10 @@ Cookies necessary for the Citybreak online to function and cannot be switched of
 
 Description of Citybreak Online cookies
 
-#### Mandatory cookies
+#### Mandatory cookies 
+
+None of the mandatory cookies stores personal data.
+
 - online3\_{guideIdentifier}\_{UICulture}\_{Culture}, User session
 - online3\_ss\_{guideIdentifier}\_[UICulture}\_{Culture}, User session
 - bookcred\_online3\_{guideIdentifier}, MyPage, stores booking credentials used to access a made booking
@@ -23,6 +26,7 @@ Description of Citybreak Online cookies
 - pymtid + "_" + "online3" + "_" + onlineIdentifier, Stores payment service provider parameters
 
 #### Optional cookies
+
 - TrackingId\_{guideIdentifier}, a Tracking string stored in cookie, is set by passing the querystring "tid"
 - CBTRACKGTMBasket, Tracking Google cookie only if implemented
 - CBTRACKGABasket, Tracking Google cookie only if implemented
