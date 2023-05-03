@@ -80,7 +80,7 @@ FYI:
 * We dont have anny google trackers active via our development ot tests enviromets. But we can setup a test online in product if requested.
 * Missing something? Pleace contact us with specified sample of you needs or what your are missing and why you need if. Then we will consider developming support to our default feature set.
 
-## Goolge Purchase output sample
+## Goolge Purchase output sample (will soon be updated with GA4 format)
 
 > Purchase event output sample
 
