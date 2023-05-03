@@ -66,19 +66,21 @@ Parameter | Description
 
 ## Google tracking
 
-Citybreak online has build in standard support for google tracking.
-* Google analytics ga.js
-* Universal Analytics analytics.js
+Citybreak online has standard support for google tracking.
+* Google analytics ga.js (depricated)
+* Universal Analytics analytics.js (depricated by google July 1, 2023)
 * Google tag manager gtm.js
+* Google analytics 4 gtag.js **SOON AVAILABLE**
+* Google tag manager (with ga4 datalayer) gtm.js **SOON AVAILABLE**
 
-_**NOTE: adding Google tracker id via your template page is not allowed. We what to avoid dubble tracking**_
+_**NOTE: adding Google tracker property id via your template page is not allowed. We what to avoid dubble tracking**_
 
-We just need to add the google tracking id for you when implementing a new Citybreak online.
+We just need to add the google tracking property id for you when implementing a new Citybreak online.
 Need help to add this contact us!
 
 FYI:
-* We dont have anny google trackers active via our development ot tests enviromets. But we can setup a test online in product if requested.
-* Missing something? Pleace contact us with specified sample of you needs or what your are missing and why you need if. Then we will consider developming support to our default feature set.
+* We dont have any google trackers active via our development or tests environments. But we can setup a test online in product if requested.
+* Missing something? Please contact us with specified sample of you needs or what your are missing and why you need if. Then we will consider developing support to our default feature set.
 
 ## Goolge Purchase output sample (will soon be updated with GA4 format)
 
