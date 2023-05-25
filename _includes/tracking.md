@@ -102,15 +102,16 @@ Items parameters
 | Name     | Type   | Example value | Description                                                                   |
 |----------|--------|---------------|-------------------------------------------------------------------------------|
 | item_id  | String | 123456           | Citybreak prodcut id |
-| item_name    | String | My product | 	Citybreak product system name                                               |
-| price    | Number | 1234.00 | 	Product price                                                                      |
+| item_name    	| String | My product | 	Citybreak product system name                                               |
+| price    	| Number | 1234.00 | 	Product price                                                                      |
 | item_category     | String | Acommodation | 	Citybreak system category                                |
 | item_category2    | String |  | 	                           |
 | item_category3    | String |  | 	                               |
 | item_category4    | String |  | 	                                |
 | item_category5    | String |  | 	 |
-| quantity    | Number | 1 | 	Quantity of product                                           |
+| quantity    | Number | 1 	| 	Quantity of product                                           |
 | affiliation    | String | 1234567890 | 	Citybreak online identifier id                                           |
+
 ```
 Example output
 
