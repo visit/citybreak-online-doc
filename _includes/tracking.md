@@ -60,7 +60,8 @@ Parameter | Description
 
 ```html
 
-<script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}"></script>
+<script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}">
+</script>
 
 ```
 
@@ -113,8 +114,8 @@ Items parameters
 ```
 Example output
 
-						'event':"view_cart",
-						'ecommerce': {
+			'event':"view_cart",
+			'ecommerce': {
                             'currency': "SEK",
                             'items': [{
                     'item_name': "My product",
@@ -152,7 +153,7 @@ Items parameters
 ```
 Example output
 
-						'event':"begin_checkout",
+			'event':"begin_checkout",
                         'ecommerce': {
                             'currency': "SEK",
                             'items': [{
@@ -193,7 +194,7 @@ Items parameters
 ```
 Example output
 
-							'event': "purchase",
+			    'event': "purchase",
                             'ecommerce': {
                                 'transaction_id': "ABCD12",
                                 'value': 1234.00,
