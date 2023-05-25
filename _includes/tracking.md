@@ -91,6 +91,22 @@ FYI:
 ### <a id="view_cart"></a> 'view_cart' - This event signifies that a user viewed their cart. 
 Fires on .../basket
 
+```
+Example output
+
+			'event':"view_cart",
+			'ecommerce': {
+                            'currency': "SEK",
+                            'items': [{
+                    'item_name': "My product",
+                    'item_id': "123456",                    
+                    'price': 1234.00,
+                    'item_category': "Acommodation",
+                    'quantity': 1,
+                    'affiliation': "1234567890"
+                }
+```
+
 | Name     | Type   | Example value | Description                                                                   |
 |----------|--------|---------------|-------------------------------------------------------------------------------|
 | Currency | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
@@ -112,10 +128,14 @@ Items parameters
 | quantity    | Number | 1 	| 	Quantity of product                                           |
 | affiliation    | String | 1234567890 | 	Citybreak online identifier id                                           |
 
+### <a id="begin_checkout"></a> 'begin_checkout' - This event signifies that a user has begun a checkout.
+Event fires on .../paymentdetails
+
+```
 Example output
 
-			'event':"view_cart",
-			'ecommerce': {
+			'event':"begin_checkout",
+                        'ecommerce': {
                             'currency': "SEK",
                             'items': [{
                     'item_name': "My product",
@@ -125,9 +145,7 @@ Example output
                     'quantity': 1,
                     'affiliation': "1234567890"
                 }
-
-### <a id="begin_checkout"></a> 'begin_checkout' - This event signifies that a user has begun a checkout.
-Event fires on .../paymentdetails
+```
 
 | Name     | Type   | Example value | Description                                                                   |
 |----------|--------|---------------|-------------------------------------------------------------------------------|
@@ -150,23 +168,27 @@ Items parameters
 | quantity    | Number | 1 | 	Quantity of product                            |
 | affiliation    | String | 1234567890 | 	Citybreak online identifier id     |
 
+### <a id="purchase"></a> 'purchase' - This event signifies when one or more items is purchased by a user.
+Event fires 1 time on .../confirmation
 
+```
 Example output
 
-			'event':"begin_checkout",
-                        'ecommerce': {
-                            'currency': "SEK",
-                            'items': [{
+			    'event': "purchase",
+                            'ecommerce': {
+                                'transaction_id': "ABCD12",
+                                'value': 1234.00,
+                                'tax': 123.12,
+                                'currency': "SEK",
+                                'items': [{
+                    'item_id': "123456",
                     'item_name': "My product",
-                    'item_id': "123456",                    
-                    'price': 1234.00,
                     'item_category': "Acommodation",
+                    'price': 1234.00,
                     'quantity': 1,
                     'affiliation': "1234567890"
                 }
-
-### <a id="purchase"></a> 'purchase' - This event signifies when one or more items is purchased by a user.
-Event fires 1 time on .../confirmation
+```
 
 | Name     | Type   | Example value | Description                                                                   |
 |----------|--------|---------------|-------------------------------------------------------------------------------|
@@ -190,25 +212,6 @@ Items parameters
 | item_category5    | String |  | 	|
 | quantity    | Number | 1 | 	Quantity of product                                           |
 | affiliation    | String | 1234567890 | 	Citybreak online identifier id                                          |
-
-
-Example output
-
-			    'event': "purchase",
-                            'ecommerce': {
-                                'transaction_id': "ABCD12",
-                                'value': 1234.00,
-                                'tax': 123.12,
-                                'currency': "SEK",
-                                'items': [{
-                    'item_id': "123456",
-                    'item_name': "My product",
-                    'item_category': "Acommodation",
-                    'price': 1234.00,
-                    'quantity': 1,
-                    'affiliation': "1234567890"
-                }
-
 
 ## Booking confimation urls
 
