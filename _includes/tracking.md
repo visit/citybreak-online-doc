@@ -112,7 +112,6 @@ Items parameters
 | quantity    | Number | 1 	| 	Quantity of product                                           |
 | affiliation    | String | 1234567890 | 	Citybreak online identifier id                                           |
 
-```
 Example output
 
 			'event':"view_cart",
@@ -126,7 +125,7 @@ Example output
                     'quantity': 1,
                     'affiliation': "1234567890"
                 }
-```
+
 ### <a id="begin_checkout"></a> 'begin_checkout' - This event signifies that a user has begun a checkout.
 Event fires on .../paymentdetails
 
@@ -151,7 +150,7 @@ Items parameters
 | quantity    | Number | 1 | 	Quantity of product                            |
 | affiliation    | String | 1234567890 | 	Citybreak online identifier id     |
 
-```
+
 Example output
 
 			'event':"begin_checkout",
@@ -165,7 +164,7 @@ Example output
                     'quantity': 1,
                     'affiliation': "1234567890"
                 }
-```
+
 ### <a id="purchase"></a> 'purchase' - This event signifies when one or more items is purchased by a user.
 Event fires 1 time on .../confirmation
 
@@ -192,7 +191,7 @@ Items parameters
 | quantity    | Number | 1 | 	Quantity of product                                           |
 | affiliation    | String | 1234567890 | 	Citybreak online identifier id                                          |
 
-```
+
 Example output
 
 			    'event': "purchase",
@@ -209,7 +208,7 @@ Example output
                     'quantity': 1,
                     'affiliation': "1234567890"
                 }
-```
+
 
 ## Booking confimation urls
 
