@@ -55,7 +55,7 @@ Parameter | Description
 > 
 > var booking = {bookingJSONObject};
 > Will generate:
-> var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": "600.0", "TotalTax": "64.29", "Products": [{ "Id": "248466", "Name": "Hotell_name/room_name", "Category": "Accommodation/Hotelroom", "Price": "600.0", "Quantity": "1", "DocumentUrls": ["https://doc.citybreak.com/url-to-ticket"] }] };
+> var booking = { "BookingCode": "ABCD12", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": "600.0", "TotalTax": "64.29", "Products": [{ "Id": "123456", "Name": "Hotell_name/room_name", "Category": "Accommodation/Hotelroom", "Price": "600.0", "Quantity": "1", "DocumentUrls": ["https://doc.citybreak.com/url-to-ticket"] }] };
 
 
 ```html
@@ -64,71 +64,154 @@ Parameter | Description
 
 ```
 
-## Google tracking
+## Google tracking (GA4)
 
-Citybreak online has standard support for google tracking.
-* Google analytics ga.js (depricated)
-* Universal Analytics analytics.js (depricated by google July 1, 2023)
-* Google tag manager gtm.js
-* Google analytics 4 gtag.js **SOON AVAILABLE**
-* Google tag manager (with ga4 datalayer) gtm.js **SOON AVAILABLE**
+Citybreak online has support for google tracking.
+* Google tag manager gtm.js (Not recomended)
+* Google analytics 4 gtag.js
+* Google tag manager (with ga4 datalayer) gtm.js
 
-_**NOTE: adding Google tracker property id via your template page is not allowed. We what to avoid dubble tracking**_
+Events:
+* [view_cart](#view_cart)
+* [begin_checkout](#begin_checkout)
+* [purchase](#purchase)
+* remove_from_cart (soon avaliable - stay tuned)
+* add_payment_info (soon avaliable - stay tuned)
 
-We just need to add the google tracking property id for you when implementing a new Citybreak online.
-Need help to add this contact us!
+A tracker property is implemented in Citybreak admin per online.
+To add or remove your tracker propertys, contact our support with the [online id] or [url to the ecom] and the tracker property you want to add or remove.
+_Example: "Please add this tracker property "G-[ID]" or GTM-[ID]" to onlineid: [add intentifier] OR url to citybreak online booking_
 
 FYI:
-* We dont have any google trackers active via our development or tests environments. But we can setup a test online in product if requested.
-* Missing something? Please contact us with specified sample of you needs or what your are missing and why you need if. Then we will consider developing support to our default feature set.
+* Google tracking is only avaliable in our production environment
+* Avoid to add Google tracking scripts via your template page. To avoid risk of double tracking
+* Questions related to the events we provied please contact our support.
 
-## Goolge Purchase output sample (will soon be updated with GA4 format)
+### <a id="view_cart"></a> 'view_cart' - This event signifies that a user viewed their cart. 
+Fires on .../basket
 
-> Purchase event output sample
+| Name     | Type   | Example value | Description                                                                   |
+|----------|--------|---------------|-------------------------------------------------------------------------------|
+| Currency | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| value | Number | 1234.00           | Value of products in the cart |
+| items    | Array - see Items below | 	    | 	The items for the event.                                                     |
 
-```html
-<script>
-citybreak0dataLayer = [{
-'onlineGuide': '[citybreak_online_id]',
-'organizationId': '[citybreak_organization_id]',
-'culture': 'en-GB'
-}];
+Items parameters
 
-if (shouldSendCheckoutTrackingGTMCookie === 'true') {
- citybreak0dataLayer.push({
- 'ecommerce': {
-  'checkout': {
-   'actionField': {
-    'step': 1
-    },
-   'currencyCode': 'SEK',
-   'products': [{
-    'name': "Hotel_name/room_name",
-    'id': '******',                    
-    'price': '1234.00',
-    'category': "Accommodation/Room",
-    'quantity': 2
-    }]
-   }
-  }
- },
- {
- 'event': 'checkout',
- 'eventCallback': function() {
-   console.log('Checkout event has fired');
-  }
- });
-}
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                               '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                                })(window,document,'script','citybreak0dataLayer','GTM-[tracker_id]');
- </script>
+| Name     | Type   | Example value | Description                                                                   |
+|----------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id  | String | 123456           | Citybreak prodcut id |
+| item_name    | String | My product | 	Citybreak product system name                                               |
+| price    | Number | 1234.00 | 	Product price                                                                      |
+| item_category     | String | Acommodation | 	Citybreak system category                                |
+| item_category2    | String |  | 	                           |
+| item_category3    | String |  | 	                               |
+| item_category4    | String |  | 	                                |
+| item_category5    | String |  | 	 |
+| quantity    | Number | 1 | 	Quantity of product                                           |
+| affiliation    | String | 1234567890 | 	Citybreak online identifier id                                           |
 ```
+Example output
+
+						'event':"view_cart",
+						'ecommerce': {
+                            'currency': "SEK",
+                            'items': [{
+                    'item_name': "My product",
+                    'item_id': "123456",                    
+                    'price': 1234.00,
+                    'item_category': "Acommodation",
+                    'quantity': 1,
+                    'affiliation': "1234567890"
+                }
+```
+### <a id="begin_checkout"></a> 'begin_checkout' - This event signifies that a user has begun a checkout.
+Event fires on .../paymentdetails
+
+| Name     | Type   | Example value | Description                                                                   |
+|----------|--------|---------------|-------------------------------------------------------------------------------|
+| Currency | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| value | Number | 1234.00           | Value of products in the cart |
+| items    | Array - see Items below | 	    | 	The items for the event.                                                     |
+
+Items parameters
+
+| Name     | Type   | Example value | Description                                                                   |
+|----------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id  | String | 123456           | Citybreak prodcut id |
+| item_name    | String | My product | 	Citybreak product system name                                               |
+| price    | Number | 1234.00 | 	Product price                                                                      |
+| item_category     | String | Acommodation | 	Citybreak system category      |
+| item_category2    | String |  | 	 |
+| item_category3    | String |  | 	 |
+| item_category4    | String |  | 	 |
+| item_category5    | String |  | 	 |
+| quantity    | Number | 1 | 	Quantity of product                            |
+| affiliation    | String | 1234567890 | 	Citybreak online identifier id     |
+
+```
+Example output
+
+						'event':"begin_checkout",
+                        'ecommerce': {
+                            'currency': "SEK",
+                            'items': [{
+                    'item_name': "My product",
+                    'item_id': "123456",                    
+                    'price': 1234.00,
+                    'item_category': "Acommodation",
+                    'quantity': 1,
+                    'affiliation': "1234567890"
+                }
+```
+### <a id="purchase"></a> 'purchase' - This event signifies when one or more items is purchased by a user.
+Event fires 1 time on .../confirmation
+
+| Name     | Type   | Example value | Description                                                                   |
+|----------|--------|---------------|-------------------------------------------------------------------------------|
+| transaction_id | string | ABCD12  | Booking number |
+| value    | Number | 1234.00	    | 	Booking value                                                   |
+| tax    | Number | 123.12	    | 	Booking tax value                                                   |
+| Currency | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| items    | Array - see Items below | 	    | 	The items for the event.                                        |
+
+Items parameters
+
+| Name     | Type   | Example value | Description                                                                   |
+|----------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id  | String | 123456           | Citybreak prodcut id |
+| item_name    | String | My product | 	Citybreak product system name                                               |
+| price    | Number | 1234.00 | 	Product price                                                                   |
+| item_category     | String | Acommodation | 	Citybreak system category                                 |
+| item_category2    | String |  | 	|
+| item_category3    | String |  | 	|
+| item_category4    | String |  | 	|
+| item_category5    | String |  | 	|
+| quantity    | Number | 1 | 	Quantity of product                                           |
+| affiliation    | String | 1234567890 | 	Citybreak online identifier id                                          |
+
+```
+Example output
+
+							'event': "purchase",
+                            'ecommerce': {
+                                'transaction_id': "ABCD12",
+                                'value': 1234.00,
+                                'tax': 123.12,
+                                'currency': "SEK",
+                                'items': [{
+                    'item_id': "123456",
+                    'item_name': "My product",
+                    'item_category': "Acommodation",
+                    'price': 1234.00,
+                    'quantity': 1,
+                    'affiliation': "1234567890"
+                }
+```
+
 ## Booking confimation urls
 
-``http(s)://[CB online url]/[Lang/Culture]/confirmation...``
+``https://[CB online url]/[Lang/Culture]/confirmation...``
 
 Language | url
 --------- | ---------
