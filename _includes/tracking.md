@@ -1,6 +1,6 @@
 # Tracking
 
-Citybreak online support the basic google tracking and has a few custom build options that can be used.
+Citybreak online tracing alternativs and technical information
 
 ## Booking tracking id
 
