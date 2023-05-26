@@ -88,7 +88,7 @@ FYI:
 * Avoid to add Google tracking scripts via your template page. To avoid risk of double tracking
 * Questions related to the events we provied please contact our support.
 
-### <a id="view_cart"></a> 'view_cart' - This event signifies that a user viewed their cart. 
+### <a id="view_cart"></a> view_cart - This event signifies that a user viewed their cart. 
 Fires on .../basket
 
 ```
@@ -97,6 +97,7 @@ Example output
 			'event':"view_cart",
 			'ecommerce': {
                             'currency': "SEK",
+			    'value': 1234.00,
                             'items': [{
                     'item_name': "My product",
                     'item_id': "123456",                    
@@ -128,7 +129,7 @@ Items parameters
 | quantity    | Number | 1 	| 	Quantity of product                                           |
 | affiliation    | String | 1234567890 | 	Citybreak online identifier id                                           |
 
-### <a id="begin_checkout"></a> 'begin_checkout' - This event signifies that a user has begun a checkout.
+### <a id="begin_checkout"></a> begin_checkout - This event signifies that a user has begun a checkout.
 Event fires on .../paymentdetails
 
 ```
@@ -137,6 +138,7 @@ Example output
 			'event':"begin_checkout",
                         'ecommerce': {
                             'currency': "SEK",
+			    'value': 1234.00,
                             'items': [{
                     'item_name': "My product",
                     'item_id': "123456",                    
@@ -168,7 +170,7 @@ Items parameters
 | quantity    | Number | 1 | 	Quantity of product                            |
 | affiliation    | String | 1234567890 | 	Citybreak online identifier id     |
 
-### <a id="purchase"></a> 'purchase' - This event signifies when one or more items is purchased by a user.
+### <a id="purchase"></a> purchase - This event signifies when one or more items is purchased by a user.
 Event fires 1 time on .../confirmation
 
 ```
