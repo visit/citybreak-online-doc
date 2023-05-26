@@ -82,7 +82,7 @@ Events:
 A tracker property is implemented in Citybreak admin per online.
 To add or remove your tracker propertys, contact our support with the [online id] or [url to the ecom] and the tracker property you want to add or remove.
 
-_Example: "Please add this tracker property "G-[ID]" or GTM-[ID]" to onlineid: [add intentifier] OR url to citybreak online booking_
+_Example: "Please add this tracker property "G-[ID]" or GTM-[ID]" to onlineid: [add identifier] OR url to citybreak online booking_
 
 FYI:
 * Google tracking is only avaliable in our production environment
