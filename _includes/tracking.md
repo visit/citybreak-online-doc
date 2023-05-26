@@ -80,7 +80,7 @@ _Example: "Please add this tracker property "G-[ID]" or GTM-[ID]" to onlineid: [
 FYI:
 * Google tracking is only avaliable in our production environment
 * Avoid to add Google tracking scripts via your template page. To avoid risk of double tracking
-* Questions or feature request related to the events we proved please contact our us.
+* Questions or feature request related to the events we provide please contact us.
 
 ### <a id="view_cart"></a> view_cart - This event signifies that a user viewed their cart. 
 Fires on ``.../basket``
