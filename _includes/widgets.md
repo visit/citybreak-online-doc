@@ -18,7 +18,7 @@ To implement the widgets you need to add two things to your webpage:
 <script type="text/javascript">
         (function() {
               var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
-               widget.src = 'https://[ONLINE-HOST]/[CULTURE]...';
+               widget.src = '//[online-host]/[culture]/...';
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
         })();
 </script>
@@ -73,7 +73,7 @@ The parameters have to be passed in the correct order, i.e. the value of the fir
 <script type="text/javascript">
         (function() {
               var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
-               widget.src = 'https://[ONLINE-HOST]/[CULTURE]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2';
+               widget.src = '//[online-host]/[culture]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2';
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);
         })();
 </script>
@@ -270,7 +270,7 @@ optional trigger id: ``citybreak_basket_widget_display``
 	        var widget = document.createElement('script');
 	        widget.type = 'text/javascript';
 	        widget.async = true;
-	        widget.src = '//[ONLINE-HOST]/[CULTURE]/basketwidget/widget';
+	        widget.src = '//[online-host]/[culture]/basketwidget/widget';
 	        var s = document.getElementsByTagName('script')[0];
 	        s.parentNode.insertBefore(widget, s);
         })();
@@ -293,7 +293,7 @@ Div tag Id: ``citybreak_accommodation_property_widget``
 	var widget = document.createElement('script');
 	widget.type = 'text/javascript';
 	widget.async = true;
-	widget.src = 'https://[ONLINE-HOST]/[CULTURE]' + '?productid=123456';
+	widget.src = '//[online-host]/[culture]/accommodationPropertyWidget/searchform?productid=123456';
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(widget, s);
 	} catch {return;} })();							
@@ -319,7 +319,7 @@ Div tag Id: ``citybreak_activity_transport_searchform_widget``
 <script type="text/javascript">
 	(function() { 		
 	var widget = document.createElement('script'); widget.type = 'text/javascript'; widget.async = true;
-        widget.src = 'https://[ONLINE-HOST]/[CULTURE]' + '?cbisProductId=123456';		
+        widget.src = '//[online-host]/[culture]/activitytransportwidget/searchform?cbisProductId=123456';		
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(widget, s);			
 	})(); 
 </script>
@@ -515,7 +515,7 @@ The id of the product/package to display the search form for.
         var widget = document.createElement('script');
         widget.type = 'text/javascript';
         widget.async = true;
-        widget.src = '//[ONLINE-HOST]/[CULTURE]/accommodationferrypackagewidget/searchform?cbisProductId=[CBIS_ID]';
+        widget.src = '//[online-host]/[culture]/accommodationferrypackagewidget/searchform?cbisProductId=[CBIS_ID]';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(widget, s);
     })();
