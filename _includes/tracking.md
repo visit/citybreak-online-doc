@@ -108,26 +108,26 @@ Example output
                 }
 ```
 
-| Name     | Type   | Example value | Description                                                                   |
-|----------|--------|---------------|-------------------------------------------------------------------------------|
-| Currency | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
-| value | Number | 1234.00           | Value of products in the cart |
-| items    | Array - see Items below | 	    | 	The items for the event.                                                     |
+| Name    	  | Type   | Example value | Description                                                                   |
+|-----------------|--------|---------------|-------------------------------------------------------------------------------|
+| currency	  | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| value 	  | Number | 1234.00       | Value of products in the cart 						   |
+| items    	  | Array  | See Items	   | The items for the event.                                             	   |
 
 Items parameters
 
-| Name     | Type   | Example value | Description                                                                   |
-|----------|--------|---------------|-------------------------------------------------------------------------------|
-| item_id  | String | 123456           | Citybreak prodcut id |
-| item_name    	| String | My product | 	Citybreak product system name                                               |
-| price    	| Number | 1234.00 | 	Product price                                                                      |
-| item_category     | String | Acommodation | 	Citybreak system category                                |
-| item_category2    | String |  | 	                           |
-| item_category3    | String |  | 	                               |
-| item_category4    | String |  | 	                                |
-| item_category5    | String |  | 	 |
-| quantity    | Number | 1 	| 	Quantity of product                                           |
-| affiliation    | String | 1234567890 | 	Citybreak online identifier id                                           |
+| Name    	  | Type   | Example value | Description                                                                   |
+|-----------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id  	  | String | 123456        | Citybreak product id 							   |
+| item_name    	  | String | My product    | Citybreak product system name                                                 |
+| price    	  | Number | 1234.00 	   | Product price                                                                 |
+| item_category   | String | Acommodation  | Citybreak system category                                			   |
+| item_category2  | String |  		   | 	                            						   |
+| item_category3  | String |  		   | 	                               						   |
+| item_category4  | String |               | 	                                					   |
+| item_category5  | String |               | 	 									   |
+| quantity    	  | Number | 1 	           | Quantity of product                                           		   |
+| affiliation     | String | 1234567890    | Citybreak online identifier id                                           	   |
 
 ### <a id="begin_checkout"></a> begin_checkout - This event signifies that a user has begun a checkout.
 Event fires on .../paymentdetails
@@ -149,26 +149,26 @@ Example output
                 }
 ```
 
-| Name     | Type   | Example value | Description                                                                   |
-|----------|--------|---------------|-------------------------------------------------------------------------------|
-| Currency | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
-| value | Number | 1234.00           | Value of products in the cart |
-| items    | Array - see Items below | 	    | 	The items for the event.                                                     |
+| Name    	  | Type   | Example value | Description                                                                   |
+|-----------------|--------|---------------|-------------------------------------------------------------------------------|
+| currency 	  | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| value 	  | Number | 1234.00       | Value of products in the cart 						   |
+| items           | Array  | See Items 	   | The items for the event.                                                      |
 
 Items parameters
 
-| Name     | Type   | Example value | Description                                                                   |
-|----------|--------|---------------|-------------------------------------------------------------------------------|
-| item_id  | String | 123456           | Citybreak prodcut id |
-| item_name    | String | My product | 	Citybreak product system name                                               |
-| price    | Number | 1234.00 | 	Product price                                                                      |
-| item_category     | String | Acommodation | 	Citybreak system category      |
-| item_category2    | String |  | 	 |
-| item_category3    | String |  | 	 |
-| item_category4    | String |  | 	 |
-| item_category5    | String |  | 	 |
-| quantity    | Number | 1 | 	Quantity of product                            |
-| affiliation    | String | 1234567890 | 	Citybreak online identifier id     |
+| Name    	  | Type   | Example value | Description                                                                   |
+|-----------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id  	  | String | 123456        | Citybreak product id 							   |
+| item_name       | String | My product    | Citybreak product system name                                                 |
+| price    	  | Number | 1234.00 	   | Product price                                                                 |
+| item_category   | String | Acommodation  | Citybreak system category      						   |
+| item_category2  | String |  		   | 	 									   |
+| item_category3  | String |               | 	 									   |
+| item_category4  | String |  		   | 	 									   |
+| item_category5  | String |    	   | 	 									   |
+| quantity        | Number | 1 		   | Quantity of product                            				   |
+| affiliation     | String | 1234567890    | Citybreak online identifier id     					   |
 
 ### <a id="purchase"></a> purchase - This event signifies when one or more items is purchased by a user.
 Event fires 1 time on .../confirmation
@@ -192,28 +192,28 @@ Example output
                 }
 ```
 
-| Name     | Type   | Example value | Description                                                                   |
-|----------|--------|---------------|-------------------------------------------------------------------------------|
-| transaction_id | string | ABCD12  | Booking number |
-| value    | Number | 1234.00	    | 	Booking value                                                   |
-| tax    | Number | 123.12	    | 	Booking tax value                                                   |
-| Currency | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
-| items    | Array - see Items below | 	    | 	The items for the event.                                        |
+| Name    	  | Type   | Example value | Description                                                                   |
+|-----------------|--------|---------------|-------------------------------------------------------------------------------|
+| transaction_id  | string | ABCD12  	   | Booking number 								   |
+| value    	  | Number | 1234.00	   | Booking value                                                   		   |
+| tax             | Number | 123.12	   | Booking tax value                                                   	   |
+| currency        | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| items    	  | Array  | See Items     | The items for the event.                                        		   |
 
 Items parameters
 
-| Name     | Type   | Example value | Description                                                                   |
-|----------|--------|---------------|-------------------------------------------------------------------------------|
-| item_id  | String | 123456           | Citybreak prodcut id |
-| item_name    | String | My product | 	Citybreak product system name                                               |
-| price    | Number | 1234.00 | 	Product price                                                                   |
-| item_category     | String | Acommodation | 	Citybreak system category                                 |
-| item_category2    | String |  | 	|
-| item_category3    | String |  | 	|
-| item_category4    | String |  | 	|
-| item_category5    | String |  | 	|
-| quantity    | Number | 1 | 	Quantity of product                                           |
-| affiliation    | String | 1234567890 | 	Citybreak online identifier id                                          |
+| Name            | Type   | Example value | Description                                                                   |
+|-----------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id  	  | String | 123456        | Citybreak product id 						           |
+| item_name       | String | My product    | Citybreak product system name                                                 |
+| price           | Number | 1234.00       | Product price                                                                 |
+| item_category   | String | Acommodation  | Citybreak system category                                 		   	   |
+| item_category2  | String |  		   | 	 									   |
+| item_category3  | String |  		   | 										   |
+| item_category4  | String |  		   | 										   |
+| item_category5  | String |  		   | 										   |
+| quantity        | Number | 1 		   | Quantity of product                                           		   |
+| affiliation     | String | 1234567890    | Citybreak online identifier id                                         	   |
 
 ## Booking confimation urls
 
