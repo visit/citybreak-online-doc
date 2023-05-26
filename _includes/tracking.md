@@ -23,19 +23,12 @@ Paramerter:
 
 Direct link sample
 ``
-https://[ONLINE-HOST]/[culture]/[Citybreak guide]?tid=mytrackingkey
-``
-
-
-Widget link sample
-``
-https://[ONLINE-HOST]/[culture]/[widgettype]/searchform?tid=mytrackingkey
+//[online-host]/[culture]/[slug]?tid=mytrackingkey
 ``
 
 ## Custom conversion tracking
 
 To make your script work for your organization you need to configure it. To do so you need to change the variables in your script with the variable names below. This custum scripts are added to the booking confirmaiton page.
-
 
 Parameter | Description
 --------- | --------- 
@@ -218,7 +211,7 @@ Items parameters
 
 ## Booking confimation urls
 
-``https://[CB online url]/[Lang/Culture]/confirmation...``
+``//[online-host]/[culture]/confirmation...``
 
 Language | url
 --------- | ---------
