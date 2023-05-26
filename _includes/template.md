@@ -93,7 +93,7 @@ Values sample:
 - USD
 etc.
 
-``https://[CBONLINE_URL]?refcur=EUR``
+``//[online-host]/[culture]/[slug]?refcur=EUR``
 
 _Note: not supported in one domain implementations_
 
@@ -219,12 +219,12 @@ If you want to compare your CB online url with and with out the template page lo
 ``NoHeaderFooter=true``
 
 ```html
-//[ONLINE-HOST]/[CULTURE]/[CB ONLINE URL...]?NoHeaderFooter=true
+//[online-host]/[culture]/[slug]?NoHeaderFooter=true
 ```
 
 If you want to load all System translation strings on a url you can user this parameter:  
 ``showTranslationKeys=true``
 
 ```html
-//[ONLINE-HOST]/[CULTURE]/[CB ONLINE URL...]?showTranslationKeys=true
+//[online-host]/[culture]/[slug]?showTranslationKeys=true
 ```
