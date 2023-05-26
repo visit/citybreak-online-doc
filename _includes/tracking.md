@@ -67,7 +67,7 @@ Parameter | Description
 
 ## Google tracking (GA4)
 
-Citybreak online has support this googles tracking options.
+Citybreak online googles tracking options.
 * Google tag manager (old datalayer) gtm.js (Not recomended)
 * Google analytics 4 gtag.js
 * Google tag manager (*with ga4* datalayer) gtm.js
@@ -86,7 +86,7 @@ _Example: "Please add this tracker property "G-[ID]" or GTM-[ID]" to onlineid: [
 FYI:
 * Google tracking is only avaliable in our production environment
 * Avoid to add Google tracking scripts via your template page. To avoid risk of double tracking
-* Questions related to the events we provied please contact our support.
+* Questions or feature request related to the events we proved please contact our us.
 
 ### <a id="view_cart"></a> view_cart - This event signifies that a user viewed their cart. 
 Fires on .../basket
