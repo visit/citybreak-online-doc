@@ -90,7 +90,7 @@ FYI:
 * Questions or feature request related to the events we proved please contact our us.
 
 ### <a id="view_cart"></a> view_cart - This event signifies that a user viewed their cart. 
-Fires on .../basket
+Fires on ``.../basket``
 
 ```
 Example output
@@ -131,7 +131,7 @@ Items parameters
 | affiliation     | String | 1234567890    | Citybreak online identifier id                                           	   |
 
 ### <a id="begin_checkout"></a> begin_checkout - This event signifies that a user has begun a checkout.
-Event fires on .../paymentdetails
+Event fires on ``.../paymentdetails``
 
 ```
 Example output
@@ -172,7 +172,7 @@ Items parameters
 | affiliation     | String | 1234567890    | Citybreak online identifier id     					   |
 
 ### <a id="purchase"></a> purchase - This event signifies when one or more items is purchased by a user.
-Event fires 1 time on .../confirmation
+Event fires 1 time on ``.../confirmation``
 
 ```
 Example output
