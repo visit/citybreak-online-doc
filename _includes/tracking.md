@@ -67,10 +67,10 @@ Parameter | Description
 
 ## Google tracking (GA4)
 
-Citybreak online has support for google tracking.
-* Google tag manager gtm.js (Not recomended)
+Citybreak online has support this googles tracking options.
+* Google tag manager (old datalayer) gtm.js (Not recomended)
 * Google analytics 4 gtag.js
-* Google tag manager (with ga4 datalayer) gtm.js
+* Google tag manager (*with ga4* datalayer) gtm.js
 
 Events:
 * [view_cart](#view_cart)
