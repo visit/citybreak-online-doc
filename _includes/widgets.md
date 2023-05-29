@@ -33,6 +33,12 @@ Searchform widget are user if you want to have a singel searchform widget loaded
 (if you need to load 2 widget on 1 page see combine widget (LINK))
 
 ### Accommodation searchform
+```html
+<div id="citybreak_accommodation_searchform_widget"></div>
+
+<script async type="text/javascript" src="//[online-host]/[culture]/accommodationwidget/searchform">
+</script>
+```
 Use for multi property accommodation, search will target
 
 | Parameter       	   |type    | Example value  | Description                                                                             |
@@ -57,40 +63,31 @@ You define the number of adults and children (including the child’s age) that 
 | r		    | String | &pr=1r1r1 (One room with one adult and two children (10, 12 yrs) is entered)| The separator if the search is made on more rooms than one.|
 | c		    | String | &pr=1a10c12(Two rooms with one adult and two children (10, 12 yrs) in the first room and two adults in the second room is entered)| The separator if the search shall be made on more than one child.|
 
-Example:
-
-```html
-<div id="citybreak_accommodation_searchform_widget"></div>
-
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationwidget/searchform">
-</script>
-```
-
 ### Activity searchform
-Use for multi product todos, search/fitler will target
-
-Example:
-
 ```html
 <div id="citybreak_activity_searchform_widget"></div> 
 
 <script async type="text/javascript" src="//[online-host]/[culture]/activitywidget/searchform">
 </script>
 ```
+Use for multi product todos, search/fitler will target
 
 ### Ferry searchform
-Use for external ferry search
-
-Example:
-
 ```html
 <div id="citybreak_ferry_searchform_widget"></div> 
 
 <script async type="text/javascript" src="//[online-host]/[culture]/ferrywidget/searchform">
 </script>
 ```
+Use for external ferry search
 
 ### Flight searchform
+```html
+<div id="citybreak_flight_searchform_widget"></div> 
+
+<script async type="text/javascript" src="//[online-host]/[culture]/flightwidget/searchform">
+</script>
+```
 Use for external flight search
 
 | Parameter       	   |type    | Example value  | Description                                                                             |
@@ -103,42 +100,32 @@ Use for external flight search
 | sgid 	   			   | Int    | 123456      	 | Use to preselect start location using a CBIS geonode id.						   		   |
 | css 			       | 		| [url]			 | Add absolute url to you custom hosted CSS.											   |
 
-Example:
-
-```html
-<div id="citybreak_flight_searchform_widget"></div> 
-
-<script async type="text/javascript" src="//[online-host]/[culture]/flightwidget/searchform">
-</script>
-```
-
-
 ### Carrental searchform
-Use for external carrental search
-
-Example:
-
 ```html
 <div id="citybreak_carrental_searchform_widget"></div> 
 
 <script async type="text/javascript" src="//[online-host]/[culture]/carrentalwidget/searchform">
 </script>
 ```
+Use for external carrental search
 
 ### Public transport searchform
-Use for external public transport search
-
-Example:
-
 ```html
 <div id="citybreak_publictransportwidget_searchform_widget"></div> 
 
 <script async type="text/javascript" src="//[online-host]/[culture]/publictransportwidget/searchform">
 </script>
 ```
+Use for external public transport search
 
 ## <a id="Combine"></a> Combine widget - Used if you want to load 2 or more widgets on the same page.
+```html
+<div id="citybreak_accommodation_searchform_widget"></div>
+<div id="citybreak_ferry_searchform_widget"></div>
 
+<script async type="text/javascript" src="//[online-host]/[culture]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2"
+</script>
+```
 You have 3 parameters what has to be included.
 
 | Type 		 |Parameter | Example value 											   | Description                                                                  |
@@ -147,38 +134,9 @@ You have 3 parameters what has to be included.
 | Action 	 | a= 		| a=searchform&a=searchform 								   | Names of actions for the widget controllers specified in the "c" parameter   |
 | Parameter  | p= 		| p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2 | Parameters to each widget action specified by the "c" and "a" parameters. To pass multiple parameters to a widget, use a semicolon-separated list of keys and values |
 
-Example - accommodation and ferry searchform:
-
-```html
-<div id="citybreak_accommodation_searchform_widget"></div>
-<div id="citybreak_ferry_searchform_widget"></div>
-
-<script async type="text/javascript" src="//[online-host]/[culture]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2"
-</script>
-```
-
 ## <a id="product_package"></a> Product & package widgets - Used to load a product or package booking widget
 
 ### Activity & merchandise product widget
-Activity & merchandise product booking widget - load one per page. (you can load multipe products in one script if needed.
-
-| Parameter       |type  | Example value  | Description                                                                             |
-|-----------------|------|----------------|-----------------------------------------------------------------------------------------|
-| *cbisProductId  | Int  | 123456   	  | CBIS product id, We reccomend that you keep this ID on all elements See [ID] in example.|
-| proceedToBasket | Bool | true (or false)| Use to proceed to basket(checkout) or stay on widget page?  	  					    |
-| css 			  |      | [url]		  | Add absolute url to you custom hosted CSS.												|
-| defaultDate	  | Date | 2023-06-11     | Use JavaScript "new" date format, default selected date									|
-| startDate 	  | Date | 2023-07-01     | Use JavaScript "new" date format, widget start date selectable date						|
-| endDate	 	  | Date | 2023-07-01     | Use JavaScript "new" date format, maximum selectable date								|
-*Requierd 
-
-### Booking event listner for Activity
-You may also customize the booking process with the proceedToBasket option and 'cb-activity-booked' event.
-*The cb-activity-booked event receives:*
-cbisProductId: a CBIS product id of the booked product, basketProductIds: a list of resulting basket product ids, complementaryUrl: url to complementary page (will redirect to basket if no complementary options are available), success: [bool] whether the product was added successfully to basket
-
-Example:
-
 ```html
 <div id="citybreak_activity_booking_widget"></div>
 <div id="activity_booking_widget-[ID]"></div>
@@ -194,34 +152,53 @@ Example:
     }, false);
  </script>
 ```
+Activity & merchandise product booking widget - load one per page. (you can load multipe products in one script if needed.
+
+| Parameter       |type  | Example value  | Description                                                                             |
+|-----------------|------|----------------|-----------------------------------------------------------------------------------------|
+| cbisProductId  | Int  | 123456   	  | CBIS product id, We reccomend that you keep this ID on all elements See [ID] in example.|
+| proceedToBasket | Bool | true (or false)| Use to proceed to basket(checkout) or stay on widget page?  	  					    |
+| css 			  |      | [url]		  | Add absolute url to you custom hosted CSS.												|
+| defaultDate	  | Date | 2023-06-11     | Use JavaScript "new" date format, default selected date									|
+| startDate 	  | Date | 2023-07-01     | Use JavaScript "new" date format, widget start date selectable date						|
+| endDate	 	  | Date | 2023-07-01     | Use JavaScript "new" date format, maximum selectable date								|
+*cbisProductId is requierd 
+
+### Booking event listner for Activity
+You may also customize the booking process with the proceedToBasket option and 'cb-activity-booked' event.
+*The cb-activity-booked event receives:*
+cbisProductId: a CBIS product id of the booked product, basketProductIds: a list of resulting basket product ids, complementaryUrl: url to complementary page (will redirect to basket if no complementary options are available), success: [bool] whether the product was added successfully to basket
 
 ### iTicket Activity Transport widget
-Use for iticket transport products.
-
-| Parameter       	 |type  | Example value  | Description                                                                             |
-|--------------------|------|----------------|-----------------------------------------------------------------------------------------|
-| *cbisProductId     | Int  | 123456   	     | CBIS product id, product to display the widget.										   |
-| proceedToBasket 	 | Bool | true (or false)| Use to proceed to basket(checkout) or stay on widget page?    						   |
-| css 			  	 |      | [url]		     | Add absolute url to you custom hosted CSS.											   |
-| preferredDate	  	 | Date | 2023-06-11     | A valid date to set the default initially selected date in the widget, the format of the date must be the same as the format of the requested widget. If the preferred date is not available it will fall back to default behavior.|
-| preferredDeparture | Date | 2023-06-11     | Id of the location that will be initially selected as departure location. If not available it will fallback to default behavior.|
-| preferredArrival 	 | Date | 2023-07-01     | Id of the location that will be initially selected as arrival location. If not available it will fallback to default behavior.|
-| enablePromocode	 | Bool | true (or false)| Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.|
-*Requierd 
-
-### Booking event listner for iTicket Activity Transport
-You may also customize the booking process as the with the proceedToBasket option and 'cb-activitytransport-booked'.
-
-Example:
-
 ```html
 <div id="citybreak_activity_transport_searchform_widget"></div>
 
 <script async type="text/javascript" src="//[online-host]/[culture]/activitytransportwidget/searchform?cbisProductId=[ID]">
 </script>
 ```
+Use for iticket transport products.
+
+| Parameter       	 |type  | Example value  | Description                                                                             |
+|--------------------|------|----------------|-----------------------------------------------------------------------------------------|
+| cbisProductId     | Int  | 123456   	     | CBIS product id, product to display the widget.										   |
+| proceedToBasket 	 | Bool | true (or false)| Use to proceed to basket(checkout) or stay on widget page?    						   |
+| css 			  	 |      | [url]		     | Add absolute url to you custom hosted CSS.											   |
+| preferredDate	  	 | Date | 2023-06-11     | A valid date to set the default initially selected date in the widget, the format of the date must be the same as the format of the requested widget. If the preferred date is not available it will fall back to default behavior.|
+| preferredDeparture | Date | 2023-06-11     | Id of the location that will be initially selected as departure location. If not available it will fallback to default behavior.|
+| preferredArrival 	 | Date | 2023-07-01     | Id of the location that will be initially selected as arrival location. If not available it will fallback to default behavior.|
+| enablePromocode	 | Bool | true (or false)| Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.|
+*cbisProductId id requierd 
+
+### Booking event listner for iTicket Activity Transport
+You may also customize the booking process as the with the proceedToBasket option and 'cb-activitytransport-booked'.
 
 ### Accommodation product widget
+```html
+<div id="citybreak_accommodation_property_widget"></div>
+
+<script async type="text/javascript" src="//[online-host]/[culture]/accommodationPropertyWidget/searchform?productid=[ID]">
+</script>
+```
 Use for one accommodation property.
 
 | Parameter       	 |type  | Example value  | Description                                                                             |
@@ -229,13 +206,6 @@ Use for one accommodation property.
 | *productId         | Int  | 123456   	     | CBIS product id, product to display the widget. You can only use one product per widget.|
 | css 			  	 |      | [url]	    	 | Add absolute url to you custom hosted CSS.											   |
 
-Example:
-```html
-<div id="citybreak_accommodation_property_widget"></div>
-
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationPropertyWidget/searchform?productid=[ID]">
-</script>
-```
 
 ### Dynamic packages widget
 Use for dynamic package you have 1 widget per package type.
@@ -249,68 +219,51 @@ Parameters for all package types
 *Requierd 
 
 ### Accommodation Ferry package widget
-Use for package type AccommodationFerry
-
-Example:
 ```html
 <div id="citybreak_accommodation_ferry_package_searchform_widget"></div>
 
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationferrypackagewidget/searchform?cbisProductid=[ID]">
 </script>
 ```
+Use for package type AccommodationFerry
 
 ### Accommodation Todo package widget
-Use for package type AccommodationTodo
-
-Example:
 ```html
 <div id="citybreak_accommodation_todo_package_searchform_widget"></div>
 
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationtodopackagewidget/searchform?cbisProductid=[ID]">
 </script>
 ```
+Use for package type AccommodationTodo
 
 ### Accommodation Accommodation package widget
-Use for package type AccommodationAccommodation
-
-Example:
 ```html
 <div id="citybreak_accommodation_accommodation_package_searchform_widget"></div>
 
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationaccommodationpackagewidget/searchform?cbisProductid=[ID]">
 </script>
 ```
+Use for package type AccommodationAccommodation
 
 ### Todo Todo package widget
-Use for package type TodoTodo
-
-Example:
 ```html
 <div id="citybreak_todo_todo_package_searchform_widget"></div>
 
 <script async type="text/javascript" src="//[online-host]/[culture]/todotodopackagewidget/searchform?cbisProductid=[ID]">
 </script>
 ```
+Use for package type TodoTodo
 
 ### Accommodation Flight package widget
-Use for package type AccommodationFlight
-
-Example:
 ```html
 <div id="citybreak_accommodation_flight_package_searchform_widget"></div>
 
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationflightpackagewidget/searchform?cbisProductid=[ID]">
 </script>
 ```
+Use for package type AccommodationFlight
 
 ### <a id="Basket"></a> Basket widget - Used if you want to have a shopping cart in the CMS and in your template page.
-The basket widget can be used within or outside of the Citybreak online template page.
-When the basket widget is used within the template the script tag must be omitted.
-
-Note: citybreak_basket_widget_display is a optional trigger
-
-Example:
-
 ```
 <a id="citybreak_basket_widget_display" href="#" tabindex="0"></a>
 <div id="citybreak_basket_widget_summary"></div>
@@ -318,3 +271,7 @@ Example:
 <script async type="text/javascript" src="//[online-host]/[culture]/basketwidget/widget">
 </script>
 ```
+The basket widget can be used within or outside of the Citybreak online template page.
+When the basket widget is used within the template the script tag must be omitted.
+
+Note: citybreak_basket_widget_display is a optional trigger
