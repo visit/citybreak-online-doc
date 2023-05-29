@@ -152,7 +152,7 @@ You have 3 parameters what has to be included.
     }, false);
  </script>
 ```
-Activity & merchandise product booking widget - load one per page. (you can load multipe products in one script if needed.
+Activity & merchandise product booking widget - load one per page. (you can load multipe products in one script if needed.)
 
 | Parameter       |type  | Example value  | Description                                                                             |
 |-----------------|------|----------------|-----------------------------------------------------------------------------------------|
@@ -162,6 +162,7 @@ Activity & merchandise product booking widget - load one per page. (you can load
 | defaultDate	  | Date | 2023-06-11     | Use JavaScript "new" date format, default selected date									|
 | startDate 	  | Date | 2023-07-01     | Use JavaScript "new" date format, widget start date selectable date						|
 | endDate	 	  | Date | 2023-07-01     | Use JavaScript "new" date format, maximum selectable date								|
+
 *cbisProductId is requierd 
 
 ### Booking event listner for Activity
@@ -187,6 +188,7 @@ Use for iticket transport products.
 | preferredDeparture | Date | 2023-06-11     | Id of the location that will be initially selected as departure location. If not available it will fallback to default behavior.|
 | preferredArrival 	 | Date | 2023-07-01     | Id of the location that will be initially selected as arrival location. If not available it will fallback to default behavior.|
 | enablePromocode	 | Bool | true (or false)| Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.|
+
 *cbisProductId id requierd 
 
 ### Booking event listner for iTicket Activity Transport
@@ -214,9 +216,10 @@ Parameters for all package types
 
 | Parameter       |type  | Example value  | Description                                                                             |
 |-----------------|------|----------------|-----------------------------------------------------------------------------------------|
-| *cbisProductId  | Int  | 123456   	  | CBIS product id for the package															|
+| cbisProductId  | Int  | 123456   	  | CBIS product id for the package															|
 | css 			  |      | [url]	      | Add absolute url to you custom hosted CSS.											    |
-*Requierd 
+
+*cbisProductId is requierd 
 
 ### Accommodation Ferry package widget
 ```html
