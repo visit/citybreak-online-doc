@@ -123,7 +123,7 @@ Use for external public transport search
 <div id="citybreak_accommodation_searchform_widget"></div>
 <div id="citybreak_ferry_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2"
+<script async type="text/javascript" src="//[online-host]/[culture]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2">
 </script>
 ```
 You have 3 parameters what has to be included.
