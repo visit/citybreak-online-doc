@@ -20,19 +20,19 @@ FYI:
 - Never use CSS overrides on the widget since the CSS are controlled from the impementaion.
 _(if you want to use custom CSS this should be loaded via CSS parameter and the url where you host the CSS)_
 
-## Widget types
+### Widget types
 
 - [Searchforms widgets](#Searchforms)
 - [Combine widgets](#Combine)
 - [product & package widgets](#product_package)
 - [Basket widget](#Basket)
 
-### <a id="Searchforms"></a> Searchform widgets - Used for a search or filtering for prodcuts per of guide.
+## <a id="Searchforms"></a> Searchform widgets - Used for a search or filtering for prodcuts per of guide.
 
 Searchform widget are user if you want to have a singel searchform widget loaded on the page. 
 (if you need to load 2 widget on 1 page see combine widget (LINK))
 
-#### Accommodation searchform
+### Accommodation searchform
 Use for multi property accommodation, search will target
 
 | Parameter       	   |type    | Example value  | Description                                                                             |
@@ -47,7 +47,7 @@ Use for multi property accommodation, search will target
 | css 			       | 		| [url]			 | Add absolute url to you custom hosted CSS.											   |
 
 
-#### Parameter for number of rooms and guests
+### Parameter for number of rooms and guests
 You define the number of adults and children (including the child’s age) that will stay in each room as parameters in the direct search, so called ”Room configuration”. It can for example be a search with two rooms where the first room shall have two adults and the other room shall have one adult and a child with age 5.
 
 | Parameter |type    | Example value  							1					| Description                                                                             |
@@ -66,7 +66,7 @@ Example:
 </script>
 ```
 
-#### Activity searchform
+### Activity searchform
 Use for multi product todos, search/fitler will target
 
 Example:
@@ -78,7 +78,7 @@ Example:
 </script>
 ```
 
-#### Ferry searchform
+### Ferry searchform
 Use for external ferry search
 
 Example:
@@ -90,7 +90,7 @@ Example:
 </script>
 ```
 
-#### Flight searchform
+### Flight searchform
 Use for external flight search
 
 | Parameter       	   |type    | Example value  | Description                                                                             |
@@ -103,7 +103,6 @@ Use for external flight search
 | sgid 	   			   | Int    | 123456      	 | Use to preselect start location using a CBIS geonode id.						   		   |
 | css 			       | 		| [url]			 | Add absolute url to you custom hosted CSS.											   |
 
-
 Example:
 
 ```html
@@ -114,7 +113,7 @@ Example:
 ```
 
 
-#### Carrental searchform
+### Carrental searchform
 Use for external carrental search
 
 Example:
@@ -126,7 +125,7 @@ Example:
 </script>
 ```
 
-#### Public transport searchform
+### Public transport searchform
 Use for external public transport search
 
 Example:
@@ -138,7 +137,7 @@ Example:
 </script>
 ```
 
-### <a id="Combine"></a> Combine widget - Used if you want to load 2 or more widgets on the same page.
+## <a id="Combine"></a> Combine widget - Used if you want to load 2 or more widgets on the same page.
 
 You have 3 parameters what has to be included.
 
@@ -153,16 +152,14 @@ Example - accommodation and ferry searchform:
 ```html
 <div id="citybreak_accommodation_searchform_widget"></div>
 <div id="citybreak_ferry_searchform_widget"></div>
-```
 
-```html
 <script async type="text/javascript" src="//[online-host]/[culture]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2"
 </script>
 ```
 
-### <a id="product_package"></a> Product & package widgets - Used to load a product or package booking widget
+## <a id="product_package"></a> Product & package widgets - Used to load a product or package booking widget
 
-#### Activity & merchandise product
+### Activity & merchandise product widget
 Activity & merchandise product booking widget - load one per page. (you can load multipe products in one script if needed.
 
 | Parameter       |type  | Example value  | Description                                                                             |
@@ -175,7 +172,7 @@ Activity & merchandise product booking widget - load one per page. (you can load
 | endDate	 	  | Date | 2023-07-01     | Use JavaScript "new" date format, maximum selectable date								|
 *Requierd 
 
-#### Booking event listner for Activity 
+### Booking event listner for Activity
 You may also customize the booking process with the proceedToBasket option and 'cb-activity-booked' event.
 *The cb-activity-booked event receives:*
 cbisProductId: a CBIS product id of the booked product, basketProductIds: a list of resulting basket product ids, complementaryUrl: url to complementary page (will redirect to basket if no complementary options are available), success: [bool] whether the product was added successfully to basket
@@ -198,7 +195,7 @@ Example:
  </script>
 ```
 
-#### iTicket Activity Transport
+### iTicket Activity Transport widget
 Use for iticket transport products.
 
 | Parameter       	 |type  | Example value  | Description                                                                             |
@@ -212,7 +209,7 @@ Use for iticket transport products.
 | enablePromocode	 | Bool | true (or false)| Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.|
 *Requierd 
 
-#### Booking event listner for iTicket Activity Transport
+### Booking event listner for iTicket Activity Transport
 You may also customize the booking process as the with the proceedToBasket option and 'cb-activitytransport-booked'.
 
 Example:
@@ -222,12 +219,9 @@ Example:
 
 <script async type="text/javascript" src="//[online-host]/[culture]/activitytransportwidget/searchform?cbisProductId=[ID]">
 </script>
-
-
-
 ```
 
-#### Accommodation product
+### Accommodation product widget
 Use for one accommodation property.
 
 | Parameter       	 |type  | Example value  | Description                                                                             |
@@ -243,8 +237,10 @@ Example:
 </script>
 ```
 
-#### Dynamic packages widget
+### Dynamic packages widget
 Use for dynamic package you have 1 widget per package type.
+
+Parameters for all package types
 
 | Parameter       |type  | Example value  | Description                                                                             |
 |-----------------|------|----------------|-----------------------------------------------------------------------------------------|
@@ -252,7 +248,7 @@ Use for dynamic package you have 1 widget per package type.
 | css 			  |      | [url]	      | Add absolute url to you custom hosted CSS.											    |
 *Requierd 
 
-#### Accommodation Ferry package
+### Accommodation Ferry package widget
 Use for package type AccommodationFerry
 
 Example:
@@ -263,7 +259,7 @@ Example:
 </script>
 ```
 
-#### Accommodation Todo package
+### Accommodation Todo package widget
 Use for package type AccommodationTodo
 
 Example:
@@ -274,7 +270,7 @@ Example:
 </script>
 ```
 
-#### Accommodation Accommodation package
+### Accommodation Accommodation package widget
 Use for package type AccommodationAccommodation
 
 Example:
@@ -285,7 +281,7 @@ Example:
 </script>
 ```
 
-#### Todo Todo package
+### Todo Todo package widget
 Use for package type TodoTodo
 
 Example:
@@ -296,7 +292,7 @@ Example:
 </script>
 ```
 
-#### Accommodation Flight package
+### Accommodation Flight package widget
 Use for package type AccommodationFlight
 
 Example:
