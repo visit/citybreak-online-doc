@@ -72,6 +72,11 @@ Activity searchform example:
 ```
 Use for multi product todos, search/fitler will target
 
+
+
+
+
+
 ### Ferry searchform
 ```html
 Ferry searchform example:
@@ -80,6 +85,12 @@ Ferry searchform example:
 <script async type="text/javascript" src="//[online-host]/[culture]/ferrywidget/searchform"></script>
 ```
 Use for external ferry search
+
+
+
+
+
+
 
 ### Flight searchform
 ```html
@@ -109,6 +120,11 @@ Carrental searchform example:
 ```
 Use for external carrental search
 
+
+
+
+
+
 ### Public transport searchform
 ```html
 Public Transport searchform example:
@@ -117,6 +133,11 @@ Public Transport searchform example:
 <script async type="text/javascript" src="//[online-host]/[culture]/publictransportwidget/searchform"></script>
 ```
 Use for external public transport search
+
+
+
+
+
 
 ## <a id="Combine"></a> Combine widget - Used if you want to load 2 or more widgets on the same page.
 ```html
@@ -231,6 +252,11 @@ Accommodation Ferry package example:
 ```
 Use for package type AccommodationFerry
 
+
+
+
+
+
 ### Accommodation Todo package widget
 ```html
 Accommodation Todo package example:
@@ -239,6 +265,11 @@ Accommodation Todo package example:
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationtodopackagewidget/searchform?cbisProductid=[ID]"></script>
 ```
 Use for package type AccommodationTodo
+
+
+
+
+
 
 ### Accommodation Accommodation package widget
 ```html
@@ -249,6 +280,11 @@ Accommodation Accommodation package example:
 ```
 Use for package type AccommodationAccommodation
 
+
+
+
+
+
 ### Todo Todo package widget
 ```html
 Todo Todo package example:
@@ -258,6 +294,11 @@ Todo Todo package example:
 ```
 Use for package type TodoTodo
 
+
+
+
+
+
 ### Accommodation Flight package widget
 ```html
 Accommodation Flight package example:
@@ -266,6 +307,11 @@ Accommodation Flight package example:
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationflightpackagewidget/searchform?cbisProductid=[ID]"></script>
 ```
 Use for package type AccommodationFlight
+
+
+
+
+
 
 ### <a id="Basket"></a> Basket widget - Used if you want to have a shopping cart in the CMS and in your template page.
 ```html
@@ -279,3 +325,8 @@ The basket widget can be used within or outside of the Citybreak online template
 When the basket widget is used within the template the script tag must be omitted.
 
 Note: citybreak_basket_widget_display is a optional trigger
+
+
+
+
+
