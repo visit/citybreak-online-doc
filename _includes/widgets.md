@@ -17,13 +17,14 @@ FYI:
 - Make sure you only run ONE widget script at the time. 
 - Don´t load a widget scripts on your tempalte page. This will affect the booking controlles and create possible conflicts.
 - Never use CSS overrides on the widget since the CSS are controlled from the impementaion.
+- Need to test widgets in CMS test envitoment? Make sure you good domain setup in CMS and test CB online to avoid potential CORS issues.
 _(if you want to use custom CSS this should be loaded via CSS parameter and the url where you host the CSS)_
 
 ### Widget types
 
 - [Searchforms widgets](#Searchforms)
 - [Combine widgets](#Combine)
-- [product & package widgets](#product_package)
+- [Product & package widgets](#product_package)
 - [Basket widget](#Basket)
 
 ## <a id="Searchforms"></a> Searchform widgets - Used for a search or filtering for prodcuts per of guide.
