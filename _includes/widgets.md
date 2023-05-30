@@ -6,14 +6,11 @@ The widgets are JavaScript widgets that are easy to integrate with a few lines o
 All widget got a sctipt tag loaded asynchronously
 Example script:
 ```html
-<script async type="text/javascript" src="//[online-host]/[culture]/...
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/...</script>
 ```
 And a div tag that that you add where the widget will be inserted into the page.
 Example div:
-``
-<div id="[id needed for widget]"></div>
-``
+``<div id="[id needed for widget]"></div>``
 See example for the widget you need below.
 
 FYI:
@@ -39,8 +36,7 @@ Searchform widget are user if you want to have a singel searchform widget loaded
 Accommodation searchform example:
 <div id="citybreak_accommodation_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationwidget/searchform">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/accommodationwidget/searchform"></script>
 ```
 Use for multi property accommodation, search will target
 
@@ -71,8 +67,7 @@ You define the number of adults and children (including the child’s age) that 
 Activity searchform example: 
 <div id="citybreak_activity_searchform_widget"></div> 
 
-<script async type="text/javascript" src="//[online-host]/[culture]/activitywidget/searchform">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/activitywidget/searchform"></script>
 ```
 Use for multi product todos, search/fitler will target
 
@@ -81,8 +76,7 @@ Use for multi product todos, search/fitler will target
 Ferry searchform example:
 <div id="citybreak_ferry_searchform_widget"></div> 
 
-<script async type="text/javascript" src="//[online-host]/[culture]/ferrywidget/searchform">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/ferrywidget/searchform"></script>
 ```
 Use for external ferry search
 
@@ -91,8 +85,7 @@ Use for external ferry search
 Flight searchform example:
 <div id="citybreak_flight_searchform_widget"></div> 
 
-<script async type="text/javascript" src="//[online-host]/[culture]/flightwidget/searchform">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/flightwidget/searchform"></script>
 ```
 Use for external flight search
 
@@ -111,8 +104,7 @@ Use for external flight search
 Carrental searchform example:
 <div id="citybreak_carrental_searchform_widget"></div> 
 
-<script async type="text/javascript" src="//[online-host]/[culture]/carrentalwidget/searchform">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/carrentalwidget/searchform"></script>
 ```
 Use for external carrental search
 
@@ -121,8 +113,7 @@ Use for external carrental search
 Public Transport searchform example:
 <div id="citybreak_publictransportwidget_searchform_widget"></div> 
 
-<script async type="text/javascript" src="//[online-host]/[culture]/publictransportwidget/searchform">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/publictransportwidget/searchform"></script>
 ```
 Use for external public transport search
 
@@ -132,8 +123,7 @@ Combine Accommodation and ferry searchform example:
 <div id="citybreak_accommodation_searchform_widget"></div>
 <div id="citybreak_ferry_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2"></script>
 ```
 You have 3 parameters what has to be included.
 
@@ -185,8 +175,7 @@ cbisProductId: a CBIS product id of the booked product, basketProductIds: a list
 iTicket Activity Transport example:
 <div id="citybreak_activity_transport_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/activitytransportwidget/searchform?cbisProductId=[ID]">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/activitytransportwidget/searchform?cbisProductId=[ID]"></script>
 ```
 Use for iticket transport products.
 
@@ -210,8 +199,7 @@ You may also customize the booking process as the with the proceedToBasket optio
 Accommodation prodcut example:
 <div id="citybreak_accommodation_property_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationPropertyWidget/searchform?productid=[ID]">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/accommodationPropertyWidget/searchform?productid=[ID]"></script>
 ```
 Use for one accommodation property.
 
@@ -238,8 +226,7 @@ Parameters for all package types
 Accommodation Ferry package example:
 <div id="citybreak_accommodation_ferry_package_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationferrypackagewidget/searchform?cbisProductid=[ID]">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/accommodationferrypackagewidget/searchform?cbisProductid=[ID]"></script>
 ```
 Use for package type AccommodationFerry
 
@@ -248,8 +235,7 @@ Use for package type AccommodationFerry
 Accommodation Todo package example:
 <div id="citybreak_accommodation_todo_package_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationtodopackagewidget/searchform?cbisProductid=[ID]">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/accommodationtodopackagewidget/searchform?cbisProductid=[ID]"></script>
 ```
 Use for package type AccommodationTodo
 
@@ -258,8 +244,7 @@ Use for package type AccommodationTodo
 Accommodation Accommodation package example:
 <div id="citybreak_accommodation_accommodation_package_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationaccommodationpackagewidget/searchform?cbisProductid=[ID]">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/accommodationaccommodationpackagewidget/searchform?cbisProductid=[ID]"></script>
 ```
 Use for package type AccommodationAccommodation
 
@@ -268,8 +253,7 @@ Use for package type AccommodationAccommodation
 Todo Todo package example:
 <div id="citybreak_todo_todo_package_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/todotodopackagewidget/searchform?cbisProductid=[ID]">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/todotodopackagewidget/searchform?cbisProductid=[ID]"></script>
 ```
 Use for package type TodoTodo
 
@@ -278,8 +262,7 @@ Use for package type TodoTodo
 Accommodation Flight package example:
 <div id="citybreak_accommodation_flight_package_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationflightpackagewidget/searchform?cbisProductid=[ID]">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/accommodationflightpackagewidget/searchform?cbisProductid=[ID]"></script>
 ```
 Use for package type AccommodationFlight
 
@@ -289,8 +272,7 @@ Basket example:
 <a id="citybreak_basket_widget_display" href="#" tabindex="0"></a>
 <div id="citybreak_basket_widget_summary"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/basketwidget/widget">
-</script>
+<script async type="text/javascript" src="//[online-host]/[culture]/basketwidget/widget"></script>
 ```
 The basket widget can be used within or outside of the Citybreak online template page.
 When the basket widget is used within the template the script tag must be omitted.
