@@ -94,7 +94,8 @@ Example output
 			    'value': 1234.00,
                             'items': [{
                     'item_name': "My product",
-                    'item_id': "123456",                    
+                    'item_id': "123456",
+		    'item_brand': "My supplier",
                     'price': 1234.00,
                     'item_category': "Acommodation",
                     'quantity': 1,
@@ -114,6 +115,7 @@ Items parameters
 |-----------------|--------|---------------|-------------------------------------------------------------------------------|
 | item_id  	  | String | 123456        | Citybreak product id 							   |
 | item_name    	  | String | My product    | Citybreak product system name                                                 |
+| item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price    	  | Number | 1234.00 	   | Product price                                                                 |
 | item_category   | String | Acommodation  | Citybreak system category                                			   |
 | item_category2  | String |  		   | 	                            						   |
@@ -135,7 +137,8 @@ Example output
 			    'value': 1234.00,
                             'items': [{
                     'item_name': "My product",
-                    'item_id': "123456",                    
+                    'item_id': "123456",
+		    'item_brand': "My supplier",
                     'price': 1234.00,
                     'item_category': "Acommodation",
                     'quantity': 1,
@@ -155,7 +158,9 @@ Items parameters
 |-----------------|--------|---------------|-------------------------------------------------------------------------------|
 | item_id  	  | String | 123456        | Citybreak product id 							   |
 | item_name       | String | My product    | Citybreak product system name                                                 |
+| item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price    	  | Number | 1234.00 	   | Product price                                                                 |
+| item_brand      | String | My supplier   | Citybreak supplier name							   |
 | item_category   | String | Acommodation  | Citybreak system category      						   |
 | item_category2  | String |  		   | 	 									   |
 | item_category3  | String |               | 	 									   |
@@ -179,6 +184,7 @@ Example output
                                 'items': [{
                     'item_id': "123456",
                     'item_name': "My product",
+		    'item_brand': "My supplier",
                     'item_category': "Acommodation",
                     'price': 1234.00,
                     'quantity': 1,
@@ -200,6 +206,7 @@ Items parameters
 |-----------------|--------|---------------|-------------------------------------------------------------------------------|
 | item_id  	  | String | 123456        | Citybreak product id 						           |
 | item_name       | String | My product    | Citybreak product system name                                                 |
+| item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price           | Number | 1234.00       | Product price                                                                 |
 | item_category   | String | Acommodation  | Citybreak system category                                 		   	   |
 | item_category2  | String |  		   | 	 									   |
