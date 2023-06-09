@@ -79,8 +79,11 @@ _Example: "Please add this tracker property "G-[ID]" or GTM-[ID]" to onlineid: [
 
 FYI:
 * Google tracking is only avaliable in our production environment
-* Avoid to add Google tracking scripts via your template page. To avoid risk of double tracking
-* Questions or feature request related to the events we provide please contact us.
+* Avoid to add Google tracking scripts via your template page. (To avoid risk of double tracking)
+* Questions or feature request related to the events we provide? Please contact us.
+
+Do you need help with the google tools or your metric plan?
+Don’t worry! Our trackerpartner, BBO is ready to assist you. Contact them through this email: kund-visit@bebetteronline.com
 
 ### <a id="view_cart"></a> view_cart - This event signifies that a user viewed their cart. 
 Fires on ``.../basket``
@@ -97,7 +100,7 @@ Example output
                     'item_id': "123456",
 		    'item_brand': "My supplier",
                     'price': 1234.00,
-                    'item_category': "Acommodation",
+                    'item_category': "Accommodation",
                     'quantity': 1,
                     'affiliation': "1234567890"
                 }
@@ -117,7 +120,7 @@ Items parameters
 | item_name    	  | String | My product    | Citybreak product system name                                                 |
 | item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price    	  | Number | 1234.00 	   | Product price                                                                 |
-| item_category   | String | Acommodation  | Citybreak system category                                			   |
+| item_category   | String | Accommodation | Citybreak system category                                			   |
 | item_category2  | String |  		   | 	                            						   |
 | item_category3  | String |  		   | 	                               						   |
 | item_category4  | String |               | 	                                					   |
@@ -140,7 +143,7 @@ Example output
                     'item_id': "123456",
 		    'item_brand': "My supplier",
                     'price': 1234.00,
-                    'item_category': "Acommodation",
+                    'item_category': "Accommodation",
                     'quantity': 1,
                     'affiliation': "1234567890"
                 }
@@ -161,7 +164,7 @@ Items parameters
 | item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price    	  | Number | 1234.00 	   | Product price                                                                 |
 | item_brand      | String | My supplier   | Citybreak supplier name							   |
-| item_category   | String | Acommodation  | Citybreak system category      						   |
+| item_category   | String | Accommodation | Citybreak system category      						   |
 | item_category2  | String |  		   | 	 									   |
 | item_category3  | String |               | 	 									   |
 | item_category4  | String |  		   | 	 									   |
@@ -185,7 +188,7 @@ Example output
                     'item_id': "123456",
                     'item_name': "My product",
 		    'item_brand': "My supplier",
-                    'item_category': "Acommodation",
+                    'item_category': "Accommodation",
                     'price': 1234.00,
                     'quantity': 1,
                     'affiliation': "1234567890"
@@ -208,7 +211,7 @@ Items parameters
 | item_name       | String | My product    | Citybreak product system name                                                 |
 | item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price           | Number | 1234.00       | Product price                                                                 |
-| item_category   | String | Acommodation  | Citybreak system category                                 		   	   |
+| item_category   | String | Accommodation | Citybreak system category                                 		   	   |
 | item_category2  | String |  		   | 	 									   |
 | item_category3  | String |  		   | 										   |
 | item_category4  | String |  		   | 										   |
