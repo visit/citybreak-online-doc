@@ -257,6 +257,11 @@ Use for package type AccommodationFerry
 
 
 
+
+
+
+
+
 ### Accommodation Todo package widget
 ```html
 Accommodation Todo package example:
@@ -265,6 +270,11 @@ Accommodation Todo package example:
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationtodopackagewidget/searchform?cbisProductid=[ID]"></script>
 ```
 Use for package type AccommodationTodo
+
+
+
+
+
 
 
 
@@ -285,6 +295,11 @@ Use for package type AccommodationAccommodation
 
 
 
+
+
+
+
+
 ### Todo Todo package widget
 ```html
 Todo Todo package example:
@@ -293,6 +308,11 @@ Todo Todo package example:
 <script async type="text/javascript" src="//[online-host]/[culture]/todotodopackagewidget/searchform?cbisProductid=[ID]"></script>
 ```
 Use for package type TodoTodo
+
+
+
+
+
 
 
 
@@ -313,7 +333,12 @@ Use for package type AccommodationFlight
 
 
 
-### <a id="Basket"></a> Basket widget - Used if you want to have a shopping cart in the CMS and in your template page.
+
+
+
+
+
+## <a id="Basket"></a> Basket widget - Used if you want to have a shopping cart in the CMS and in your template page.
 ```html
 Basket example:
 <a id="citybreak_basket_widget_display" href="#" tabindex="0"></a>
