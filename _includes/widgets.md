@@ -56,7 +56,7 @@ Use for multi property accommodation, search will target
 ### Parameter for number of rooms and guests
 You define the number of adults and children (including the child’s age) that will stay in each room as parameters in the direct search, so called ”Room configuration”. It can for example be a search with two rooms where the first room shall have two adults and the other room shall have one adult and a child with age 5.
 
-| Parameter |type    | Example value  							1					| Description                                                                             |
+| Parameter |type    | Example value  												| Description                                                                             |
 |-----------|--------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | &pr    	| String | &pr=1 (One room with one adults is entered)| This is the base parameter for the room configuration that shall be searched.|
 | a		    | String | &pr=1a10 (One room with one adult and one child (10 yrs) is entered)| The separator between adults and children.|
