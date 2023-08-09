@@ -95,8 +95,7 @@ Events:
 * [view_cart](#view_cart)
 * [begin_checkout](#begin_checkout)
 * [purchase](#purchase)
-* remove_from_cart (soon avaliable - stay tuned)
-* add_payment_info (soon avaliable - stay tuned)
+* remove_from_cart (Avaliable in next system release in mid august)
 
 A tracker property is implemented in Citybreak admin per online.
 To add or remove your tracker propertys, contact our support with the [online id] or [url to the ecom] and the tracker property you want to add or remove.
