@@ -145,7 +145,7 @@ Items parameters
 | item_name    	  | String | My product    | Citybreak product system name                                                 |
 | item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price    	  | Number | 1234.00 	   | Product price                                                                 |
-| item_category   | String | Accommodation | Citybreak system category                                			   |
+| item_category   | String | Accommodation | System category                                			   |
 | item_category2  | String |  		   | 	                            						   |
 | item_category3  | String |  		   | 	                               						   |
 | item_category4  | String |               | 	                                					   |
@@ -189,7 +189,7 @@ Items parameters
 | item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price    	  | Number | 1234.00 	   | Product price                                                                 |
 | item_brand      | String | My supplier   | Citybreak supplier name							   |
-| item_category   | String | Accommodation | Citybreak system category      						   |
+| item_category   | String | Accommodation | System category      						   |
 | item_category2  | String |  		   | 	 									   |
 | item_category3  | String |               | 	 									   |
 | item_category4  | String |  		   | 	 									   |
@@ -236,7 +236,7 @@ Items parameters
 | item_name       | String | My product    | Citybreak product system name                                                 |
 | item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price           | Number | 1234.00       | Product price                                                                 |
-| item_category   | String | Accommodation | Citybreak system category                                 		   	   |
+| item_category   | String | Accommodation | System category                                 		   	   |
 | item_category2  | String |  		   | 	 									   |
 | item_category3  | String |  		   | 										   |
 | item_category4  | String |  		   | 										   |
