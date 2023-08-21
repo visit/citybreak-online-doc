@@ -95,7 +95,7 @@ Events:
 * [view_cart](#view_cart)
 * [begin_checkout](#begin_checkout)
 * [purchase](#purchase)
-* remove_from_cart (Avaliable in next system release in mid august)
+* [remove_from_cart](#remove_from_cart)
 
 A tracker property is implemented in Citybreak admin per online.
 To add or remove your tracker propertys, contact our support with the [online id] or [url to the ecom] and the tracker property you want to add or remove.
@@ -226,6 +226,49 @@ Example output
 | value    	  | Number | 1234.00	   | Booking value                                                   		   |
 | tax             | Number | 123.12	   | Booking tax value                                                   	   |
 | currency        | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| items    	  | Array  | See Items     | The items for the event.                                        		   |
+
+Items parameters
+
+| Name            | Type   | Example value | Description                                                                   |
+|-----------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id  	  | String | 123456        | Citybreak product id 						           |
+| item_name       | String | My product    | Citybreak product system name                                                 |
+| item_brand      | String | My supplier   | Citybreak supplier name							   |
+| price           | Number | 1234.00       | Product price                                                                 |
+| item_category   | String | Accommodation | System category                                 		   	   |
+| item_category2  | String |  		   | 	 									   |
+| item_category3  | String |  		   | 										   |
+| item_category4  | String |  		   | 										   |
+| item_category5  | String |  		   | 										   |
+| quantity        | Number | 1 		   | Quantity of product                                           		   |
+| affiliation     | String | 1234567890    | Citybreak online identifier id                                         	   |
+
+### <a id="remove_from_cart"></a> remove_from_cart - This event signifies when items are removed from /basket by a user.
+Event fires 1 time per user remove action on /basket
+
+```
+Example output
+
+			    'event': "remove_from_cart",
+                            'ecommerce': {
+				'currency': "SEK",
+				'value': 1234.00,
+                                'items': [{
+                    'item_id': "123456",
+                    'item_name': "My product",
+		    'item_brand': "My supplier",
+                    'item_category': "Accommodation",
+                    'price': 1234.00,
+                    'quantity': 1,
+                    'affiliation': "1234567890"
+                }
+```
+
+| Name    	  | Type   | Example value | Description                                                                   |
+|-----------------|--------|---------------|-------------------------------------------------------------------------------|
+| currency        | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| value    	  | Number | 1234.00	   | Booking value                                                   		   |
 | items    	  | Array  | See Items     | The items for the event.                                        		   |
 
 Items parameters
