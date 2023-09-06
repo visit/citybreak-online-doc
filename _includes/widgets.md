@@ -340,14 +340,24 @@ Use for package type AccommodationFlight
 
 ## <a id="Basket"></a> Basket widget - Used if you want to have a shopping cart in the CMS and in your template page.
 ```html
-Basket example:
-<a id="citybreak_basket_widget_display" href="#" tabindex="0"></a>
+
+Basket example if anchor:
+<a id="citybreak_basket_widget_display" href="javascript:void(0);"></a>
+<div id="citybreak_basket_widget_summary"></div>
+
+<script async type="text/javascript" src="//[online-host]/[culture]/basketwidget/widget"></script>
+```
+```html
+Basket example if span:
+<span id="citybreak_basket_widget_display" tabindex="0"></span>
 <div id="citybreak_basket_widget_summary"></div>
 
 <script async type="text/javascript" src="//[online-host]/[culture]/basketwidget/widget"></script>
 ```
 The basket widget can be used within or outside of the Citybreak online template page.
 When the basket widget is used within the template the script tag must be omitted.
+
+FYI: The collapsed widget view is always styled from the CMS side.
 
 Note: citybreak_basket_widget_display is a optional trigger
 
