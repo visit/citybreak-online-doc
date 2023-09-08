@@ -357,7 +357,7 @@ Basket example if span:
 The basket widget can be used within or outside of the Citybreak online template page.
 When the basket widget is used within the template the script tag must be omitted.
 
-FYI: The collapsed widget view is always styled from the CMS side.
+FYI: The collapsed widget div ``<div id="citybreak_basket_widget_summary"></div>`` is not Styled from Citybreak system.
 
 Note: citybreak_basket_widget_display is a optional trigger
 
