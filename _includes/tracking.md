@@ -61,7 +61,7 @@ Parameter | Description
 ## Google tracking (GA4)
 
 Citybreak online googles tracking options.
-* Google tag manager (old datalayer) gtm.js (Not recommended)
+* Google tag manager (old datalayer) gtm.js (Not recommended - End of life 2023-12-18)
 * Google analytics 4 gtag.js
 * Google tag manager (*with ga4* datalayer) gtm.js
 
