@@ -25,6 +25,10 @@ This will be the placeholder where the Citybreak online booking engine will be i
 * **All meta tags except 'viewport' will be removed**
 (You need to add the meta tag 'viewport' to your template to enable a mobile friendly responsive CB online. 
 example: ``<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />``)
+
+* **No support for <frame> , <iframe> , <embed> or <object>**
+X-Frame-Options: DENY is set in CB online header as default (in production soon)
+ 
  
 **Note:** *Consultning or troubleshooting a tempate will be debited with standard hour rate.*
 **FYI:** *Currently we don't support TLS 1.3 or 1.4 - work inprogress*
