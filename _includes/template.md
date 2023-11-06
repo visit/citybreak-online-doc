@@ -31,7 +31,6 @@ X-Frame-Options: DENY is set in CB online header as default (in production soon)
  
  
 **Note:** *Consultning or troubleshooting a tempate will be debited with standard hour rate.*
-**FYI:** *Currently we don't support TLS 1.3 or 1.4 - work inprogress*
 
 
 ## Optional functionality
