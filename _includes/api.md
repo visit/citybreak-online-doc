@@ -1,6 +1,6 @@
 # Online API
 
-Here some help full Citybreak online API to be user via a CMS site.
+Some help full Citybreak online APIs you can use via a CMS site etc...
 
 ## Linking API
 
@@ -20,8 +20,8 @@ Determine the link to a dynamic page irregardless of its language, there is an a
 
 ## Bookable status API
 
-Online bookable status API  can be usefull to find out if a product is bookable or not via a simple call.
-This can then be user to build a citybreak online widget in the CMS or similar to have a more dynamic implementation.
+Online bookable status API  can be useful to find out if a product is bookable or not via a simple call.
+This can then be used to build a citybreak online widget in the CMS or similar to have a more dynamic implementation.
 
 ``
 //[online-host]/[culture]/api/products/bookablestatus?cbisProductId=[CBIS-PRODUCT-ID]
