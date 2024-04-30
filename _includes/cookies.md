@@ -21,7 +21,6 @@ None of the mandatory cookies stores personal data.
 - pgid\_online3\_{guideIdentifier}, MyPage, stores personId of the currently logged in person
 - Promotion\_online3\_{guideIdentifier}, Stores promotion code used
 - ca-citybreak-online, Specify backend server used by the client
-- ca-citybreak-online-signalr, Specify signalr backend server used by the client
 - citybreak_online, Stores client search parameters
 - pymtid + "_" + "online3" + "_" + onlineIdentifier, Stores payment service provider parameters
 
