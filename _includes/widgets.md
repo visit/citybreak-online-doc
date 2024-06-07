@@ -210,7 +210,7 @@ Use for iticket transport products.
 | preferredDeparture | Date | 2023-06-11     | Id of the location that will be initially selected as departure location. If not available it will fallback to default behavior.|
 | preferredArrival 	 | Date | 2023-07-01     | Id of the location that will be initially selected as arrival location. If not available it will fallback to default behavior.|
 | enablePromocode	 | Bool | true (or false)| Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.|
-| tripType	 | String | Set selected trip type onload return (default) OR oneway, only work for iticket product with a trip type as option of course.  Example: tripType=oneway  |
+| tripType	 | String | oneway (or return) |Set selected trip type onload return (default) OR oneway, only work for iticket product with a trip type as option of course.  |
 
 *cbisProductId id requierd 
 
