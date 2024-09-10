@@ -151,8 +151,8 @@ Items parameters
 | item_category5  | String |               | 	 									   |
 | quantity    	  | Number | 1 	           | Quantity of product                                           		   |
 | affiliation     | String | 1234567890    | Citybreak online identifier id                                           	   |
-| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id (NOTE: Will be added Aug/Sept 2024)	   |
-| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name (NOTE: Will be added Aug/Sept 2024)	   |								
+| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id	   |
+| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name	   |								
 
 
 ### <a id="begin_checkout"></a> begin_checkout - This event signifies that a user has begun a checkout.
@@ -198,8 +198,8 @@ Items parameters
 | item_category5  | String |    	   | 	 									   |
 | quantity        | Number | 1 		   | Quantity of product                            				   |
 | affiliation     | String | 1234567890    | Citybreak online identifier id     					   |
-| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id (NOTE: Will be added Aug/Sept 2024)	   |
-| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name (NOTE: Will be added Aug/Sept 2024)	   |			
+| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id	   |
+| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name	   |			
 
 ### <a id="purchase"></a> purchase - This event signifies when one or more items is purchased by a user.
 Event fires 1 time on ``.../confirmation``
@@ -247,8 +247,8 @@ Items parameters
 | item_category5  | String |  		   | 										   |
 | quantity        | Number | 1 		   | Quantity of product                                           		   |
 | affiliation     | String | 1234567890    | Citybreak online identifier id                                         	   |
-| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id (NOTE: Will be added Aug/Sept 2024)	   |
-| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name (NOTE: Will be added Aug/Sept 2024)	   |			
+| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id	   |
+| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name 	   |			
 
 ### <a id="remove_from_cart"></a> remove_from_cart - This event signifies when items are removed from /basket by a user.
 Event fires 1 time per user remove action on /basket
@@ -285,15 +285,15 @@ Items parameters
 | item_name       | String | My product    | Citybreak product system name                                                 |
 | item_brand      | String | My supplier   | Citybreak supplier name							   |
 | price           | Number | 1234.00       | Product price                                                                 |
-| item_category   | String | Accommodation | System category                                 		   	   |
+| item_category   | String | Accommodation | System category                                 		   	 	   |
 | item_category2  | String |  		   | 	 									   |
 | item_category3  | String |  		   | 										   |
 | item_category4  | String |  		   | 										   |
 | item_category5  | String |  		   | 										   |
 | quantity        | Number | 1 		   | Quantity of product                                           		   |
 | affiliation     | String | 1234567890    | Citybreak online identifier id                                         	   |
-| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id (NOTE: Will be added Aug/Sept 2024)	   |
-| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name (NOTE: Will be added Aug/Sept 2024)	   |			
+| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id 	   |
+| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name 	   |			
 
 ## Booking confimation urls
 
