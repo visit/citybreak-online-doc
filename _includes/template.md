@@ -17,7 +17,7 @@ Citybreak online will parse the template page as HTML5 markup and it will theref
 Loading an Citybreak online widget (via script) in the header/footer template page will cause serious conflicts and JavaScript errors. It is therefore not supported at this moment.
 
 * **No Google Analytics tracking scripts** 
-(calls to _trackPageview, _trackEvent etc) are allowed in the template page. This would cause double page views.
+GTM or Gtag are allowed in the template page. This would cause double page views since the tracker property is added via the implementation of the online booking in Citybreak.
 
 * **Must Contain a div element with id attribute set to ``cb_init_bookingengine``**
 This will be the placeholder where the Citybreak online booking engine will be injected. Make sure this div element can use full page width.
@@ -26,7 +26,7 @@ This will be the placeholder where the Citybreak online booking engine will be i
 (You need to add the meta tag 'viewport' to your template to enable a mobile friendly responsive CB online. 
 example: ``<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />``)
 
-* **No support for <frame> , <iframe> , <embed> or <object>**
+* **No support for <frame> , <iframe> , <embed> or <object> in templates**
 X-Frame-Options: DENY is set in CB online header as default (in production soon)
  
  
