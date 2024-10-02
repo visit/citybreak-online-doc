@@ -4,6 +4,8 @@ Citybreak online tracking alternativs and technical information.
 
 ## Booking tracking id
 
+_(NOTE: This is a legacy feature will be removed later on. This feature only work with redirect PSP integrations.)_
+
 The booking tracking feature is a simple way for a client to track whether or not certain bookings were referred to by a tracking key or not.
 
 A tracking key is a text string which could be any value, it could be provided through a direct link or within a widget.
