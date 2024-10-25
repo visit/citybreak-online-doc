@@ -184,6 +184,7 @@ Activity & merchandise product booking widget - load one per page. (you can load
 | defaultDate	  | Date | 2023-06-11     | Use JavaScript "new" date format, default selected date									|
 | startDate 	  | Date | 2023-07-01     | Use JavaScript "new" date format, widget start date selectable date						|
 | endDate	 	  | Date | 2023-07-01     | Use JavaScript "new" date format, maximum selectable date								|
+| enablePromocode	 | Bool | true (or false)| Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.|
 
 *cbisProductId is requierd 
 
