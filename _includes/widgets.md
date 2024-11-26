@@ -178,7 +178,7 @@ Use for iticket transport products.
 
 | Parameter       	 |type  | Example value  | Description                                                                             |
 |--------------------|------|----------------|-----------------------------------------------------------------------------------------|
-| cbisProductId     | Int  | 123456   	     | CBIS product id, product to display the widget.										   |
+| cbisProductId      | Int  | 123456   	     | CBIS product id, product to display the widget.										   |
 | proceedToBasket 	 | Bool | true (or false)| Use to proceed to basket(checkout) or stay on widget page?    						   |
 | css 			  	 |      | [url]		     | Add absolute url to you custom hosted CSS.											   |
 | preferredDate	  	 | Date | 2023-06-11     | A valid date to set the default initially selected date in the widget, the format of the date must be the same as the format of the requested widget. If the preferred date is not available it will fall back to default behavior.|
@@ -190,7 +190,21 @@ Use for iticket transport products.
 *cbisProductId id required 
 
 ### iTicket Bookingflow widgets
-For iTicket BookingFlow widgets contact our support, then we'll provide you with the widgets needed.
+For iTicket BookingFlow widgets contact our support, then we'll provide you with the widget(s).
+
+*What is a Token?* A token will provide the needed parameters to control the widget. Please take a look at the parameter below.
+
+| Parameter       	 |type  | Example value  | Description                                                                             |
+|--------------------|------|----------------|-----------------------------------------------------------------------------------------|
+| cbisProductId      | Int  | 123456   	     | CBIS product id, product to display the widget.										   |
+| startDateISO     	 | Date | 2024-12-24     | A valid date to set the default initially selected date in the widget. |
+| promotionCode 	 | String | MyPromoCode  | Add the promocode you want to load with the widget as active. |
+| proceedToBasket 	 | true (or false) | Use to proceed to basket(checkout) or stay on widget page? |
+| referenceCurrency	 | String | USD	         | Use ISO format to set reference currency.  |
+| display        	 | String | Button       | Selected Display type: Standard, Collapsed or Button. |
+| allowOverride    	 | Bool   | False        | Used to toggle  external URL parameter override, can be useful if you want to automate widgets in your CMS. |
+
+
 
 ```html
 iTicket BookingFlow widgets example:
@@ -216,7 +230,11 @@ Use for one accommodation property.
 
 
 ### Dynamic packages widgets
-For Dynamic packages widgets contact our support, then we'll provide you with the widgets needed.
+For Dynamic packages widgets contact our support, then we'll provide you with the widget(s).
+
+| Parameter       	 |type  | Example value  | Description                                                                             |
+|--------------------|------|----------------|-----------------------------------------------------------------------------------------|
+| cbisProductId      | Int  | 123456   	     | CBIS product id, package to display the widget.										   |
 
 ```html
 Dynamic package example:
