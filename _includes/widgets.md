@@ -232,6 +232,8 @@ Use for one accommodation property.
 ### Dynamic packages widgets
 For Dynamic packages widgets contact our support, then we'll provide you with the widget(s).
 
+*What is a Token?* A token will provide the needed parameters to control the widget. Please take a look at the parameter below.
+
 | Parameter       	 |type  | Example value  | Description                                                                             |
 |--------------------|------|----------------|-----------------------------------------------------------------------------------------|
 | cbisProductId      | Int  | 123456   	     | CBIS product id, package to display the widget.										   |
