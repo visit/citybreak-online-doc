@@ -237,6 +237,7 @@ For Dynamic packages widgets contact our support, then we'll provide you with th
 | Parameter       	 |type  | Example value  | Description                                                                             |
 |--------------------|------|----------------|-----------------------------------------------------------------------------------------|
 | cbisProductId      | Int  | 123456   	     | CBIS product id, package to display the widget.										   |
+| allowOverride    	 | Bool   | False        | Used to toggle  external URL parameter override, can be useful if you want to automate widgets in your CMS. |
 
 ```html
 Dynamic package example:
