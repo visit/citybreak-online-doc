@@ -111,28 +111,6 @@ Use for external flight search
 | sgid 	   			   | Int    | 123456      	 | Use to preselect start location using a CBIS geonode id.						   		   |
 | css 			       | 		| [url]			 | Add absolute url to you custom hosted CSS.											   |
 
-### Carrental searchform
-```html
-Carrental searchform example:
-<div id="citybreak_carrental_searchform_widget"></div> 
-
-<script async type="text/javascript" src="//[online-host]/[culture]/carrentalwidget/searchform"></script>
-```
-Use for external carrental search
-
-
-
-
-
-
-### Public transport searchform
-```html
-Public Transport searchform example:
-<div id="citybreak_publictransportwidget_searchform_widget"></div> 
-
-<script async type="text/javascript" src="//[online-host]/[culture]/publictransportwidget/searchform"></script>
-```
-Use for external public transport search
 
 
 
@@ -188,10 +166,6 @@ Activity & merchandise product booking widget - load one per page. (you can load
 
 *cbisProductId is requierd 
 
-### Booking event listner for Activity
-You may also customize the booking process with the proceedToBasket option and 'cb-activity-booked' event.
-*The cb-activity-booked event receives:*
-cbisProductId: a CBIS product id of the booked product, basketProductIds: a list of resulting basket product ids, complementaryUrl: url to complementary page (will redirect to basket if no complementary options are available), success: [bool] whether the product was added successfully to basket
 
 ### iTicket Activity Transport widget
 ```html
@@ -213,10 +187,18 @@ Use for iticket transport products.
 | enablePromocode	 | Bool | true (or false)| Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.|
 | tripType	 | String | oneway (or roundtrip) |Set selected trip type onload roundtrip OR oneway, only work for iticket product with a trip type as option of course.  |
 
-*cbisProductId id requierd 
+*cbisProductId id required 
 
-### Booking event listner for iTicket Activity Transport
-You may also customize the booking process as the with the proceedToBasket option and 'cb-activitytransport-booked'.
+### iTicket Bookingflow widgets
+For iTicket BookingFlow widgets contact our support, then we'll provide you with the widgets needed.
+
+```html
+iTicket BookingFlow widgets example:
+<script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
+
+<div id="[Unique Token ID]"></div>
+```
+
 
 ### Accommodation product widget
 ```html
@@ -233,103 +215,15 @@ Use for one accommodation property.
 | css 			  	 |      | [url]	    	 | Add absolute url to you custom hosted CSS.											   |
 
 
-### Dynamic packages widget
-Use for dynamic package you have 1 widget per package type.
+### Dynamic packages widgets
+For Dynamic packages widgets contact our support, then we'll provide you with the widgets needed.
 
-Parameters for all package types
-
-| Parameter       |type  | Example value  | Description                                                                             |
-|-----------------|------|----------------|-----------------------------------------------------------------------------------------|
-| cbisProductId  | Int  | 123456   	  | CBIS product id for the package															|
-| css 			  |      | [url]	      | Add absolute url to you custom hosted CSS.											    |
-
-*cbisProductId is requierd 
-
-### Accommodation Ferry package widget
 ```html
-Accommodation Ferry package example:
-<div id="citybreak_accommodation_ferry_package_searchform_widget"></div>
+Dynamic package example:
+<script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationferrypackagewidget/searchform?cbisProductid=[ID]"></script>
+<div id="[Unique Token ID]"></div>
 ```
-Use for package type AccommodationFerry
-
-
-
-
-
-
-
-
-
-
-
-### Accommodation Todo package widget
-```html
-Accommodation Todo package example:
-<div id="citybreak_accommodation_todo_package_searchform_widget"></div>
-
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationtodopackagewidget/searchform?cbisProductid=[ID]"></script>
-```
-Use for package type AccommodationTodo
-
-
-
-
-
-
-
-
-
-
-
-### Accommodation Accommodation package widget
-```html
-Accommodation Accommodation package example:
-<div id="citybreak_accommodation_accommodation_package_searchform_widget"></div>
-
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationaccommodationpackagewidget/searchform?cbisProductid=[ID]"></script>
-```
-Use for package type AccommodationAccommodation
-
-
-
-
-
-
-
-
-
-
-
-### Todo Todo package widget
-```html
-Todo Todo package example:
-<div id="citybreak_todo_todo_package_searchform_widget"></div>
-
-<script async type="text/javascript" src="//[online-host]/[culture]/todotodopackagewidget/searchform?cbisProductid=[ID]"></script>
-```
-Use for package type TodoTodo
-
-
-
-
-
-
-
-
-
-
-
-### Accommodation Flight package widget
-```html
-Accommodation Flight package example:
-<div id="citybreak_accommodation_flight_package_searchform_widget"></div>
-
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationflightpackagewidget/searchform?cbisProductid=[ID]"></script>
-```
-Use for package type AccommodationFlight
-
 
 
 
