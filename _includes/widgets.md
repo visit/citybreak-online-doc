@@ -23,7 +23,6 @@ _(if you want to use custom CSS this should be loaded via CSS parameter and the 
 ### Widget types
 
 - [Searchforms widgets](#Searchforms)
-- [Combine widgets](#Combine)
 - [Product & package widgets](#product_package)
 - [Basket widget](#Basket)
 
@@ -39,7 +38,7 @@ Accommodation searchform example:
 
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationwidget/searchform"></script>
 ```
-Use for multi property accommodation, search will target
+Use for multi property accommodation, search will target (NOTE: will be replace in the near future)
 
 | Parameter       	   |type    | Example value  | Description                                                                             |
 |----------------------|--------|----------------|-----------------------------------------------------------------------------------------|
@@ -63,34 +62,34 @@ You define the number of adults and children (including the child’s age) that 
 | r		    | String | &pr=1r1r1 (One room with one adult and two children (10, 12 yrs) is entered)| The separator if the search is made on more rooms than one.|
 | c		    | String | &pr=1a10c12(Two rooms with one adult and two children (10, 12 yrs) in the first room and two adults in the second room is entered)| The separator if the search shall be made on more than one child.|
 
-### Activity searchform
-```html 
-Activity searchform example: 
-<div id="citybreak_activity_searchform_widget"></div> 
+### Activity/Todo searchform
+```html
+<script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/activitywidget/searchform"></script>
+<div id="[Unique Token ID]"></div>
 ```
-Use for multi product todos, search/fitler will target
+Used for filtering products in a Todo product list. Please contact our support team, and we’ll provide the necessary widget.
 
-
-
-
+*What is a Token?* A token will provide the needed parameters to control the widget. Please take a look at the parameter below.
+Note: 
+- A token is linked to a single online store.
+- Each token is unique and should only be added once per view.
+- A token is associated with a specific widget type.
 
 
 ### Ferry searchform
 ```html
-Ferry searchform example:
-<div id="citybreak_ferry_searchform_widget"></div> 
+<script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/ferrywidget/searchform"></script>
+<div id="[Unique Token ID]"></div>
 ```
-Use for external ferry search
+Used for Ferry search. Please contact our support team, and we’ll provide the necessary widget.
 
-
-
-
-
-
+*What is a Token?* A token will provide the needed parameters to control the widget. Please take a look at the parameter below.
+Note: 
+- A token is linked to a single online store.
+- Each token is unique and should only be added once per view.
+- A token is associated with a specific widget type.
 
 ### Flight searchform
 ```html
@@ -99,7 +98,7 @@ Flight searchform example:
 
 <script async type="text/javascript" src="//[online-host]/[culture]/flightwidget/searchform"></script>
 ```
-Use for external flight search
+Use for external flight search (NOTE: will be replace in the near future)
 
 | Parameter       	   |type    | Example value  | Description                                                                             |
 |----------------------|--------|----------------|-----------------------------------------------------------------------------------------|
@@ -111,31 +110,9 @@ Use for external flight search
 | sgid 	   			   | Int    | 123456      	 | Use to preselect start location using a CBIS geonode id.						   		   |
 | css 			       | 		| [url]			 | Add absolute url to you custom hosted CSS.											   |
 
-
-
-
-
-
-
-## <a id="Combine"></a> Combine widget - Used if you want to load 2 or more widgets on the same page.
-```html
-Combine Accommodation and ferry searchform example:
-<div id="citybreak_accommodation_searchform_widget"></div>
-<div id="citybreak_ferry_searchform_widget"></div>
-
-<script async type="text/javascript" src="//[online-host]/[culture]/combinewidget/combine?c=accommodationwidget&c=ferrywidget&a=searchform&a=searchform&p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2"></script>
-```
-You have 3 parameters what has to be included.
-
-| Type 		 |Parameter | Example value 											   | Description                                                                  |
-|------------|----------|--------------------------------------------------------------|------------------------------------------------------------------------------|
-| Controller | c= 		| c=accommodationwidget&c=ferrywidget 						   | Names of controllers for the desired widgets                                 |
-| Action 	 | a= 		| a=searchform&a=searchform 								   | Names of actions for the widget controllers specified in the "c" parameter   |
-| Parameter  | p= 		| p=defaultCategoryId=1345;defaultRoomCfg=2&p=alignDirection=2 | Parameters to each widget action specified by the "c" and "a" parameters. To pass multiple parameters to a widget, use a semicolon-separated list of keys and values |
-
 ## <a id="product_package"></a> Product & package widgets - Used to load a product or package booking widget
 
-### Activity & merchandise product widget
+### Activity & merchandise product widget 
 ```html
 Activity product example:
 <div id="citybreak_activity_booking_widget"></div>
@@ -152,7 +129,8 @@ Activity product example:
     }, false);
  </script>
 ```
-Activity & merchandise product booking widget - load one per page. (you can load multipe products in one script if needed.)
+Activity & merchandise product booking widget - load one per page. (you can load multipe products in one script if needed.) 
+(NOTE: will be replace in the near future)
 
 | Parameter       |type  | Example value  | Description                                                                             |
 |-----------------|------|----------------|-----------------------------------------------------------------------------------------|
@@ -190,9 +168,19 @@ Use for iticket transport products.
 *cbisProductId id required 
 
 ### iTicket Bookingflow widgets
-For iTicket BookingFlow widgets contact our support, then we'll provide you with the widget(s).
+```html
+iTicket BookingFlow widgets example:
+<script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
+
+<div id="[Unique Token ID]"></div>
+```
+For iTicket BookingFlow widgets contact our support, then we'll give you the widget(s) needed.
 
 *What is a Token?* A token will provide the needed parameters to control the widget. Please take a look at the parameter below.
+Note: 
+- A token is linked to a single online store.
+- Each token is unique and should only be added once per view.
+- A token is associated with a specific widget type.
 
 | Parameter       	 |type  | Example value  | Description                                                                             |
 |--------------------|------|----------------|-----------------------------------------------------------------------------------------|
@@ -204,16 +192,6 @@ For iTicket BookingFlow widgets contact our support, then we'll provide you with
 | display        	 | String | Button       | Selected Display type: Standard, Collapsed or Button. |
 | allowOverride    	 | Bool   | False        | Used to toggle  external URL parameter override, can be useful if you want to automate widgets in your CMS. |
 
-
-
-```html
-iTicket BookingFlow widgets example:
-<script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
-
-<div id="[Unique Token ID]"></div>
-```
-
-
 ### Accommodation product widget
 ```html
 Accommodation prodcut example:
@@ -221,7 +199,7 @@ Accommodation prodcut example:
 
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationPropertyWidget/searchform?productid=[ID]"></script>
 ```
-Use for one accommodation property.
+Use for one accommodation property. (NOTE: will be replace in the near future)
 
 | Parameter       	 |type  | Example value  | Description                                                                             |
 |--------------------|------|----------------|-----------------------------------------------------------------------------------------|
@@ -230,30 +208,24 @@ Use for one accommodation property.
 
 
 ### Dynamic packages widgets
-For Dynamic packages widgets contact our support, then we'll provide you with the widget(s).
-
-*What is a Token?* A token will provide the needed parameters to control the widget. Please take a look at the parameter below.
-
-| Parameter       	 |type  | Example value  | Description                                                                             |
-|--------------------|------|----------------|-----------------------------------------------------------------------------------------|
-| cbisProductId      | Int  | 123456   	     | CBIS product id, package to display the widget.										   |
-| allowOverride    	 | Bool   | False        | Used to toggle  external URL parameter override, can be useful if you want to automate widgets in your CMS. |
-
 ```html
 Dynamic package example:
 <script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
 
 <div id="[Unique Token ID]"></div>
 ```
+For Dynamic packages widgets contact our support, then we'll provide you with the widget(s).
 
+*What is a Token?* A token will provide the needed parameters to control the widget. Please take a look at the parameter below.
+Note: 
+- A token is linked to a single online store.
+- Each token is unique and should only be added once per view.
+- A token is associated with a specific widget type.
 
-
-
-
-
-
-
-
+| Parameter       	 |type  | Example value  | Description                                                                             |
+|--------------------|------|----------------|-----------------------------------------------------------------------------------------|
+| cbisProductId      | Int  | 123456   	     | CBIS product id, package to display the widget.										   |
+| allowOverride    	 | Bool   | False        | Used to toggle  external URL parameter override, can be useful if you want to automate widgets in your CMS. |
 
 ## <a id="Basket"></a> Basket widget - Used if you want to have a shopping cart in the CMS and in your template page.
 ```html
