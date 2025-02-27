@@ -1,24 +1,26 @@
 # Widgets
 
-Citybreak online comes with a set of standard widgets in relation to the implementation.
+Citybreak Online comes with a set of standard widgets.
 The widgets are JavaScript widgets that are easy to integrate with a few lines of code.
 
-All widget got a sctipt tag loaded asynchronously
+All widgets got a script tag loaded asynchronously
 Example script:
 ```html
 <script async type="text/javascript" src="//[online-host]/[culture]/...</script>
 ```
-And a div tag that that you add where the widget will be inserted into the page.
+And a div tag that you add where the widget will be inserted into the page.
 Example div:
 ``<div id="[id needed for widget]"></div>``
-See example for the widget you need below.
+
+See the example for the widget you need below.
 
 FYI:
-- Make sure you only run ONE widget script at the time. 
-- Don´t load a widget scripts on your tempalte page. This will affect the booking controlles and create possible conflicts.
-- Never use CSS overrides on the widget since the CSS are controlled from the impementaion.
-- Need to test widgets in CMS test envitoment? Make sure you good domain setup in CMS and test CB online to avoid potential CORS issues.
-_(if you want to use custom CSS this should be loaded via CSS parameter and the url where you host the CSS)_
+- Make sure you only run ONE widget script at a time.
+- Don’t load widget scripts on your template page. This will affect the booking controls and create potential conflicts.
+- Never use CSS overrides on the widget, as the CSS is controlled by the implementation.
+- Need to test widgets in a CMS test environment? Make sure you have a proper domain setup in the CMS and test CB online to avoid potential CORS issues.
+_(If you want to use custom CSS, it should be loaded via the CSS parameter and the URL where you host the CSS.)_
+
 
 ### Widget types
 
@@ -26,10 +28,9 @@ _(if you want to use custom CSS this should be loaded via CSS parameter and the 
 - [Product & package widgets](#product_package)
 - [Basket widget](#Basket)
 
-## <a id="Searchforms"></a> Searchform widgets - Used for a search or filtering for prodcuts per of guide.
+## <a id="Searchforms"></a> Searchform widgets - Used for a search or filtering for products per guide.
 
-Searchform widget are user if you want to have a singel searchform widget loaded on the page. 
-(if you need to load 2 widget on 1 page see combine widget (LINK))
+Searchform widgets are used if you need a multi-product or a transport searchform in your CMS.
 
 ### Accommodation searchform
 ```html
@@ -38,32 +39,34 @@ Accommodation searchform example:
 
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationwidget/searchform"></script>
 ```
-Use for multi property accommodation, search will target (NOTE: will be replace in the near future)
+Use for multi property accommodation, search will target 
+(NOTE: will be replaced shortly)
 
 | Parameter       	   |type    | Example value  | Description                                                                             |
 |----------------------|--------|----------------|-----------------------------------------------------------------------------------------|
-| defaultCategoryId    | int    | 123456   	     | Set default category in the widget. CBIS category id is needed.						   |
+| defaultCategoryId    | int    | 123456   	     | Set the default category in the widget. CBIS category ID is needed.						   |
 | lockCategory		   | Bool   | true   	     | Use this parameter to lock down the category dropdown, when this is set then the dropdown with the categories will be hidden.|
-| geoNodeId		       | int    | 123456   	     | Set default geonode in the widget. CBIS geonode id is needed.						   |
-| cbispids		       | int    | 123456   	     | Set default products in the widget. CBIS prodcut id is needed.						   |
+| geoNodeId		       | int    | 123456   	     | Set default geonode in the widget. CBIS geonode ID is needed.						   |
+| cbispids		       | int    | 123456   	     | Set default products in the widget. CBIS product ID is needed.						   |
 | defaultArrivalDate   | Date   | 2023-03-12     | A valid date to set the default arrival date in the widget, the format of the date must be the same as the format of the requested widget|
 | defaultDepartureDate | Date   | 2023-03-13	 | A valid date to set the default departure date in the widget, the format of the date must be the same as the format of the requested widget|
 | promotionCode	       | String | Promo_2023     | Use this parameter if you want to set a promotion code in the promotion code field.	   |
-| css 			       | 		| [url]			 | Add absolute url to you custom hosted CSS.											   |
+| css 			       | 		| [url]			 | Add absolute URL to your custom hosted CSS.											   |
 
 
 ### Parameter for number of rooms and guests
-You define the number of adults and children (including the child’s age) that will stay in each room as parameters in the direct search, so called ”Room configuration”. It can for example be a search with two rooms where the first room shall have two adults and the other room shall have one adult and a child with age 5.
+You define the number of adults and children (including the child’s age) that will stay in each room as parameters in the direct search, so-called ”Room configuration”. It can for example be a search with two rooms where the first room shall have two adults and the other room shall have one adult and a child with age 5.
 
 | Parameter |type    | Example value  												| Description                                                                             |
 |-----------|--------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| &pr    	| String | &pr=1 (One room with one adults is entered)| This is the base parameter for the room configuration that shall be searched.|
+| &pr    	| String | &pr=1 (One room with one adult is entered)| This is the base parameter for the room configuration that shall be searched.|
 | a		    | String | &pr=1a10 (One room with one adult and one child (10 yrs) is entered)| The separator between adults and children.|
 | r		    | String | &pr=1r1r1 (One room with one adult and two children (10, 12 yrs) is entered)| The separator if the search is made on more rooms than one.|
 | c		    | String | &pr=1a10c12(Two rooms with one adult and two children (10, 12 yrs) in the first room and two adults in the second room is entered)| The separator if the search shall be made on more than one child.|
 
 ### Activity/Todo searchform
 ```html
+Todo searchform example:
 <script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
 
 <div id="[Unique Token ID]"></div>
@@ -79,6 +82,7 @@ Note:
 
 ### Ferry searchform
 ```html
+Ferry searchform example:
 <script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
 
 <div id="[Unique Token ID]"></div>
@@ -98,16 +102,17 @@ Flight searchform example:
 
 <script async type="text/javascript" src="//[online-host]/[culture]/flightwidget/searchform"></script>
 ```
-Use for external flight search (NOTE: will be replace in the near future)
+Use for external flight search
+(NOTE: will be replaced shortly)
 
 | Parameter       	   |type    | Example value  | Description                                                                             |
 |----------------------|--------|----------------|-----------------------------------------------------------------------------------------|
 | defaultArrivalDate   | String | 2023-03-12     | Set default default arrival date.													   |
 | defaultDepartureDate | String | 2023-03-13     | Set default default departure date.													   |
 | preselectFlexibleDates | Bool | True           | Use to preselect flexible date search.										       	   |
-| preselectedEndLocationId | Int| 123456         | Use to preselect a end location id (Travelswitch(agregatror) location id).		   	   |
+| preselectedEndLocationId | Int| 123456         | Use to preselect a end location id (Travelswitch(agregatror) location ID).		   	   |
 | lockEndLocation 	   | Bool   | True      	 | Use to locked/disabled changing the end location. 								   	   |
-| sgid 	   			   | Int    | 123456      	 | Use to preselect start location using a CBIS geonode id.						   		   |
+| sgid 	   			   | Int    | 123456      	 | Use to preselect start location using a CBIS geonode ID.						   		   |
 | css 			       | 		| [url]			 | Add absolute url to you custom hosted CSS.											   |
 
 ## <a id="product_package"></a> Product & package widgets - Used to load a product or package booking widget
@@ -129,18 +134,18 @@ Activity product example:
     }, false);
  </script>
 ```
-Activity & merchandise product booking widget - load one per page. (you can load multipe products in one script if needed.) 
-(NOTE: will be replace in the near future)
+Activity & merchandise product booking widget - load one per page. (you can load multiple products in one script if needed.) 
+(NOTE: will be replaced shortly)
 
 | Parameter       |type  | Example value  | Description                                                                             |
 |-----------------|------|----------------|-----------------------------------------------------------------------------------------|
-| cbisProductId  | Int  | 123456   	  | CBIS product id, We reccomend that you keep this ID on all elements See [ID] in example.|
+| cbisProductId  | Int  | 123456   	  | CBIS product id, We recommend that you keep this ID on all elements See [ID] in the example.|
 | proceedToBasket | Bool | true (or false)| Use to proceed to basket(checkout) or stay on widget page?  	  					    |
-| css 			  |      | [url]		  | Add absolute url to you custom hosted CSS.												|
+| css 			  |      | [url]		  | Add absolute URL to your custom-hosted CSS.												|
 | defaultDate	  | Date | 2023-06-11     | Use JavaScript "new" date format, default selected date									|
 | startDate 	  | Date | 2023-07-01     | Use JavaScript "new" date format, widget start date selectable date						|
 | endDate	 	  | Date | 2023-07-01     | Use JavaScript "new" date format, maximum selectable date								|
-| enablePromocode	 | Bool | true (or false)| Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.|
+| enablePromocode	 | Bool | true (or false)| Whether the field for entering promo code will be visible in the widget. If the  parameter is not added widget defaults to false.|
 
 *cbisProductId is requierd 
 
@@ -158,12 +163,12 @@ Use for iticket transport products.
 |--------------------|------|----------------|-----------------------------------------------------------------------------------------|
 | cbisProductId      | Int  | 123456   	     | CBIS product id, product to display the widget.										   |
 | proceedToBasket 	 | Bool | true (or false)| Use to proceed to basket(checkout) or stay on widget page?    						   |
-| css 			  	 |      | [url]		     | Add absolute url to you custom hosted CSS.											   |
+| css 			  	 |      | [url]		     | Add absolute URL to your custom-hosted CSS.											   |
 | preferredDate	  	 | Date | 2023-06-11     | A valid date to set the default initially selected date in the widget, the format of the date must be the same as the format of the requested widget. If the preferred date is not available it will fall back to default behavior.|
-| preferredDeparture | Date | 2023-06-11     | Id of the location that will be initially selected as departure location. If not available it will fallback to default behavior.|
-| preferredArrival 	 | Date | 2023-07-01     | Id of the location that will be initially selected as arrival location. If not available it will fallback to default behavior.|
-| enablePromocode	 | Bool | true (or false)| Whether field for entering promocode will be visible in the widget. If parameter is not added widget defaults to false.|
-| tripType	 | String | oneway (or roundtrip) |Set selected trip type onload roundtrip OR oneway, only work for iticket product with a trip type as option of course.  |
+| preferredDeparture | Date | 2023-06-11     | Id of the location that will be initially selected as departure location. If not available it will fall back to default behavior.|
+| preferredArrival 	 | Date | 2023-07-01     | Id of the location that will be initially selected as arrival location. If not available it will fall back to default behavior.|
+| enablePromocode	 | Bool | true (or false)| Whether the field for entering promo code will be visible in the widget. If the  parameter is not added widget defaults to false.|
+| tripType	 | String | oneway (or roundtrip) |Set selected trip type onload roundtrip OR oneway, only work for iTicket products with a trip type as the option of course.  |
 
 *cbisProductId id required 
 
@@ -186,7 +191,7 @@ Note:
 |--------------------|------|----------------|-----------------------------------------------------------------------------------------|
 | cbisProductId      | Int  | 123456   	     | CBIS product id, product to display the widget.										   |
 | startDateISO     	 | Date | 2024-12-24     | A valid date to set the default initially selected date in the widget. |
-| promotionCode 	 | String | MyPromoCode  | Add the promocode you want to load with the widget as active. |
+| promotionCode 	 | String | MyPromoCode  | Add the promo code you want to load with the widget as active. |
 | proceedToBasket 	 | true (or false) | Use to proceed to basket(checkout) or stay on widget page? |
 | referenceCurrency	 | String | USD	         | Use ISO format to set reference currency.  |
 | display        	 | String | Button       | Selected Display type: Standard, Collapsed or Button. |
@@ -194,17 +199,17 @@ Note:
 
 ### Accommodation product widget
 ```html
-Accommodation prodcut example:
+Accommodation product example:
 <div id="citybreak_accommodation_property_widget"></div>
 
 <script async type="text/javascript" src="//[online-host]/[culture]/accommodationPropertyWidget/searchform?productid=[ID]"></script>
 ```
-Use for one accommodation property. (NOTE: will be replace in the near future)
+Use for one accommodation property. (NOTE: will be replaced shortly)
 
 | Parameter       	 |type  | Example value  | Description                                                                             |
 |--------------------|------|----------------|-----------------------------------------------------------------------------------------|
 | *productId         | Int  | 123456   	     | CBIS product id, product to display the widget. You can only use one product per widget.|
-| css 			  	 |      | [url]	    	 | Add absolute url to you custom hosted CSS.											   |
+| css 			  	 |      | [url]	    	 | Add absolute URL to your custom hosted CSS.											   |
 
 
 ### Dynamic packages widgets
@@ -246,9 +251,9 @@ Basket example if span:
 The basket widget can be used within or outside of the Citybreak online template page.
 When the basket widget is used within the template the script tag must be omitted.
 
-FYI: The collapsed widget div ``<div id="citybreak_basket_widget_summary"></div>`` is not Styled from Citybreak system.
+FYI: The collapsed widget div ``<div id="citybreak_basket_widget_summary"></div>`` is not Styled from the Citybreak system.
 
-Note: citybreak_basket_widget_display is a optional trigger
+Note: citybreak_basket_widget_display is an optional trigger
 
 
 
