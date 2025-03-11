@@ -232,6 +232,27 @@ Note:
 | cbisProductId      | Int  | 123456   	     | CBIS product id, package to display the widget.										   |
 | allowOverride    	 | Bool   | False        | Used to toggle  external URL parameter override, can be useful if you want to automate widgets in your CMS. |
 
+### Traveller rating / GuestReviews widget
+```html
+Traveller rating / GuestReviews example:
+<script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
+
+<div id="[Unique Token ID]"></div>
+```
+For Traveller rating / GuestReviews widgets contact our support, then we'll provide you with the widget(s).
+
+*What is a Token?* A token will provide the needed parameters to control the widget. Please take a look at the parameter below.
+Note: 
+- A token is linked to a single online store.
+- Each token is unique and should only be added once per view.
+- A token is associated with a specific widget type.
+
+| Parameter       	 |type  | Example value  | Description                                                                             |
+|--------------------|------|----------------|-----------------------------------------------------------------------------------------|
+| cbisProductId      | Int  | 123456   	     | CBIS product id, package to display the widget.										   |
+| display        	 | String | Button       | Display type options: (default) Button or standard |
+| allowOverride    	 | Bool   | False        | Used to toggle  external URL parameter override, can be useful if you want to automate widgets in your CMS. |
+
 ## <a id="Basket"></a> Basket widget - Used if you want to have a shopping cart in the CMS and in your template page.
 ```html
 
