@@ -26,6 +26,7 @@ _(If you want to use custom CSS, it should be loaded via the CSS parameter and t
 
 - [Searchforms widgets](#Searchforms)
 - [Product & package widgets](#product_package)
+- [Traveller rating / GuestReviews widget](#traveller_rating)
 - [Basket widget](#Basket)
 
 ## <a id="Searchforms"></a> Searchform widgets - Used for a search or filtering for products per guide.
@@ -231,6 +232,8 @@ Note:
 |--------------------|------|----------------|-----------------------------------------------------------------------------------------|
 | cbisProductId      | Int  | 123456   	     | CBIS product id, package to display the widget.										   |
 | allowOverride    	 | Bool   | False        | Used to toggle  external URL parameter override, can be useful if you want to automate widgets in your CMS. |
+
+## <a id="traveller_rating"></a> Product & package widgets - Used to load a product or package Traveller rating / GuestReviews
 
 ### Traveller rating / GuestReviews widget
 ```html
