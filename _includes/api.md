@@ -23,6 +23,9 @@ Determine the link to a dynamic page irregardless of its language, there is an a
 Online bookable status API  can be useful to find out if a product is bookable or not via a simple call.
 This can then be used to build a citybreak online widget in the CMS or similar to have a more dynamic implementation.
 
+_(NOTE: This is a legacy feature and will be removed later on.)_
+
+
 ``
 //[online-host]/[culture]/api/products/bookablestatus?cbisProductId=[CBIS-PRODUCT-ID]
 ``
