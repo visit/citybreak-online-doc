@@ -154,6 +154,15 @@ For the Todo group booking widget, contact our support team and we’ll provide 
 
 --
 
+### Todo booking widget
+
+Used for activity & merchandise products
+_Note: Not for iTicket Bookingflow products Or iTicket Activity Transport products._
+
+Very soon documentation will be updated with the new version widget version.
+
+--
+
 ### iTicket Activity Transport booking widget
 ```html
 iTicket Activity Transport example:
