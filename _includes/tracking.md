@@ -107,206 +107,221 @@ FYI:
 Need help with Google tools or your metric plan?  
 Don’t worry! Our tracker partner, BBO, is ready to assist you. Contact them at: kund-visit@bebetteronline.com
 
+### <a id="view_cart"></a> view_cart - This event signifies that a user viewed their cart.  
+Event fires on ``.../basket``
+
 ```
 Example output
 
-			'event':"view_cart",
-			'ecommerce': {
-                            'currency': "SEK",
-			    'value': 1234.00,
-                            'items': [{
-                    'item_name': "My product",
-                    'item_id': "123456",
-		    'item_brand': "My supplier",
-                    'price': 1234.00,
-                    'item_category': "Accommodation",
-                    'quantity': 1,
-                    'affiliation': "1234567890"
-                }
+    'event': "view_cart",
+    'ecommerce': {
+        'currency': "SEK",
+        'value': 1234.00,
+        'items': [{
+            'item_name': "My product",
+            'item_id': "123456",
+            'item_brand': "My supplier",
+            'price': 1234.00,
+            'item_category': "Accommodation",
+            'quantity': 1,
+            'affiliation': "1234567890"
+        }]
+    }
 ```
 
-| Name    	  | Type   | Example value | Description                                                                   |
-|-----------------|--------|---------------|-------------------------------------------------------------------------------|
-| currency	  | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
-| value 	  | Number | 1234.00       | Value of products in the cart 						   |
-| items    	  | Array  | See Items	   | The items for the event.                                             	   |
+| Name       | Type   | Example value | Description                                                                   |
+|------------|--------|---------------|-------------------------------------------------------------------------------|
+| currency   | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| value      | Number | 1234.00       | Value of products in the cart                                                 |
+| items      | Array  | See Items     | The items for the event.                                                      |
 
 Items parameters
 
-| Name    	  | Type   | Example value | Description                                                                   |
-|-----------------|--------|---------------|-------------------------------------------------------------------------------|
-| item_id  	  | String | 123456        | Citybreak product id 							   |
-| item_name    	  | String | My product    | Citybreak product system name                                                 |
-| item_brand      | String | My supplier   | Citybreak supplier name							   |
-| price    	  | Number | 1234.00 	   | Product price                                                                 |
-| item_category   | String | Accommodation | System category                                			   	   |
-| item_category2  | String |  		   | 	                            						   |
-| item_category3  | String |  		   | 	                               						   |
-| item_category4  | String |               | 	                                					   |
-| item_category5  | String |               | 	 									   |
-| quantity    	  | Number | 1 	           | Quantity of product                                           		   |
-| affiliation     | String | 1234567890    | Citybreak online identifier id                                           	   |
-| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id	   |
-| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name	   |								
+| Name              | Type   | Example value | Description                                                                   |
+|-------------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id           | String | 123456        | Citybreak product ID                                                          |
+| item_name         | String | My product    | Citybreak product system name                                                 |
+| item_brand        | String | My supplier   | Citybreak supplier name                                                       |
+| price             | Number | 1234.00       | Product price                                                                 |
+| item_category     | String | Accommodation| System category                                                               |
+| item_category2    | String |               |                                                                               |
+| item_category3    | String |               |                                                                               |
+| item_category4    | String |               |                                                                               |
+| item_category5    | String |               |                                                                               |
+| quantity          | Number | 1             | Quantity of product                                                           |
+| affiliation       | String | 1234567890    | Citybreak online identifier ID                                                |
+| item_package_id   | Number | 1234          | Citybreak dynamic package system ID OR iTicket bookingFlow system ID         |
+| item_package_name | String | My Package    | Citybreak dynamic package system name OR iTicket bookingFlow system name     |
 
+---
 
-### <a id="begin_checkout"></a> begin_checkout - This event signifies that a user has begun a checkout.
+### <a id="begin_checkout"></a> begin_checkout - This event signifies that a user has begun a checkout.  
 Event fires on ``.../paymentdetails``
 
 ```
 Example output
 
-			'event':"begin_checkout",
-                        'ecommerce': {
-                            'currency': "SEK",
-			    'value': 1234.00,
-                            'items': [{
-                    'item_name': "My product",
-                    'item_id': "123456",
-		    'item_brand': "My supplier",
-                    'price': 1234.00,
-                    'item_category': "Accommodation",
-                    'quantity': 1,
-                    'affiliation': "1234567890"
-                }
+    'event': "begin_checkout",
+    'ecommerce': {
+        'currency': "SEK",
+        'value': 1234.00,
+        'items': [{
+            'item_name': "My product",
+            'item_id': "123456",
+            'item_brand': "My supplier",
+            'price': 1234.00,
+            'item_category': "Accommodation",
+            'quantity': 1,
+            'affiliation': "1234567890"
+        }]
+    }
 ```
 
-| Name    	  | Type   | Example value | Description                                                                   |
-|-----------------|--------|---------------|-------------------------------------------------------------------------------|
-| currency 	  | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
-| value 	  | Number | 1234.00       | Value of products in the cart 						   |
-| items           | Array  | See Items 	   | The items for the event.                                                      |
+| Name       | Type   | Example value | Description                                                                   |
+|------------|--------|---------------|-------------------------------------------------------------------------------|
+| currency   | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| value      | Number | 1234.00       | Value of products in the cart                                                 |
+| items      | Array  | See Items     | The items for the event.                                                      |
 
 Items parameters
 
-| Name    	  | Type   | Example value | Description                                                                   |
-|-----------------|--------|---------------|-------------------------------------------------------------------------------|
-| item_id  	  | String | 123456        | Citybreak product id 							   |
-| item_name       | String | My product    | Citybreak product system name                                                 |
-| item_brand      | String | My supplier   | Citybreak supplier name							   |
-| price    	  | Number | 1234.00 	   | Product price                                                                 |
-| item_brand      | String | My supplier   | Citybreak supplier name							   |
-| item_category   | String | Accommodation | System category      						   |
-| item_category2  | String |  		   | 	 									   |
-| item_category3  | String |               | 	 									   |
-| item_category4  | String |  		   | 	 									   |
-| item_category5  | String |    	   | 	 									   |
-| quantity        | Number | 1 		   | Quantity of product                            				   |
-| affiliation     | String | 1234567890    | Citybreak online identifier id     					   |
-| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id	   |
-| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name	   |			
+| Name              | Type   | Example value | Description                                                                   |
+|-------------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id           | String | 123456        | Citybreak product ID                                                          |
+| item_name         | String | My product    | Citybreak product system name                                                 |
+| item_brand        | String | My supplier   | Citybreak supplier name                                                       |
+| price             | Number | 1234.00       | Product price                                                                 |
+| item_category     | String | Accommodation| System category                                                               |
+| item_category2    | String |               |                                                                               |
+| item_category3    | String |               |                                                                               |
+| item_category4    | String |               |                                                                               |
+| item_category5    | String |               |                                                                               |
+| quantity          | Number | 1             | Quantity of product                                                           |
+| affiliation       | String | 1234567890    | Citybreak online identifier ID                                                |
+| item_package_id   | Number | 1234          | Citybreak dynamic package system ID OR iTicket bookingFlow system ID         |
+| item_package_name | String | My Package    | Citybreak dynamic package system name OR iTicket bookingFlow system name     |
 
-### <a id="purchase"></a> purchase - This event signifies when one or more items is purchased by a user.
+---
+
+### <a id="purchase"></a> purchase - This event signifies when one or more items are purchased by a user.  
 Event fires 1 time on ``.../confirmation``
 
 ```
 Example output
 
-			    'event': "purchase",
-                            'ecommerce': {
-                                'transaction_id': "ABCD12",
-                                'value': 1234.00,
-                                'tax': 123.12,
-                                'currency': "SEK",
-                                'items': [{
-                    'item_id': "123456",
-                    'item_name': "My product",
-		    'item_brand': "My supplier",
-                    'item_category': "Accommodation",
-                    'price': 1234.00,
-                    'quantity': 1,
-                    'affiliation': "1234567890"
-                }
+    'event': "purchase",
+    'ecommerce': {
+        'transaction_id': "ABCD12",
+        'value': 1234.00,
+        'tax': 123.12,
+        'currency': "SEK",
+        'items': [{
+            'item_id': "123456",
+            'item_name': "My product",
+            'item_brand': "My supplier",
+            'item_category': "Accommodation",
+            'price': 1234.00,
+            'quantity': 1,
+            'affiliation': "1234567890"
+        }]
+    }
 ```
 
-| Name    	  | Type   | Example value | Description                                                                   |
-|-----------------|--------|---------------|-------------------------------------------------------------------------------|
-| transaction_id  | string | ABCD12  	   | Booking number 								   |
-| value    	  | Number | 1234.00	   | Booking value                                                   		   |
-| tax             | Number | 123.12	   | Booking tax value                                                   	   |
-| currency        | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
-| items    	  | Array  | See Items     | The items for the event.                                        		   |
+| Name            | Type   | Example value | Description                                                                   |
+|------------------|--------|---------------|-------------------------------------------------------------------------------|
+| transaction_id   | String | ABCD12        | Booking number                                                                |
+| value            | Number | 1234.00       | Booking value                                                                 |
+| tax              | Number | 123.12        | Booking tax value                                                             |
+| currency         | String | SEK           | Currency in 3-letter ISO 4217 format                                          |
+| items            | Array  | See Items     | The items for the event.                                                      |
 
 Items parameters
 
-| Name            | Type   | Example value | Description                                                                   |
-|-----------------|--------|---------------|-------------------------------------------------------------------------------|
-| item_id  	  | String | 123456        | Citybreak product id 						           |
-| item_name       | String | My product    | Citybreak product system name                                                 |
-| item_brand      | String | My supplier   | Citybreak supplier name							   |
-| price           | Number | 1234.00       | Product price                                                                 |
-| item_category   | String | Accommodation | System category                                 		   	   |
-| item_category2  | String |  		   | 	 									   |
-| item_category3  | String |  		   | 										   |
-| item_category4  | String |  		   | 										   |
-| item_category5  | String |  		   | 										   |
-| quantity        | Number | 1 		   | Quantity of product                                           		   |
-| affiliation     | String | 1234567890    | Citybreak online identifier id                                         	   |
-| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id	   |
-| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name 	   |			
+| Name              | Type   | Example value | Description                                                                   |
+|-------------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id           | String | 123456        | Citybreak product ID                                                          |
+| item_name         | String | My product    | Citybreak product system name                                                 |
+| item_brand        | String | My supplier   | Citybreak supplier name                                                       |
+| price             | Number | 1234.00       | Product price                                                                 |
+| item_category     | String | Accommodation| System category                                                               |
+| item_category2    | String |               |                                                                               |
+| item_category3    | String |               |                                                                               |
+| item_category4    | String |               |                                                                               |
+| item_category5    | String |               |                                                                               |
+| quantity          | Number | 1             | Quantity of product                                                           |
+| affiliation       | String | 1234567890    | Citybreak online identifier ID                                                |
+| item_package_id   | Number | 1234          | Citybreak dynamic package system ID OR iTicket bookingFlow system ID         |
+| item_package_name | String | My Package    | Citybreak dynamic package system name OR iTicket bookingFlow system name     |
 
-### <a id="remove_from_cart"></a> remove_from_cart - This event signifies when items are removed from /basket by a user.
-Event fires 1 time per user remove action on /basket
+---
+
+### <a id="remove_from_cart"></a> remove_from_cart - This event signifies when items are removed from `/basket` by a user.  
+Event fires 1 time per user action on `/basket`
 
 ```
 Example output
 
-			    'event': "remove_from_cart",
-                            'ecommerce': {
-				'currency': "SEK",
-				'value': 1234.00,
-                                'items': [{
-                    'item_id': "123456",
-                    'item_name': "My product",
-		    'item_brand': "My supplier",
-                    'item_category': "Accommodation",
-                    'price': 1234.00,
-                    'quantity': 1,
-                    'affiliation': "1234567890"
-                }
+    'event': "remove_from_cart",
+    'ecommerce': {
+        'currency': "SEK",
+        'value': 1234.00,
+        'items': [{
+            'item_id': "123456",
+            'item_name': "My product",
+            'item_brand': "My supplier",
+            'item_category': "Accommodation",
+            'price': 1234.00,
+            'quantity': 1,
+            'affiliation': "1234567890"
+        }]
+    }
 ```
 
-| Name    	  | Type   | Example value | Description                                                                   |
-|-----------------|--------|---------------|-------------------------------------------------------------------------------|
-| currency        | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
-| value    	  | Number | 1234.00	   | Booking value                                                   		   |
-| items    	  | Array  | See Items     | The items for the event.                                        		   |
+| Name       | Type   | Example value | Description                                                                   |
+|------------|--------|---------------|-------------------------------------------------------------------------------|
+| currency   | String | SEK           | Currency in 3-letter ISO 4217 format                                          |
+| value      | Number | 1234.00       | Booking value                                                                 |
+| items      | Array  | See Items     | The items for the event.                                                      |
 
 Items parameters
 
-| Name            | Type   | Example value | Description                                                                   |
-|-----------------|--------|---------------|-------------------------------------------------------------------------------|
-| item_id  	  | String | 123456        | Citybreak product id 						           |
-| item_name       | String | My product    | Citybreak product system name                                                 |
-| item_brand      | String | My supplier   | Citybreak supplier name							   |
-| price           | Number | 1234.00       | Product price                                                                 |
-| item_category   | String | Accommodation | System category                                 		   	 	   |
-| item_category2  | String |  		   | 	 									   |
-| item_category3  | String |  		   | 										   |
-| item_category4  | String |  		   | 										   |
-| item_category5  | String |  		   | 										   |
-| quantity        | Number | 1 		   | Quantity of product                                           		   |
-| affiliation     | String | 1234567890    | Citybreak online identifier id                                         	   |
-| item_package_id | Number | 1234	   | Citybreak dynamic package system id OR iTicket bookingFlow system id 	   |
-| item_package_name | String | My Package  | Citybreak dynamic package system name OR iTicket bookingFlow system name 	   |			
+| Name              | Type   | Example value | Description                                                                   |
+|-------------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id           | String | 123456        | Citybreak product ID                                                          |
+| item_name         | String | My product    | Citybreak product system name                                                 |
+| item_brand        | String | My supplier   | Citybreak supplier name                                                       |
+| price             | Number | 1234.00       | Product price                                                                 |
+| item_category     | String | Accommodation| System category                                                               |
+| item_category2    | String |               |                                                                               |
+| item_category3    | String |               |                                                                               |
+| item_category4    | String |               |                                                                               |
+| item_category5    | String |               |                                                                               |
+| quantity          | Number | 1             | Quantity of product                                                           |
+| affiliation       | String | 1234567890    | Citybreak online identifier ID                                                |
+| item_package_id   | Number | 1234          | Citybreak dynamic package system ID OR iTicket bookingFlow system ID         |
+| item_package_name | String | My Package    | Citybreak dynamic package system name OR iTicket bookingFlow system name     |
 
-## Booking confimation urls
+---
 
-``//[online-host]/[culture]/confirmation...``
+## Booking confirmation URLs
 
-Language | url
---------- | ---------
-sv | /Bekraftelse
-da | /Bekraftelse
-de | /Bestaetigung
-es | /confirmacion
-fi | /vahvistus
-fr | /confirmation
-it | /conferma
-nl | /bevestiging
-no | /bekreftelse
-pt | /confirmacao
-en | /confirmation
+```
+//[online-host]/[culture]/confirmation...
+```
+
+Language | URL
+--------- | -------------
+sv        | /Bekraftelse
+da        | /Bekraftelse
+de        | /Bestaetigung
+es        | /confirmacion
+fi        | /vahvistus
+fr        | /confirmation
+it        | /conferma
+nl        | /bevestiging
+no        | /bekreftelse
+pt        | /confirmacao
+en        | /confirmation
 Not in list | /confirmation
 
 _Note: After /confirmation we add unique parameters to define the booking_
