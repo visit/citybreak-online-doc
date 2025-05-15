@@ -32,7 +32,7 @@ See the example for the specific widget you need below.
 - [Traveller Rating / Guest Reviews Widget](#traveller_rating)
 - [Basket Widget](#Basket)
 
-## <a id="Searchforms"></a> Searchform widgets - Used for a search or filtering for products per guide.
+## <a id="Searchforms"></a> Searchform widgets 
 
 Searchform widgets are used if you need a multi-product or a transport searchform in your CMS.
 
@@ -127,6 +127,8 @@ Used for external flight searches.
 | css                       |        | [url]          | Add the absolute URL to your custom hosted CSS.                                        |
 
 ---
+
+## <a id="product_package"></a> Product booking & Package widgets
 
 ### Todo group booking widget
 ```html
@@ -243,7 +245,7 @@ For Dynamic packages widgets, contact our support team to obtain the necessary w
 
 ---
 
-## <a id="traveller_rating"></a> Product & package widgets - Traveller rating / GuestReviews
+## <a id="traveller_rating"></a> Traveller rating / GuestReviews widget
 
 ### Traveller rating / GuestReviews widget
 ```html
@@ -269,7 +271,7 @@ For Traveller rating / GuestReviews widgets, contact our support team to obtain 
 
 ---
 
-## <a id="Basket"></a> Basket widget - Used to include a shopping cart in your CMS or template page
+## <a id="Basket"></a> Basket widget
 ```html
 Basket example if anchor:
 <a id="citybreak_basket_widget_display" href="javascript:void(0);"></a>
@@ -285,6 +287,8 @@ Basket example if span:
 
 <script async type="text/javascript" src="//[online-host]/[culture]/basketwidget/widget"></script>
 ```
+Used to include a shopping cart in your CMS or template page
+
 The basket widget can be used both within and outside the Citybreak Online template page.  
 When used within the template, the `<script>` tag must be omitted.
 
