@@ -57,7 +57,6 @@ _(NOTE: will be replaced shortly with a newer token based version)_
 | promotionCode           | String | Promo_2023     | Set a promotion code in the promotion code field.                                               |
 | css                     |        | [url]          | Add absolute URL to your custom hosted CSS.                                                     |
 
-
 ### Parameters for number of rooms and guests
 You define the number of adults and children (including the child’s age) that will stay in each room using parameters in the direct search—so-called “Room configuration.” For example, a search with two rooms: the first room has two adults, and the second room has one adult and one child aged 5.
 
@@ -86,7 +85,7 @@ Used for filtering products in a Todo product list. Please contact our support t
 - Each token is unique and should only be added once per view.  
 - A token is associated with a specific widget type.
 
----
+--
 
 ### Ferry searchform widget
 ```html
@@ -104,7 +103,7 @@ Used for Ferry search. Please contact our support team, and we’ll provide the 
 - Each token is unique and should only be added once per view.  
 - A token is associated with a specific widget type.
 
----
+--
 
 ### Flight searchform widget
 ```html
@@ -126,7 +125,7 @@ Used for external flight searches.
 | sgid                      | Int    | 123456         | Use to preselect the start location using a CBIS geonode ID.                           |
 | css                       |        | [url]          | Add the absolute URL to your custom hosted CSS.                                        |
 
----
+--
 
 ## <a id="product_package"></a> Product booking & Package widgets
 
@@ -153,7 +152,7 @@ For the Todo group booking widget, contact our support team and we’ll provide 
 | cbisProductId     | Int  | 123456         | CBIS product ID; must be the parent product of the Todo product group.      |
 | allowOverride     | Bool | False          | Toggle external URL parameter override; useful for automating widgets in CMS. |
 
----
+--
 
 ### iTicket Activity Transport booking widget
 ```html
@@ -175,7 +174,7 @@ Use for iTicket transport products.
 | enablePromocode       | Bool   | true / false   | Show promo code field. Defaults to false if parameter is not added.                           |
 | tripType              | String | oneway / roundtrip | Set selected trip type on load. Only works if product supports this option.              |
 
----
+--
 
 ### iTicket Bookingflow booking widget
 ```html
@@ -220,7 +219,7 @@ Use for one accommodation property.
 | *productId  | Int  | 123456         | CBIS product ID to display the widget. Only one product per widget.        |
 | css         |      | [url]          | Add absolute URL to your custom-hosted CSS.                                |
 
----
+--
 
 ### Dynamic packages widget
 ```html
@@ -243,7 +242,7 @@ For Dynamic packages widgets, contact our support team to obtain the necessary w
 | cbisProductId   | Int  | 123456         | CBIS product ID for the package to display.                                 |
 | allowOverride   | Bool | False          | Toggle external URL parameter override for CMS widget automation.           |
 
----
+--
 
 ## <a id="traveller_rating"></a> Traveller rating / GuestReviews widget
 
@@ -269,7 +268,7 @@ For Traveller rating / GuestReviews widgets, contact our support team to obtain 
 | display         | String | Button         | Display type: 'Button' (default) or 'Standard'.                         |
 | allowOverride   | Bool   | False          | Toggle external URL parameter override for CMS widget automation.      |
 
----
+--
 
 ## <a id="Basket"></a> Basket widget
 ```html
