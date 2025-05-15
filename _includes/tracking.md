@@ -1,50 +1,50 @@
+
 # Tracking
 
-Citybreak online tracking alternativs and technical information.
+Citybreak online tracking alternatives and technical information.
 
-## Booking tracking id
+## Booking tracking ID
 
-_(NOTE: This is a legacy feature will be removed later on. This feature only work with redirect PSP integrations.)_
+_(NOTE: This is a legacy feature and will be removed later on. This feature only works with redirect PSP integrations.)_
 
-The booking tracking feature is a simple way for a client to track whether or not certain bookings were referred to by a tracking key or not.
+The booking tracking feature is a simple way for a client to track whether or not certain bookings were referred to by a tracking key.
 
-A tracking key is a text string which could be any value, it could be provided through a direct link or within a widget.
+A tracking key is a text string that can be any value, and may be provided through a direct link or within a widget.
 
-Once a tracking key is set it will remain alive for 30 days unless the cookie is manually deleted, everytime a request is done with the same tracking key the period of 30 days will refresh and start over.
+Once a tracking key is set, it remains valid for 30 days unless the cookie is manually deleted. Every time a request is made with the same tracking key, the 30-day period will refresh and restart.
 
-If an already existing tracking key is set it will never be overridden by another key, meaning that the first key must expire before a new one can be set.
+If a tracking key is already set, it will not be overridden by another key. The first key must expire before a new one can be applied.
 
-Referral statistics can be obtained by creating one of following reports in <https://reports.citybreak.com>
+Referral statistics can be obtained by creating one of the following reports in <https://reports.citybreak.com>:
 * Product report
 * Analysis per country
 
-Within these reports there's a column which represents which tracking key was used on a booking level, if there was one present.
+Within these reports, there is a column that represents the tracking key used at the booking level, if one was present.
 
-Paramerter:
+Parameter:  
 **?tid=[your value]**
 
-Direct link sample
-``
+Direct link sample  
+```
 //[online-host]/[culture]/[slug]?tid=mytrackingkey
-``
+```
 
 ## Custom conversion tracking
 
-To make your script work for your organization you need to configure it. To do so you need to change the variables in your script with the variable names below. This custum scripts are added to the booking confirmaiton page.
+To make your script work for your organization, you need to configure it. Change the variables in your script using the variable names below. These custom scripts are added to the booking confirmation page.
 
 Parameter | Description
 --------- | --------- 
 {bookingcode} | Booking number, e.g. ABCD12.
-{bookingvalue} | Total sum of customers booking.
-{customerfirstname} | Customers first name
-{customersurname} | Customers surname
+{bookingvalue} | Total sum of the customer's booking.
+{customerfirstname} | Customer's first name
+{customersurname} | Customer's surname
 {randomnumber} | Generates a random number
-{date} | Time stamp
-{isodate} | Time stamp (yyyy-MM-dd)
+{date} | Timestamp
+{isodate} | Timestamp (yyyy-MM-dd)
 {currency} | Currency
-{zipcode} | Zipcode
-{bookingJSONObject} | Booking information serialized as a JSON object, assign it to a javascript variable. If serialization fails {bookingJSONObject} will be replaced by undefined, so guard for it. Empty arrays are not serialized. All numbers are formatted as strings to the customer language culture.
-
+{zipcode} | Zip code
+{bookingJSONObject} | Booking information serialized as a JSON object. Assign it to a JavaScript variable. If serialization fails, {bookingJSONObject} will be replaced with `undefined`, so ensure you check for it. Empty arrays are not serialized. All numbers are formatted as strings according to the customer’s language culture.
 
 > Example of {bookingJSONObject} usage: 
 > 
@@ -52,22 +52,19 @@ Parameter | Description
 > Will generate:
 > var booking = { "BookingCode": "ABCD12", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": "600.0", "TotalTax": "64.29", "Products": [{ "Id": "123456", "Name": "Hotell_name/room_name", "Category": "Accommodation/Hotelroom", "Price": "600.0", "Quantity": "1", "DocumentUrls": ["https://doc.citybreak.com/url-to-ticket"] }] };
 
-
 ```html
-
 <script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}">
 </script>
-
 ```
 
 ## Google tracking (GA4)
 
-Citybreak online googles tracking options.
-* Google analytics 4 gtag.js
-* Google tag manager gtm.js
+Citybreak online Google tracking options:
+* Google Analytics 4 (gtag.js)
+* Google Tag Manager (gtm.js)
 
 ```
-Example of Google analytics 4 gtag.js
+Example of Google Analytics 4 gtag.js
 
 <!-- Begin - Google tag (gtag.js) and Google Analytics v4 DataLayer-->
 <script type="text/javascript">
@@ -79,7 +76,7 @@ gtag('config', 'G-[ID]');
 ```
 
 ```
-Example of Google tag manager (*with ga4* datalayer) gtm.js
+Example of Google Tag Manager (*with GA4* DataLayer) gtm.js
 
 <!-- Begin - Google Tag Manager v4 (gtm.js) DataLayer and Events-->
 <script type="text/javascript">
@@ -88,7 +85,6 @@ Example of Google tag manager (*with ga4* datalayer) gtm.js
                                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                                 })(window,document,'script','dataLayer','GTM-[ID]');
-
 </script>
 ```
 
@@ -98,21 +94,18 @@ Events:
 * [purchase](#purchase)
 * [remove_from_cart](#remove_from_cart)
 
-A tracker property is implemented in Citybreak admin per online.
-To add or remove your tracker propertys, contact our support with the [online id] or [url to the ecom] and the tracker property you want to add or remove.
+A tracker property is implemented in Citybreak Admin per online.  
+To add or remove your tracker properties, contact our support with the [online ID] or [URL to the ecom] and the tracker property you want to add or remove.
 
-_Example: "Please add this tracker property "G-[ID]" or GTM-[ID]" to onlineid: [add identifier] OR url to citybreak online booking_
+_Example: "Please add this tracker property 'G-[ID]' or 'GTM-[ID]' to online ID: [add identifier] OR URL to Citybreak online booking."_
 
 FYI:
-* Google tracking is only avaliable in our production environment.
-* Avoid to add Google tracking scripts via your template page. (To avoid risk of double tracking)
-* Questions or feature request related to the events we provide? Please contact us.
+* Google tracking is only available in our production environment.
+* Avoid adding Google tracking scripts via your template page. (To avoid the risk of double tracking.)
+* Questions or feature requests related to the events we provide? Please contact us.
 
-Do you need help with the google tools or your metric plan?
-Don’t worry! Our trackerpartner, BBO is ready to assist you. Contact them through this email: kund-visit@bebetteronline.com
-
-### <a id="view_cart"></a> view_cart - This event signifies that a user viewed their cart. 
-Fires on ``.../basket``
+Need help with Google tools or your metric plan?  
+Don’t worry! Our tracker partner, BBO, is ready to assist you. Contact them at: kund-visit@bebetteronline.com
 
 ```
 Example output
