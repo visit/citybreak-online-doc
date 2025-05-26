@@ -205,6 +205,7 @@ For iTicket BookingFlow widgets, contact our support team and we’ll provide th
 |----------------------|--------|----------------|-----------------------------------------------------------------------------|
 | cbisProductId         | Int    | 123456         | CBIS product ID to display in the widget.                                   |
 | startDateISO          | Date   | 2024-12-24     | Default initially selected date in the widget.                              |
+| startTimeISO          | String   | 12:30     | Filter tour start time on the selected date: Only display tours after added time                           |
 | promotionCode         | String | MyPromoCode    | Promo code to load with the widget as active.                               |
 | proceedToBasket       | Bool   | true / false   | Proceed to basket (checkout) or stay on the widget page.                    |
 | referenceCurrency     | String | USD            | Use ISO format to set reference currency.                                   |
