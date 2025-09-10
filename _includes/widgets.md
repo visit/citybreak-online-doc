@@ -37,37 +37,11 @@ See the example for the specific widget you need below.
 Searchform widgets are used if you need a multi-product or a transport searchform in your CMS.
 
 ### Accommodation searchform widget
-```html
-Accommodation searchform example:
-<div id="citybreak_accommodation_searchform_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationwidget/searchform"></script>
-```
-Use for multi-property accommodation search.
-_(NOTE: will be replaced shortly with a newer token based version)_
+Use for multi-property accommodation search. 
 
-| Parameter               | Type   | Example Value | Description                                                                                     |
-|-------------------------|--------|----------------|-------------------------------------------------------------------------------------------------|
-| defaultCategoryId       | int    | 123456         | Set the default category in the widget. CBIS category ID is needed.                             |
-| lockCategory            | Bool   | true           | Lock the category dropdown. When set, the dropdown with categories will be hidden.              |
-| geoNodeId               | int    | 123456         | Set default geonode in the widget. CBIS geonode ID is needed.                                   |
-| cbispids                | int    | 123456         | Set default products in the widget. CBIS product ID is needed.                                  |
-| defaultArrivalDate      | Date   | 2023-03-12     | Set the default arrival date. Format must match the format of the requested widget.             |
-| defaultDepartureDate    | Date   | 2023-03-13     | Set the default departure date. Format must match the format of the requested widget.           |
-| promotionCode           | String | Promo_2023     | Set a promotion code in the promotion code field.                                               |
-| css                     |        | [url]          | Add absolute URL to your custom hosted CSS.                                                     |
+Very soon documentation will be updated with the new version widget version.
 
-### Parameters for number of rooms and guests
-You define the number of adults and children (including the child’s age) that will stay in each room using parameters in the direct search—so-called “Room configuration.” For example, a search with two rooms: the first room has two adults, and the second room has one adult and one child aged 5.
-
-| Parameter | Type   | Example Value                                                   | Description                                                                             |
-|-----------|--------|------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| &pr       | String | &pr=1 (One room with one adult is entered)                      | The base parameter for the room configuration to be searched.                          |
-| a         | String | &pr=1a10 (One room with one adult and one child (10 yrs))       | Separator between adults and children.                                                  |
-| r         | String | &pr=1r1r1 (One room with one adult and two children (10, 12 yrs)) | Separator when more than one room is included in the search.                           |
-| c         | String | &pr=1a10c12 (Two rooms: one with one adult and children 10,12; second with two adults) | Separator when multiple children are included.        |
-
---
 
 ### Todo searchform widget
 ```html
@@ -154,12 +128,37 @@ For the Todo group booking widget, contact our support team and we’ll provide 
 
 --
 
-### Todo booking widget
+### Activity booking widget
 
 Used for activity & merchandise products
 _Note: Not for iTicket Bookingflow products Or iTicket Activity Transport products._
 
-Very soon documentation will be updated with the new version widget version.
+```html
+Activity booking widget example:
+<script async type="text/javascript" src="//[online-host]/[culture]//widget?token=[Unique Token ID]"></script>
+
+<div id="[Unique Token ID]"></div>
+```
+Used for activity & merchandise products
+_Note: Not for iTicket Bookingflow products Or iTicket Activity Transport products._
+
+For the Todo group booking widget, contact our support team and we’ll provide the widget(s) needed.
+
+*What is a Token?* A token provides the needed parameters to control the widget.
+
+**Note:**  
+- A token is linked to a single online store.  
+- Each token is unique and should only be added once per view.  
+- A token is associated with a specific widget type.
+
+| Parameter         | Type | Example Value | Description                                                                 |
+|------------------|------|----------------|-----------------------------------------------------------------------------|
+| cbisProductId     | Int  | 123456         | CBIS product ID; must be the parent product of the Todo product group.      |
+| promotionCode         | String | MyPromoCode    | Promo code to load with the widget as active.                               |
+| enablePromocode       | Bool   | true / false   | Show promo code field. Defaults to false if parameter is not added.  |  
+| proceedToBasket       | Bool   | true / false   | Proceed to basket (checkout) or stay on the widget page.   | 
+| allowOverride     | Bool | False          | Toggle external URL parameter override; useful for automating widgets in CMS. |
+
 
 --
 
