@@ -40,7 +40,7 @@ Searchform widgets are used if you need a multi-product or a transport searchfor
 
 Use for multi-property accommodation search. 
 
-Very soon documentation will be updated with the new version widget version.
+Very soon documentation will be updated with the new widget version.
 
 
 ### Todo searchform widget
