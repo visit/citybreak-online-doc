@@ -40,7 +40,7 @@ Searchform widgets are used if you need a multi-product or a transport searchfor
 
 Use for multi-property accommodation search. 
 
-Very soon documentation will be updated with the new widget version.
+Documentation will be updated with a new widget version in the near future.
 
 
 ### Todo searchform widget
@@ -87,7 +87,7 @@ Flight searchform example:
 <script async type="text/javascript" src="//[online-host]/[culture]/flightwidget/searchform"></script>
 ```
 Used for external flight searches.  
-(NOTE: will be replaced by a new version)
+(NOTE: will be replaced by a new version - Contact Us for more information)
 
 | Parameter                  | Type   | Example Value | Description                                                                            |
 |---------------------------|--------|----------------|----------------------------------------------------------------------------------------|
@@ -169,7 +169,7 @@ iTicket Activity Transport example:
 
 <script async type="text/javascript" src="//[online-host]/[culture]/activitytransportwidget/searchform?cbisProductId=[ID]"></script>
 ```
-Use for iTicket transport products.
+Use for iTicket transport products that is not migrated to iTicket Bookingflow.
 
 | Parameter             | Type   | Example Value | Description                                                                                   |
 |----------------------|--------|----------------|-----------------------------------------------------------------------------------------------|
@@ -214,19 +214,10 @@ For iTicket BookingFlow widgets, contact our support team and we’ll provide th
 --
 
 ### Accommodation product widget
-```html
-Accommodation product example:
-<div id="citybreak_accommodation_property_widget"></div>
 
-<script async type="text/javascript" src="//[online-host]/[culture]/accommodationPropertyWidget/searchform?productid=[ID]"></script>
-```
-Use for one accommodation property.  
-(NOTE: will be replaced shortly)
+Use for Single propertys, singls rooms or accommodation supplier packages search and book.
 
-| Parameter   | Type | Example Value | Description                                                                 |
-|-------------|------|----------------|-----------------------------------------------------------------------------|
-| *productId  | Int  | 123456         | CBIS product ID to display the widget. Only one product per widget.        |
-| css         |      | [url]          | Add absolute URL to your custom-hosted CSS.                                |
+Documentation will be updated with a new widget version in the near future.
 
 --
 
