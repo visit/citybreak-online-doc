@@ -92,6 +92,7 @@ Events:
 * [begin_checkout](#begin_checkout)
 * [purchase](#purchase)
 * [remove_from_cart](#remove_from_cart)
+* [select_item](#select_item)
 
 A tracker property is implemented in Citybreak Admin per online.  
 To add or remove your tracker properties, contact our support with the [online ID] or [URL to the ecom] and the tracker property you want to add or remove.
@@ -301,6 +302,41 @@ Items parameters
 | item_package_name | String | My Package    | Citybreak dynamic package system name OR iTicket bookingFlow system name     |
 
 ---
+
+### <a id="select_item"></a> select_item - This event signifies users navigation per step in package bookingflows
+Event fires on users action with in the Dynamic Pakages and iTicket bookingFlow.
+Every step has 1 or 2 views depending on package/product configurations
+
+(Will be in prodution in the near future. Follow CB release notes)
+
+```
+Example output
+
+  'event': "select_item",
+  'ecommerce':{
+      "package_step_name': "package step name",
+      'package_step_name': "1",
+        'items': [{
+          'item_package_id': 1234,
+          'item_package_name': "My package"
+        }]
+  }
+```
+
+| Name       | Type   | Example value | Description                                                                   |
+|------------|--------|---------------|-------------------------------------------------------------------------------|
+| package_step_name   | String        | My package step name | Citybreak dynamic package system step name OR iTicket bookingFlow slot name |
+| package_step_name   | Number        | 1                    | Step index order, what step is this in the user booking journey for the package |
+
+Items parameters
+
+| Name              | Type   | Example value | Description                                                                   |
+|-------------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_package_id   | Number | 1234          | Citybreak dynamic package system ID OR iTicket bookingFlow system ID         |
+| item_package_name | String | My Package    | Citybreak dynamic package system name OR iTicket bookingFlow system name     |
+
+---
+
 
 ## Booking confirmation URLs
 
