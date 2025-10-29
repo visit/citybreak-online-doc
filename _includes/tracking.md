@@ -92,6 +92,7 @@ Events:
 * [begin_checkout](#begin_checkout)
 * [purchase](#purchase)
 * [remove_from_cart](#remove_from_cart)
+* [add_to_cart](#add_to_cart)
 * [select_item](#select_item)
 
 A tracker property is implemented in Citybreak Admin per online.  
@@ -172,7 +173,14 @@ Example output
             'price': 1234.00,
             'item_category': "Accommodation",
             'quantity': 1,
-            'affiliation': "1234567890"
+            'affiliation': "1234567890",
+            "item_category": "Accommodation",      
+            "item_category2": null,      
+            "item_category3": null,      
+            "item_category4": null,      
+            "item_category5": null, 
+            'item_package_id': "1234",
+            'item_package_name': "My Package"
         }]
     }
 ```
@@ -216,13 +224,20 @@ Example output
         'tax': 123.12,
         'currency': "SEK",
         'items': [{
-            'item_id': "123456",
             'item_name': "My product",
+            'item_id': "123456",
             'item_brand': "My supplier",
-            'item_category': "Accommodation",
             'price': 1234.00,
+            'item_category': "Accommodation",
             'quantity': 1,
-            'affiliation': "1234567890"
+            'affiliation': "1234567890",
+            "item_category": "Accommodation",      
+            "item_category2": null,      
+            "item_category3": null,      
+            "item_category4": null,      
+            "item_category5": null, 
+            'item_package_id': "1234",
+            'item_package_name': "My Package"
         }]
     }
 ```
@@ -266,13 +281,20 @@ Example output
         'currency': "SEK",
         'value': 1234.00,
         'items': [{
-            'item_id': "123456",
             'item_name': "My product",
+            'item_id': "123456",
             'item_brand': "My supplier",
-            'item_category': "Accommodation",
             'price': 1234.00,
+            'item_category': "Accommodation",
             'quantity': 1,
-            'affiliation': "1234567890"
+            'affiliation': "1234567890",
+            "item_category": "Accommodation",      
+            "item_category2": null,      
+            "item_category3": null,      
+            "item_category4": null,      
+            "item_category5": null, 
+            'item_package_id': "1234",
+            'item_package_name': "My Package"
         }]
     }
 ```
@@ -302,12 +324,66 @@ Items parameters
 | item_package_name | String | My Package    | Citybreak dynamic package system name OR iTicket bookingFlow system name     |
 
 ---
+### <a id="view_cart"></a> add_to_cart - This event signifies that a user has added their cart.  
+Event fires on users action in the last step for the Dynamic Pakages and iTicket bookingFlow Cb online bookingflow.
+
+(Will be in prodution in the near future. Follow CB release notes)
+
+```
+Example output
+
+    'event': "add_to_cart",
+    'ecommerce': {
+        'currency': "SEK",
+        'value': 1234.00,
+        'items': [{
+            'item_name': "My product",
+            'item_id': "123456",
+            'item_brand': "My supplier",
+            'price': 1234.00,
+            'item_category': "Accommodation",
+            'quantity': 1,
+            'affiliation': "1234567890",
+            "item_category": "Accommodation",      
+            "item_category2": null,      
+            "item_category3": null,      
+            "item_category4": null,      
+            "item_category5": null, 
+            'item_package_id': "1234",
+            'item_package_name': "My Package"
+        }]
+    }
+```
+
+| Name       | Type   | Example value | Description                                                                   |
+|------------|--------|---------------|-------------------------------------------------------------------------------|
+| currency   | String | SEK           | Currency of the items associated with the event, in 3-letter ISO 4217 format. |
+| value      | Number | 1234.00       | Value of products in the cart                                                 |
+| items      | Array  | See Items     | The items for the event.                                                      |
+
+Items parameters
+
+| Name              | Type   | Example value | Description                                                                   |
+|-------------------|--------|---------------|-------------------------------------------------------------------------------|
+| item_id           | String | 123456        | Citybreak product ID                                                          |
+| item_name         | String | My product    | Citybreak product system name                                                 |
+| item_brand        | String | My supplier   | Citybreak supplier name                                                       |
+| price             | Number | 1234.00       | Product price                                                                 |
+| quantity          | Number | 1             | Quantity of product                                                           |
+| affiliation       | String | 1234567890    | Citybreak online identifier ID                                                |
+| item_category     | String | Accommodation| System category                                                               |
+| item_category2    | String |               |                                                                               |
+| item_category3    | String |               |                                                                               |
+| item_category4    | String |               |                                                                               |
+| item_category5    | String |               |                                                                               |
+| item_package_id   | Number | 1234          | Citybreak dynamic package system ID OR iTicket bookingFlow system ID         |
+| item_package_name | String | My Package    | Citybreak dynamic package system name OR iTicket bookingFlow system name     |
+
+---
 
 ### <a id="select_item"></a> select_item - This event signifies users navigation per step in package bookingflows
 Event fires on users action with in the Dynamic Pakages and iTicket bookingFlow.
 Every step has 1 or 2 views depending on package/product configurations
-
-(Will be in prodution in the near future. Follow CB release notes)
 
 ```
 Example output
