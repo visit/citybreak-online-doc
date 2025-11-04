@@ -56,14 +56,14 @@ Parameter | Description
 </script>
 ```
 
-## Google tracking (GA4)
+## Google tracking
 
 Citybreak online Google tracking options:
-* Google Analytics 4 (gtag.js)
+* Google Analytics (gtag.js)
 * Google Tag Manager (gtm.js)
 
 ```
-Example of Google Analytics 4 gtag.js
+Example of Google Analytics gtag.js
 
 <!-- Begin - Google tag (gtag.js) and Google Analytics v4 DataLayer-->
 <script type="text/javascript">
@@ -75,7 +75,7 @@ gtag('config', 'G-[ID]');
 ```
 
 ```
-Example of Google Tag Manager (*with GA4* DataLayer) gtm.js
+Example of Google Tag Manager gtm.js
 
 <!-- Begin - Google Tag Manager v4 (gtm.js) DataLayer and Events-->
 <script type="text/javascript">
