@@ -327,9 +327,6 @@ Items parameters
 ### <a id="add_to_cart"></a> add_to_cart - This event signifies that a user has added their cart.  
 Event fires on users action in the last step for the Dynamic Pakages and iTicket bookingFlow.
 
-(Will be in prodution in the near future. Follow CB release notes)
-
-
 ```
 Example output
 
