@@ -79,28 +79,6 @@ Used for Ferry search. Please contact our support team, and we’ll provide the 
 
 --
 
-### Flight searchform widget
-```html
-Flight searchform example:
-<div id="citybreak_flight_searchform_widget"></div> 
-
-<script async type="text/javascript" src="//[online-host]/[culture]/flightwidget/searchform"></script>
-```
-Used for external flight searches.  
-(NOTE: will be replaced by a new version - Contact Us for more information)
-
-| Parameter                  | Type   | Example Value | Description                                                                            |
-|---------------------------|--------|----------------|----------------------------------------------------------------------------------------|
-| defaultArrivalDate        | String | 2023-03-12     | Set the default arrival date.                                                          |
-| defaultDepartureDate      | String | 2023-03-13     | Set the default departure date.                                                        |
-| preselectFlexibleDates    | Bool   | True           | Use to preselect a flexible date search.                                               |
-| preselectedEndLocationId  | Int    | 123456         | Use to preselect an end location ID (Travelswitch aggregator location ID).             |
-| lockEndLocation           | Bool   | True           | Locks or disables changing the end location.                                           |
-| sgid                      | Int    | 123456         | Use to preselect the start location using a CBIS geonode ID.                           |
-| css                       |        | [url]          | Add the absolute URL to your custom hosted CSS.                                        |
-
---
-
 ## <a id="product_package"></a> Product booking & Package widgets
 
 ### Todo group booking widget
