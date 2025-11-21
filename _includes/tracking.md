@@ -402,7 +402,7 @@ Example output
 
 | Name       | Type   | Example value | Description                                                                   |
 |------------|--------|---------------|-------------------------------------------------------------------------------|
-| package_step_name   | String        | My package step name | Citybreak dynamic package system step name OR iTicket bookingFlow slot name |
+| package_step_name   | String        | My package step name | Citybreak dynamic package system step name OR iTicket bookingFlow slot name (on IT BF first click we will send "configuration" |
 | package_step_index   | Number        | 1                    | Step index order, what step is this in the user booking journey for the package |
 
 Items parameters
