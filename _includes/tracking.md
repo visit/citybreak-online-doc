@@ -385,13 +385,14 @@ Items parameters
 Event fires on users action with in the Dynamic Pakages and iTicket bookingFlow.
 Every step has 1 or 2 views depending on package/product configurations
 
+
 ```
 Example output
 
   'event': "select_item",
   'ecommerce':{
       "package_step_name': "package step name",
-      'package_step_name': "1",
+      'package_step_index': "1",
         'items': [{
           'item_package_id': 1234,
           'item_package_name': "My package"
@@ -402,7 +403,7 @@ Example output
 | Name       | Type   | Example value | Description                                                                   |
 |------------|--------|---------------|-------------------------------------------------------------------------------|
 | package_step_name   | String        | My package step name | Citybreak dynamic package system step name OR iTicket bookingFlow slot name |
-| package_step_name   | Number        | 1                    | Step index order, what step is this in the user booking journey for the package |
+| package_step_index   | Number        | 1                    | Step index order, what step is this in the user booking journey for the package |
 
 Items parameters
 
