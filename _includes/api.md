@@ -18,6 +18,24 @@ Determine the link to a dynamic page irregardless of its language, there is an a
 //[online-host]/[culture]/link/packagelight/[SUPPLIER-PACKAGE-ID]
 ``
 
+**Link to the My Page login**
+
+``
+//[online-host]/[culture]/link/mypage?code=[CODE]&userName=[USERNAME]&redirectUrl=[RELATIVE-URL]
+``
+
+Logs a person in with the credentials from the magic link and redirects to `redirectUrl`. Used when integrating an external login (SSO).
+
+[See information under login or click here](https://visit.github.io/citybreak-online-doc/#mypage_login_link)
+
+## Session API
+
+Returns the session key of the current visitor as a JSON string. The session key is the channel name used by the [booking events](https://visit.github.io/citybreak-online-doc/#booking_events).
+
+``
+//[online-host]/[culture]/session
+``
+
 ## Bookable status API
 
 Online bookable status API  can be useful to find out if a product is bookable or not via a simple call.

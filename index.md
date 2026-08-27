@@ -13,6 +13,7 @@ includes:
   - https_domain
   - template
   - cookies
+  - login
   - widgets
   - tracking
   - api

@@ -31,6 +31,7 @@ See the example for the specific widget you need below.
 - [Product Booking & Package Search Widgets](#product_package)
 - [Traveller Rating / Guest Reviews Widget](#traveller_rating)
 - [Basket Widget](#Basket)
+- [Booking Events](#booking_events)
 
 ## <a id="Searchforms"></a> Searchform widgets 
 
@@ -273,3 +274,42 @@ When used within the template, the `<script>` tag must be omitted.
 The collapsed widget div `<div id="citybreak_basket_widget_summary"></div>` is **not styled** by the Citybreak system.
 
 _Note: `citybreak_basket_widget_display` is an optional trigger._
+
+--
+
+## <a id="booking_events"></a> Booking events
+
+Citybreak Online publishes an event whenever something is booked in a widget, so your CMS page can react to it - for example to refresh your own basket indicator, or to pass the booking on to another system.
+
+These are **not** DOM events. They are published on the [Broadcast Channel API](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API), using the visitor's session key as the channel name.
+
+Fetch the session key from the session API, then subscribe to the channel:
+
+```html
+Booking events example:
+
+<script type="text/javascript">
+     fetch('//[online-host]/[culture]/session', { credentials: 'include' })
+         .then(function (response) { return response.json(); })
+         .then(function (sessionKey) {
+             var channel = new BroadcastChannel(sessionKey);
+
+             channel.onmessage = function (message) {
+                 if (message.data.key === 'cb-booked') {
+                     // message.data.data holds the event data
+                 }
+             };
+         });
+</script>
+```
+
+Every message is an object with a `key` (the event name) and a `data` object.
+
+| Event             | Data              | Description                                                              |
+|-------------------|-------------------|--------------------------------------------------------------------------|
+| cb-booked         | addedIdInBasket   | A product was booked in a widget and added to the basket.                |
+| cb-basket-update  |                   | The basket changed - a product was added or removed. No data.            |
+
+**FYI:**
+- The session key is per visitor. Fetch it with `credentials: 'include'` so the session cookie is sent along.
+- The Broadcast Channel API is same-origin only, so this works when your page and Citybreak Online share the same domain.

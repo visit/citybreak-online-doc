@@ -16,9 +16,9 @@ None of the mandatory cookies stores personal data.
 
 - online3\_{guideIdentifier}\_{UICulture}\_{Culture}, User session
 - online3\_ss\_{guideIdentifier}\_[UICulture}\_{Culture}, User session
-- bookcred\_online3\_{guideIdentifier}, MyPage, stores booking credentials used to access a made booking
+- bookcred\_online3\_{guideIdentifier}, MyPage, stores booking credentials used to access a made booking _(HttpOnly)_
 - chngbook\_online3\_{guideIdentifier}, MyPage change booking
-- pgid\_online3\_{guideIdentifier}, MyPage, stores personId of the currently logged in person
+- pgid\_online3\_{guideIdentifier}, MyPage, stores personId of the currently logged in person _(HttpOnly)_
 - Promotion\_online3\_{guideIdentifier}, Stores promotion code used
 - ca-citybreak-online, Specify backend server used by the client
 - citybreak_online, Stores client search parameters
@@ -40,6 +40,12 @@ None of the mandatory cookies stores personal data.
 - gat_citybreak0, TrackingGoogle cookie only if implemented _(Set by Google "Advertising plugin for configured via Google analytics")_ 
 - __utmt_citybreak0, Tracking _ Google cookie only if implemented (Set by Google "Used to throttle request rate.")_
 
+
+#####  More information regarding the login cookies
+
+The two login cookies are flagged HttpOnly and can not be read from JavaScript. Use the `cb-logged-in` body CSS class to detect whether a visitor is logged in.
+
+[See information under login or click here](https://visit.github.io/citybreak-online-doc/#detecting-login-state)
 
 #####  More information regarding cookie consent implementation via your template page
 

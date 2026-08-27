@@ -200,7 +200,9 @@ Citybreak online inserts some CSS classes into the class attribute of the Body e
 The currenly active language is inserted prepended by cb_lang_ , e.g cb_lang_sv or cb_lang_en
 
 **Logged in**
-If the user is logged in, `cb-logged-in` is inserted.
+If the user is logged in, `cb-logged-in` is inserted. It is only present when the user is actually logged in, and is the supported way of detecting login state - the login cookies are HttpOnly and can not be read from JavaScript.
+
+[See information under login or click here](https://visit.github.io/citybreak-online-doc/#detecting-login-state)
 
 **Section**
 The currently active section is indicate with a cb_ prefix followed by the name of the section. The following values are used:

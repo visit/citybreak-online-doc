@@ -32,6 +32,8 @@ Direct link sample
 
 To make your script work for your organization, you need to configure it. Change the variables in your script using the variable names below. These custom scripts are added to the booking confirmation page.
 
+These parameters are only substituted in tracker scripts registered for your online in Citybreak Admin. Placeholders pasted into your own page template or CMS content block are left untouched - send us the script and we will add it to the Tracker setup.
+
 Parameter | Description
 --------- | --------- 
 {bookingcode} | Booking number, e.g. ABCD12.
@@ -43,18 +45,34 @@ Parameter | Description
 {isodate} | Timestamp (yyyy-MM-dd)
 {currency} | Currency
 {zipcode} | Zip code
-{bookingJSONObject} | Booking information serialized as a JSON object. Assign it to a JavaScript variable. If serialization fails, {bookingJSONObject} will be replaced with `undefined`, so ensure you check for it. Empty arrays are not serialized. All numbers are formatted as strings according to the customer’s language culture.
+{bookingJSONObject} | Booking information serialized as a JSON object. Assign it to a JavaScript variable, or read it with `JSON.parse` - the result is valid JSON. All values are serialized as strings, and numbers are formatted according to the customer’s language culture.
 
 > Example of {bookingJSONObject} usage: 
 > 
 > var booking = {bookingJSONObject};
 > Will generate:
-> var booking = { "BookingCode": "ABCD12", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": "600.0", "TotalTax": "64.29", "Products": [{ "Id": "123456", "Name": "Hotell_name/room_name", "Category": "Accommodation/Hotelroom", "Price": "600.0", "Quantity": "1", "DocumentUrls": ["https://doc.citybreak.com/url-to-ticket"] }] };
+> var booking = { "BookingCode": "ABCD12", "City": "Gothenburg", "Country": "SE", "State": "41103", "TotalAmount": "600.00", "TotalTax": "64.29", "Products": [{ "Id": "123456", "Name": "Hotell_name/room_name", "Category": "Accommodation/Hotelroom", "Price": "600.00", "Quantity": "1", "DocumentUrls": ["https://doc.citybreak.com/url-to-ticket"] }] };
 
 ```html
 <script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}">
 </script>
 ```
+
+### Handing the booking over to your own script
+
+If you have your own script or widget that needs the booking, a common pattern is to render the booking as a JSON block on the confirmation page and let your script pick it up from there.
+
+```html
+Booking JSON example:
+
+<script id="bookingJSON" type="application/json">{bookingJSONObject}</script>
+```
+
+Your script then reads the contents of `#bookingJSON`.
+
+The booking code can be used to fetch the full booking from the BI API, either on the confirmation page or server side.
+
+[BI API documentation](https://visit.github.io/bi-api-doc/)
 
 ## Google tracking
 
