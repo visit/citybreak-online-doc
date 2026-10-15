@@ -25,6 +25,13 @@ See the example for the specific widget you need below.
 - Need to test widgets in a CMS test environment? Ensure the domain is properly set up in the CMS and test CB Online to avoid potential CORS issues.  
   _(If you want to use custom CSS, it should be loaded using the `css` parameter and a URL pointing to your hosted stylesheet.)_
 
+**Token widgets and URL parameters:**  
+The parameters listed for a token based widget are part of the token's configuration, set when our support team creates the token. If the token was created with overrides allowed, you can also set those parameters on the widget script URL, for example:
+
+```html
+<script async type="text/javascript" src="//[online-host]/[culture]/widget?token=[Unique Token ID]&cbisProductId=123456"></script>
+```
+
 ### Widget Types
 
 - [Search Forms Widgets](#Searchforms)
@@ -103,7 +110,6 @@ For the Todo group booking widget, contact our support team and we’ll provide 
 | Parameter         | Type | Example Value | Description                                                                 |
 |------------------|------|----------------|-----------------------------------------------------------------------------|
 | cbisProductId     | Int  | 123456         | CBIS product ID; must be the parent product of the Todo product group.      |
-| allowOverride     | Bool | False          | Toggle external URL parameter override; useful for automating widgets in CMS. |
 
 --
 
@@ -136,7 +142,6 @@ For the Todo group booking widget, contact our support team and we’ll provide 
 | promotionCode         | String | MyPromoCode    | Promo code to load with the widget as active.                               |
 | enablePromocode       | Bool   | true / false   | Show promo code field. Defaults to false if parameter is not added.  |  
 | proceedToBasket       | Bool   | true / false   | Proceed to basket (checkout) or stay on the widget page.   | 
-| allowOverride     | Bool | False          | Toggle external URL parameter override; useful for automating widgets in CMS. |
 
 
 --
@@ -188,7 +193,6 @@ For iTicket BookingFlow widgets, contact our support team and we’ll provide th
 | proceedToBasket       | Bool   | true / false   | Proceed to basket (checkout) or stay on the widget page.                    |
 | referenceCurrency     | String | USD            | Use ISO format to set reference currency.                                   |
 | display               | String | Button         | Display type: Standard, Collapsed, or Button.                               |
-| allowOverride         | Bool   | False          | Toggle external URL parameter override. Useful for automating widgets in CMS. |
 
 --
 
@@ -219,7 +223,6 @@ For Dynamic packages widgets, contact our support team to obtain the necessary w
 | Parameter       | Type | Example Value | Description                                                                 |
 |-----------------|------|----------------|-----------------------------------------------------------------------------|
 | cbisProductId   | Int  | 123456         | CBIS product ID for the package to display.                                 |
-| allowOverride   | Bool | False          | Toggle external URL parameter override for CMS widget automation.           |
 
 --
 
@@ -245,7 +248,6 @@ For Traveller rating / GuestReviews widgets, contact our support team to obtain 
 |-----------------|--------|----------------|------------------------------------------------------------------------|
 | cbisProductId   | Int    | 123456         | CBIS product ID to display in the widget.                              |
 | display         | String | Button         | Display type: 'Button' (default) or 'Standard'.                         |
-| allowOverride   | Bool   | False          | Toggle external URL parameter override for CMS widget automation.      |
 
 --
 
