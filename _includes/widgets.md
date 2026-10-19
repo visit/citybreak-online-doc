@@ -192,7 +192,7 @@ For iTicket BookingFlow widgets, contact our support team and we’ll provide th
 | promotionCode         | String | MyPromoCode    | Promo code to load with the widget as active.                               |
 | proceedToBasket       | Bool   | true / false   | Proceed to basket (checkout) or stay on the widget page.                    |
 | referenceCurrency     | String | USD            | Use ISO format to set reference currency.                                   |
-| display               | String | Button         | Display type: Standard, Collapsed, or Button.                               |
+| display               | String | button         | Display type: standard, collapsed, or button (lowercase).                   |
 
 --
 
@@ -247,7 +247,7 @@ For Traveller rating / GuestReviews widgets, contact our support team to obtain 
 | Parameter       | Type   | Example Value | Description                                                            |
 |-----------------|--------|----------------|------------------------------------------------------------------------|
 | cbisProductId   | Int    | 123456         | CBIS product ID to display in the widget.                              |
-| display         | String | Button         | Display type: 'Button' (default) or 'Standard'.                         |
+| display         | String | button         | Display type: 'button' (default) or 'standard'.                         |
 
 --
 
