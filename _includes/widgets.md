@@ -297,8 +297,8 @@ Booking events example:
              var channel = new BroadcastChannel(sessionKey);
 
              channel.onmessage = function (message) {
-                 if (message.data.key === 'cb-booked') {
-                     // message.data.data holds the event data
+                 if (message.data.key === 'cb-basket-update') {
+                     // the basket changed: read it again
                  }
              };
          });
@@ -309,9 +309,9 @@ Every message is an object with a `key` (the event name) and a `data` object.
 
 | Event             | Data              | Description                                                              |
 |-------------------|-------------------|--------------------------------------------------------------------------|
-| cb-booked         | addedIdInBasket   | A product was booked in a widget and added to the basket.                |
-| cb-basket-update  |                   | The basket changed - a product was added or removed. No data.            |
+| cb-basket-update  |                   | The basket changed - a product was added or removed. Sent by every booking widget, including the booking flow widget. No data. |
+| cb-booked         | addedIdInBasket   | A product was booked in a product widget and added to the basket. The booking flow widget sends only cb-basket-update. |
 
 **FYI:**
 - The session key is per visitor. Fetch it with `credentials: 'include'` so the session cookie is sent along.
-- The Broadcast Channel API is same-origin only, so this works when your page and Citybreak Online share the same domain.
+- The Broadcast Channel API is same-origin only. Widgets publish their events in your page, so your page receives them whichever domain the guide is on. Events from the guide's own pages reach only listeners on the guide's domain.
