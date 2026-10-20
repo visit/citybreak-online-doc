@@ -12,7 +12,7 @@ The flow is based on two request parameters, `code` and `userName`: the booking 
 Any request carrying `code` & `userName` stores those details in a booking credentials cookie, `bookcred_online3_{guideIdentifier}`. The credentials are **not** verified at this point, only stored.
 
 2. **The credentials are used.**
-Whenever the visitor enters a page where a login normally happens - the My Page section, or the customer details form - Citybreak Online tries to log the person in automatically using the stored credentials.
+When the visitor opens My Page, or a checkout page where guest or customer details are entered, Citybreak Online tries to log the person in with the stored credentials. No other page does this.
 
 3. **The person is logged in.**
 On success the `pgid_online3_{guideIdentifier}` cookie is set. The `bookcred` cookie remains, but is no longer used once a `pgid` cookie exists.
