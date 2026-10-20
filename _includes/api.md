@@ -24,7 +24,7 @@ Determine the link to a dynamic page irregardless of its language, there is an a
 //[online-host]/[culture]/link/mypage?code=[CODE]&userName=[USERNAME]&redirectUrl=[RELATIVE-URL]
 ``
 
-Logs a person in with the credentials from the magic link and redirects to `redirectUrl`. Used when integrating an external login (SSO).
+Logs a person in with the code and userName from a booking's My Page link, and redirects to `redirectUrl`. Used when integrating an external login (SSO).
 
 [See information under login or click here](https://visit.github.io/citybreak-online-doc/#mypage_login_link)
 

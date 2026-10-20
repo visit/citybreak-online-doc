@@ -70,7 +70,7 @@ Booking JSON example:
 
 Your script then reads the contents of `#bookingJSON`.
 
-The booking code can be used to fetch the full booking from the BI API, either on the confirmation page or server side.
+Your backend can then fetch the full booking from the BI API with the booking code. To connect the booking with a signed-in person's account on your site, see [linking bookings to your accounts](#linking-bookings-to-your-accounts).
 
 [BI API documentation](https://visit.github.io/bi-api-doc/)
 
