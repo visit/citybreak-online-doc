@@ -38,13 +38,10 @@ Parameter | Description
 --------- | --------- 
 {bookingcode} | Booking number, e.g. ABCD12.
 {bookingvalue} | Total sum of the customer's booking.
-{customerfirstname} | Customer's first name
-{customersurname} | Customer's surname
 {randomnumber} | Generates a random number
 {date} | Timestamp
 {isodate} | Timestamp (yyyy-MM-dd)
 {currency} | Currency
-{zipcode} | Zip code
 {bookingJSONObject} | Booking information serialized as a JSON object. Assign it to a JavaScript variable, or read it with `JSON.parse` - the result is valid JSON. All values are serialized as strings, and numbers are formatted according to the customer’s language culture.
 
 > Example of {bookingJSONObject} usage: 
