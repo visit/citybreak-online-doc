@@ -285,8 +285,8 @@ Items parameters
 
 ---
 
-### <a id="remove_from_cart"></a> remove_from_cart - This event signifies when items are removed from `/basket` by a user.  
-Event fires 1 time per user action on `/basket`
+### <a id="remove_from_cart"></a> remove_from_cart - This event signifies when items are removed from the basket by a user.  
+Event fires 1 time per user action on `/basket`, in the basket summary on the checkout pages and in the basket widget.
 
 ```
 Example output
@@ -339,10 +339,8 @@ Items parameters
 | item_package_name | String | My Package    | Citybreak dynamic package system name OR iTicket bookingFlow system name     |
 
 ---
-### <a id="add_to_cart"></a> add_to_cart - This event signifies that a user has added their cart.  
-Event fires on users action in the last step for the Dynamic Pakages and iTicket bookingFlow.
-
-(Will soon be added for the Activity booking widget widget)
+### <a id="add_to_cart"></a> add_to_cart - This event signifies that a user has added items to their cart.  
+Event fires on users action when products are added to the basket: on the accommodation and ferry booking pages, in the Activity booking widget, and in the last step for the Dynamic Packages and iTicket bookingFlow. The same applies on an activity's own page when it shows one of these.
 
 ```
 Example output
