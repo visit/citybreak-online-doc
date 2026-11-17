@@ -30,7 +30,7 @@ Direct link sample
 
 ## Custom conversion tracking
 
-To make your script work for your organization, you need to configure it. Change the variables in your script using the variable names below. These custom scripts are added to the booking confirmation page.
+To make your script work for your organization, you need to configure it. Change the variables in your script using the variable names below. These custom scripts run once, on the guest's first visit to My Booking right after a completed booking (since 2 November 2026; before that, on the booking confirmation page). They don't run again on reloads or later visits.
 
 These parameters are only substituted in tracker scripts registered for your online in Citybreak Admin. Placeholders pasted into your own page template or CMS content block are left untouched - send us the script and we will add it to the Tracker setup.
 
@@ -57,7 +57,7 @@ Parameter | Description
 
 ### Handing the booking over to your own script
 
-If you have your own script or widget that needs the booking, a common pattern is to render the booking as a JSON block on the confirmation page and let your script pick it up from there.
+If you have your own script or widget that needs the booking, a common pattern is to let your tracker script render the booking as a JSON block on My Booking (on the first visit after the booking) and let your script pick it up from there. The block only exists if your tracker script adds it.
 
 ```html
 Booking JSON example:
@@ -227,7 +227,7 @@ Items parameters
 ---
 
 ### <a id="purchase"></a> purchase - This event signifies when one or more items are purchased by a user.  
-Event fires 1 time on ``.../confirmation``
+Event fires 1 time, on the guest's first visit to ``.../mybooking?bookingCode=XXXXXX`` after a completed booking. It does not fire again on reloads or later visits. (Before 2 November 2026 it fired on ``.../confirmation``.)
 
 ```
 Example output
@@ -428,25 +428,14 @@ Items parameters
 ---
 
 
-## Booking confirmation URLs
+## Booking confirmation URL (My Booking)
+
+Since 2 November 2026, guests land on My Booking right after a completed booking, instead of the old confirmation page:
 
 ```
-//[online-host]/[culture]/confirmation...
+//[online-host]/[culture]/mybooking?bookingCode=XXXXXX
 ```
 
-Language | URL
---------- | -------------
-sv        | /Bekraftelse
-da        | /Bekraftelse
-de        | /Bestaetigung
-es        | /confirmacion
-fi        | /vahvistus
-fr        | /confirmation
-it        | /conferma
-nl        | /bevestiging
-no        | /bekreftelse
-pt        | /confirmacao
-en        | /confirmation
-Not in list | /confirmation
+The path is `mybooking` (lowercase) in all languages. The old language-specific confirmation URLs (`/Bekraftelse`, `/Bestaetigung`, `/confirmation` etc.) are no longer used for new bookings.
 
-_Note: After /confirmation we add unique parameters to define the booking_
+> **Important:** the same My Booking URL is also used for every later visit to the booking, so a visit to this URL doesn't mean a purchase was just made. To track completed purchases, use the [purchase](#purchase) event or the `cb-booking-completed` browser event, not the URL. If you have GTM triggers, tags or funnel steps based on the old confirmation URLs, update them.

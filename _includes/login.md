@@ -74,6 +74,6 @@ Since the class follows the login state, it is present on the page you send the 
 
 To connect a booking with the person's account on your site:
 
-- **On the confirmation page**, a tracker script can hand the booking to your own script, see [handing the booking over to your own script](#handing-the-booking-over-to-your-own-script). Your script then tells your site which booking the signed-in person just made.
+- **On the first My Booking visit after the booking** (previously the confirmation page), a tracker script can hand the booking to your own script, see [handing the booking over to your own script](#handing-the-booking-over-to-your-own-script). Your script then tells your site which booking the signed-in person just made.
 - **On your backend**, fetch the full booking from the [BI API](https://visit.github.io/bi-api-doc/) with the booking code. It includes the customer, and the booking's `MyPageBookingUrl`, which logs the person in to My Page for that booking.
 - **To get every booking**, including bookings made outside your site, poll the BI API's GetMany from your backend.
